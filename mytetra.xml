@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mytetradoc>
+<root>
+ <format version="1" subversion="2"/>
+ <content>
+  <node crypt="" id="14810525798gt7py836w" name="Computer Vision">
+   <node crypt="" id="1481052586nlbuxhkit4" name="Matlab">
+    <recordtable>
+     <record id="148105549895bel1og4z" name="Matlab" author="" url="" tags="" ctime="20161206231818" dir="14810554988e8i238mxh" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052645pdji3d09i2" name="Octave">
+    <recordtable>
+     <record id="14810555215lqsf8g3x9" name="Octave" author="" url="" tags="" ctime="20161206231841" dir="1481055521buplwo48hf" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="14810526502chz7ydgtx" name="R">
+    <recordtable>
+     <record id="14810555309rntdu4qir" name="R" author="" url="" tags="" ctime="20161206231850" dir="1481055530tglbwr8iak" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052705ibcmb1dk9b" name="wxPython">
+    <recordtable>
+     <record id="1481055541uxpnwhmqk0" name="wxPython" author="" url="" tags="" ctime="20161206231901" dir="14810555415w43rnanm1" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052725qpvuh5n80w" name="PyQt">
+    <recordtable>
+     <record id="1481055567kv0eawt794" name="PyQt" author="" url="" tags="" ctime="20161206231927" dir="1481055567ivbbwxt0qd" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052731k94p9ukfwb" name="Qt">
+    <recordtable>
+     <record id="1481055574hus0ayp1ed" name="Qt" author="" url="" tags="" ctime="20161206231934" dir="14810555745qaf2npf9u" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="148105273618uhtoo64c" name="C++">
+    <recordtable>
+     <record id="1481055582ht8hq5m1jo" name="C++" author="" url="" tags="" ctime="20161206231942" dir="14810555823fstehn9a4" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052743sgtchifahi" name="Python">
+    <recordtable>
+     <record id="148105561171ck108pbe" name="Python" author="" url="" tags="" ctime="20161206232011" dir="1481055611jekx5wbix8" file="text.html"/>
+    </recordtable>
+    <node crypt="" id="1481052806oadl5ie7tm" name="Caffe">
+     <recordtable>
+      <record id="14810554067opffl2lbg" name="Caffe" author="" url="" tags="" ctime="20161206231646" dir="1481055406a0ctcz3m5s" file="text.html"/>
+      <record id="1481055451m5tdvt78rf" name="How to install (Windows)" author="" url="" tags="" ctime="20161206231731" dir="14810554511ug2rwo3hd" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481052836pxwpn2a7b1" name="TensorFlow">
+     <recordtable>
+      <record id="1481055632uwakayfep9" name="TensorFlow" author="" url="" tags="" ctime="20161206232032" dir="1481055632eee8r83ig3" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481052844dm0vtou61o" name="Theano">
+     <recordtable>
+      <record id="1481055645qqyuikddqe" name="Theano" author="" url="" tags="" ctime="20161206232045" dir="1481055645t8b4eok84v" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="14810528705wnlo1sop2" name="Lasagne">
+     <recordtable>
+      <record id="1481055660vwp6tstjml" name="Lasagne" author="" url="" tags="" ctime="20161206232100" dir="1481055660gjf7bjoal1" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481052876elsfem1yph" name="Keras">
+     <recordtable>
+      <record id="1481055674j6opy11vaz" name="Keras" author="" url="" tags="" ctime="20161206232114" dir="14810556747iugnf0zgx" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
+   <node crypt="" id="1481052750d6uuwvagz1" name="OpenCV">
+    <recordtable>
+     <record id="148105325426i2dh66gn" name="OpenCV" author="" url="" tags="" ctime="20161206224054" dir="1481053254l6924zrc7l" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052758dti88xxmo8" name="OpenGL">
+    <recordtable>
+     <record id="1481055688g2tfs24oeo" name="OpenGL" author="" url="" tags="" ctime="20161206232128" dir="148105568890ez5lwnsu" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052767y8lvikrvaq" name="OpenCL">
+    <recordtable>
+     <record id="148105569994al5k46yi" name="OpenCL" author="" url="" tags="" ctime="20161206232139" dir="1481055699yn8topyerg" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052778vdjc83t3tr" name="OpenMP">
+    <recordtable>
+     <record id="1481055712ugepfy3bh5" name="OpenMP" author="" url="" tags="" ctime="20161206232152" dir="1481055712pfhx4ehvqz" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481052923qzcx9mie7r" name="Graph computing engines">
+    <node crypt="" id="14810529421a4dwi09ek" name="Giraph">
+     <recordtable>
+      <record id="1481055730d1t9d1nvog" name="Giraph" author="" url="" tags="" ctime="20161206232210" dir="1481055730gglg0fzkzs" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="14810529539bw7yoczhf" name="Giraph++">
+     <recordtable>
+      <record id="14810557424z5tuyykgh" name="Giraph++" author="" url="" tags="" ctime="20161206232222" dir="1481055742x8fwdk6gnz" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481052961mwgvupohx2" name="GraphLab">
+     <recordtable>
+      <record id="1481055758pc1hr6rlmu" name="GraphLab" author="" url="" tags="" ctime="20161206232238" dir="148105575873nsxlumg8" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481052973hav2eyh47f" name="GraphX">
+     <recordtable>
+      <record id="1481055767vxbpnaxpbd" name="GraphX" author="" url="" tags="" ctime="20161206232247" dir="1481055767kiuvjdbobz" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481052983g9qo9z5s70" name="Pregel">
+     <recordtable>
+      <record id="1481055775wg2z7v0h4g" name="Pregel" author="" url="" tags="" ctime="20161206232255" dir="1481055775z95gg3n7q1" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="14810529935svz1nxtrf" name="Pregel++">
+     <recordtable>
+      <record id="148105578502xyd7c0sw" name="Pregel++" author="" url="" tags="" ctime="20161206232305" dir="1481055785suk6mix61n" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
+   <node crypt="" id="1481053027rpvqm7gedc" name="Version Control System">
+    <node crypt="" id="1481053035nmom7fqoc7" name="SVN">
+     <recordtable>
+      <record id="1481055796svhbumijj9" name="SVN" author="" url="" tags="" ctime="20161206232316" dir="14810557964ku45767vm" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1481053042d3bmmqu5pk" name="Mercurial">
+     <recordtable>
+      <record id="1481055807u6vbhclt6t" name="Mercurial" author="" url="" tags="" ctime="20161206232327" dir="1481055807ybked6eff4" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="14810530460bxvn7t0qo" name="Git">
+     <recordtable>
+      <record id="14810558254shsrnewlt" name="Git" author="" url="" tags="" ctime="20161206232345" dir="1481055825gbgtcbyst6" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
+   <node crypt="" id="1481053076kafp0fosg9" name="Bug tracking system">
+    <node crypt="" id="1481053088xj3j6s1uep" name="JIRA">
+     <recordtable>
+      <record id="1481055864bafnssg8qi" name="JIRA" author="" url="" tags="" ctime="20161206232424" dir="1481055864417j7nhd4k" file="text.html"/>
+     </recordtable>
+    </node>
+   </node>
+   <node crypt="" id="14810534430vfku538yv" name="Математическая подготовка">
+    <node crypt="" id="1481053487peoch5f67s" name="Винберг &quot;Курс алгебры&quot;"/>
+   </node>
+   <node crypt="" id="1481054882ypmgmmcn1e" name="Методы обучения">
+    <recordtable>
+     <record id="1481055033d61h0o30ex" name="Supervised learning" author="" url="" tags="" ctime="20161206231033" dir="1481055033btb8txqgnc" file="text.html"/>
+     <record id="1481055063gw91zrdf44" name="Unsupervised learning" author="" url="" tags="" ctime="20161206231103" dir="1481055063rf0ih6zic1" file="text.html"/>
+     <record id="1481055097rkp8rzx4p2" name="Stochastic gradient descent" author="" url="" tags="" ctime="20161206231137" dir="1481055097flfbfxv67r" file="text.html"/>
+     <record id="1481055113303nzgz1yp" name="Deep feedforward networks" author="" url="" tags="" ctime="20161206231153" dir="1481055113m8yitj8qyu" file="text.html"/>
+     <record id="1481055128oqooix7qru" name="Monte-carlo methods" author="" url="" tags="" ctime="20161206231208" dir="1481055128kmihudu74m" file="text.html"/>
+     <record id="14810551441nl0kkqips" name="Convolutional networks" author="" url="" tags="" ctime="20161206231224" dir="1481055144572f1wb7cu" file="text.html"/>
+     <record id="1481055161blbm4gp99c" name="Deep recurrent networks" author="" url="" tags="" ctime="20161206231241" dir="1481055161awhniy62s4" file="text.html"/>
+     <record id="1481055176tozkbv2o9h" name="RNN" author="" url="" tags="" ctime="20161206231256" dir="14810551760u8je4j71h" file="text.html"/>
+     <record id="1481055188lbp6pmizxg" name="Bidirectional RNNs" author="" url="" tags="" ctime="20161206231308" dir="1481055188ps9ji6ozl6" file="text.html"/>
+     <record id="1481055201u7zppfj87r" name="Model compression" author="" url="" tags="" ctime="20161206231321" dir="1481055201qe3rf8xvqb" file="text.html"/>
+     <record id="1481055219g3hn4bzi9h" name="LSTM" author="" url="" tags="" ctime="20161206231339" dir="1481055219pil8qi4ki8" file="text.html"/>
+     <record id="1481055927cy0kvcn7rz" name="Обучение Хебба" author="" url="" tags="" ctime="20161206232527" dir="14810559272j4zv3lvid" file="text.html"/>
+     <record id="1481056675fadqgys02r" name="Thompson sampling" author="" url="" tags="" ctime="20161206233755" dir="1481056675w77niqgmj1" file="text.html"/>
+     <record id="1481057656e95zuj6665" name="Logistic classifier" author="" url="" tags="" ctime="20161206235416" dir="1481057656n5uuc0s2jd" file="text.html"/>
+     <record id="1481058223t5rfv26ui1" name="SoftMax" author="" url="" tags="" ctime="20161207000343" dir="1481058223gqxsmpunkl" file="text.html"/>
+     <record id="1481060990ywkhq9xfyk" name="Cross-entropy" author="" url="" tags="" ctime="20161207004950" dir="148106099037l7khnezk" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="148105723639v37448sy" name="Литература">
+    <recordtable>
+     <record id="1481057276nnild3xn6n" name="Нейронные сети Полный курс" author="Саймон Хайкин" url="" tags="" ctime="20161206234756" dir="1481057276bann3cbk0k" file="text.html"/>
+    </recordtable>
+   </node>
+  </node>
+  <node crypt="" id="14810533087dapvrwtbi" name="Работа мозга">
+   <node crypt="" id="14810535884j6ll7bm7m" name="Литература">
+    <recordtable>
+     <record id="1481054430rzeu9jb6m0" name="Об интеллекте" author="Д.Хокинс С.Блейксли" url="" tags="" ctime="20161206230030" dir="1481054430ih1mw58jq1" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481054026zgg0f9ifz7" name="Выдающиеся учёные">
+    <recordtable>
+     <record id="1481054137h34qnvfmf7" name="Вернон Маунткастл" author="" url="" tags="" ctime="20161206225537" dir="14810541374njecbicn4" file="text.html"/>
+    </recordtable>
+   </node>
+  </node>
+ </content>
+</root>
