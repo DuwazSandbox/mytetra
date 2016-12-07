@@ -174,6 +174,11 @@
      <record id="1481057276nnild3xn6n" name="Нейронные сети Полный курс" author="Саймон Хайкин" url="" tags="" ctime="20161206234756" dir="1481057276bann3cbk0k" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="148114768469sf3m5rgb" name="Activation functions">
+    <recordtable>
+     <record id="1481147702gpf9oafssp" name="ReLU" author="" url="" tags="" ctime="20161208005502" dir="1481147702t592dv9d7u" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="14810533087dapvrwtbi" name="Работа мозга">
    <node crypt="" id="14810535884j6ll7bm7m" name="Литература">
