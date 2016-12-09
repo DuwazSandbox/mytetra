@@ -147,11 +147,13 @@
     </node>
    </node>
    <node crypt="" id="14810534430vfku538yv" name="Математическая подготовка">
-    <node crypt="" id="1481053487peoch5f67s" name="Винберг &quot;Курс алгебры&quot;"/>
+    <recordtable>
+     <record id="14812411205cs2p6s8s3" name="Курс алгебры" author="Винсберг" url="" tags="" ctime="20161209025200" dir="14812411201f32sq6bvv" file="text.html"/>
+    </recordtable>
    </node>
    <node crypt="" id="1481054882ypmgmmcn1e" name="Методы обучения">
     <recordtable>
-     <record id="1481055033d61h0o30ex" name="Supervised learning" author="" url="" tags="" ctime="20161206231033" dir="1481055033btb8txqgnc" file="text.html"/>
+     <record id="1481055033d61h0o30ex" name="Dropout" author="" url="" tags="" ctime="20161206231033" dir="1481055033btb8txqgnc" file="text.html"/>
      <record id="1481055063gw91zrdf44" name="Unsupervised learning" author="" url="" tags="" ctime="20161206231103" dir="1481055063rf0ih6zic1" file="text.html"/>
      <record id="1481055097rkp8rzx4p2" name="Stochastic gradient descent" author="" url="" tags="" ctime="20161206231137" dir="1481055097flfbfxv67r" file="text.html"/>
      <record id="1481055113303nzgz1yp" name="Deep feedforward networks" author="" url="" tags="" ctime="20161206231153" dir="1481055113m8yitj8qyu" file="text.html"/>
@@ -167,6 +169,7 @@
      <record id="1481057656e95zuj6665" name="Logistic classifier" author="" url="" tags="" ctime="20161206235416" dir="1481057656n5uuc0s2jd" file="text.html"/>
      <record id="1481058223t5rfv26ui1" name="SoftMax" author="" url="" tags="" ctime="20161207000343" dir="1481058223gqxsmpunkl" file="text.html"/>
      <record id="1481060990ywkhq9xfyk" name="Cross-entropy" author="" url="" tags="" ctime="20161207004950" dir="148106099037l7khnezk" file="text.html"/>
+     <record id="14812391338nwj1o33qe" name="Supervised learning" author="" url="" tags="" ctime="20161209021853" dir="1481239133gg1ij6d7e3" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="148105723639v37448sy" name="Литература">
