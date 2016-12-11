@@ -182,7 +182,11 @@
      <record id="1481147702gpf9oafssp" name="ReLU" author="" url="" tags="" ctime="20161208005502" dir="1481147702t592dv9d7u" file="text.html"/>
     </recordtable>
    </node>
-   <node crypt="" id="14814789429uke7ljglp" name="Обучалки"/>
+   <node crypt="" id="14814789429uke7ljglp" name="Обучалки">
+    <recordtable>
+     <record id="14814793270fd490au4u" name="ML от google" author="" url="https://classroom.udacity.com/courses/ud730/" tags="" ctime="20161211210207" dir="1481479327f1pe12v0v2" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
   <node crypt="" id="14810533087dapvrwtbi" name="Работа мозга">
    <node crypt="" id="14810535884j6ll7bm7m" name="Литература">
