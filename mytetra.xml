@@ -40,9 +40,6 @@
     </recordtable>
    </node>
    <node crypt="" id="1481052743sgtchifahi" name="Python">
-    <recordtable>
-     <record id="148105561171ck108pbe" name="Python" author="" url="" tags="" ctime="20161206232011" dir="1481055611jekx5wbix8" file="text.html"/>
-    </recordtable>
     <node crypt="" id="1481052806oadl5ie7tm" name="Caffe">
      <recordtable>
       <record id="14810554067opffl2lbg" name="Caffe" author="" url="" tags="" ctime="20161206231646" dir="1481055406a0ctcz3m5s" file="text.html"/>
@@ -170,16 +167,13 @@
      <record id="1481058223t5rfv26ui1" name="SoftMax" author="" url="" tags="" ctime="20161207000343" dir="1481058223gqxsmpunkl" file="text.html"/>
      <record id="1481060990ywkhq9xfyk" name="Cross-entropy" author="" url="" tags="" ctime="20161207004950" dir="148106099037l7khnezk" file="text.html"/>
      <record id="14812391338nwj1o33qe" name="Supervised learning" author="" url="" tags="" ctime="20161209021853" dir="1481239133gg1ij6d7e3" file="text.html"/>
+     <record id="1481147702gpf9oafssp" name="ReLU" author="" url="" tags="" ctime="20170109213552" dir="1481147702t592dv9d7u" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="148105723639v37448sy" name="Литература">
     <recordtable>
      <record id="1481057276nnild3xn6n" name="Нейронные сети Полный курс" author="Саймон Хайкин" url="" tags="" ctime="20161206234756" dir="1481057276bann3cbk0k" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="148114768469sf3m5rgb" name="Activation functions">
-    <recordtable>
-     <record id="1481147702gpf9oafssp" name="ReLU" author="" url="" tags="" ctime="20161208005502" dir="1481147702t592dv9d7u" file="text.html"/>
+     <record id="14839868986nts8ul730" name="Цифровая обработка изображений" author="Р. Гонсалес, Р. Вудс" url="" tags="" ctime="20170109213458" dir="14839868988dfq5sxk98" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="14814789429uke7ljglp" name="Обучалки">
@@ -191,10 +185,10 @@
   <node crypt="" id="14810533087dapvrwtbi" name="Работа мозга">
    <node crypt="" id="14810535884j6ll7bm7m" name="Литература">
     <recordtable>
-     <record id="1481054430rzeu9jb6m0" name="Об интеллекте" author="Д.Хокинс С.Блейксли" url="" tags="" ctime="20161206230030" dir="1481054430ih1mw58jq1" file="text.html"/>
+     <record id="1481054430rzeu9jb6m0" name="Об интеллекте" author="Д.Хокинс С.Блейксли" url="" tags="Хокинс" ctime="20161206230030" dir="1481054430ih1mw58jq1" file="text.html"/>
+     <record id="1483987199udnkl05x0t" name="Иерархическая темпоральная память (HTM)" author="Numenta" url="http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" tags="Хокинс" ctime="20170109213959" dir="1483987199t78a8u9wb2" file="text.html"/>
     </recordtable>
    </node>
   </node>
-  <node crypt="" id="14818418578l9oxx1r1d" name="Tasks"/>
  </content>
 </root>
