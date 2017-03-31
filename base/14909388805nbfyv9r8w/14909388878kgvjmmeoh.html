@@ -1,0 +1,2394 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+
+<head>
+	<title>32. OpenCV шаг за шагом. Нахождение контуров и операции с ними / Компьютерное зрение / RoboCraft. Роботы? Это просто!</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
+	<meta name="DESCRIPTION" content=" Оглавление 1. OpenCV шаг за шагом. Введение. 2. Установка. 3. Hello World. 4. Загрузка картинки. ... 29. Интегральное изображение" />
+	<meta name="KEYWORDS" content="OpenCV,шаг за шагом,cvFindContours,cvDrawContours,cvContourArea,cvContourPerimeter,cvMinEnclosingCircle" />	
+	<meta name="yandex-verification" content="6fc828c3f4df0bc8" />
+	
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/style.css?v=1" />
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/ie6.css?v=1" /><![endif]-->
+	<!--[if gte IE 7]><link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/ie7.css?v=1" /><![endif]-->	
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/Roar.css" />
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/piechart.css" />
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/Autocompleter.css" />
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/prettify.css" />
+	<!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/simple_comments.css" /><![endif]-->
+		
+	<link href="http://robocraft.ru/templates/skin/new/images/favicon.ico" rel="shortcut icon" />
+	<link rel="search" type="application/opensearchdescription+xml" href="http://robocraft.ru/search/opensearch/" title="RoboCraft. Роботы? Это просто!" />
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="192x192"  href="http://robocraft.ru/templates/skin/new/icon/android-icon-192x192.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="http://robocraft.ru/templates/skin/new/icon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="http://robocraft.ru/templates/skin/new/icon/favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="http://robocraft.ru/templates/skin/new/icon/favicon-16x16.png" />
+	<link rel="manifest" href="http://robocraft.ru/templates/skin/new/icon/manifest.json" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="http://robocraft.ru/templates/skin/new/icon/ms-icon-144x144.png" />
+	<meta name="theme-color" content="#ffffff" />
+	
+			<link rel="alternate" type="application/rss+xml" href="http://robocraft.ru/rss/comments/640/" title="32. OpenCV шаг за шагом. Нахождение контуров и операции с ними" />
+	</head>
+
+<script type="text/javascript">
+var DIR_WEB_ROOT='http://robocraft.ru';
+var DIR_STATIC_SKIN='http://robocraft.ru/templates/skin/new';
+var BLOG_USE_TINYMCE='';
+</script>
+
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/JsHttpRequest/JsHttpRequest.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/mootools-1.2.js?v=1.2.2"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Roal/Roar.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Autocompleter/Observer.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Autocompleter/Autocompleter.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Autocompleter/Autocompleter.Request.js"></script>
+<!--[if IE]>
+	<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Piechart/moocanvas.js"></script>
+<![endif]-->	
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Piechart/piechart.js"></script>
+
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/prettify/prettify.js"></script>
+
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/vote.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/favourites.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/questions.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/block_loader.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/friend.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/blog.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/other.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/login.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/panel.js"></script>
+
+
+
+<script type="text/javascript">
+var tinyMCE=false;
+var msgErrorBox=new Roar({
+			position: 'upperRight',
+			className: 'roar-error',
+			margin: {x: 30, y: 10}
+		});	
+var msgNoticeBox=new Roar({
+			position: 'upperRight',
+			className: 'roar-notice',
+			margin: {x: 30, y: 10}
+		});	
+</script>
+
+
+
+
+<body onload="prettyPrint()">
+
+
+
+<div id="debug" style="border: 2px #dd0000 solid; display: none;"></div>
+
+<div id="container">
+	
+		<!-- Header -->
+		
+	<div style="display: none;">
+	<div class="login-popup" id="login-form">
+		<div class="login-popup-top"><a href="#" class="close-block" onclick="return false;"></a></div>
+		<div class="content">
+			<form action="http://robocraft.ru/login/" method="post">
+				<h3>Авторизация</h3>
+				<div class="lite-note"><a href="http://robocraft.ru/registration/">Зарегистрироваться</a><label for="login-input">Логин или эл. почта</label></div>
+				<p><input type="text" class="input-text" name="login" tabindex="1" id="login-input"/></p>
+				<div class="lite-note"><a href="http://robocraft.ru/login/reminder/" tabindex="-1">Напомнить пароль</a><label >Пароль</label></div>
+				<p><input type="password" name="password" class="input-text" tabindex="2" /></p>
+				<div class="lite-note"><button type="submit" onfocus="blur()"><span><em>Войти</em></span></button><label class="input-checkbox"><input type="checkbox" name="remember" checked tabindex="3" />Запомнить меня</label></div>
+				<input type="hidden" name="submit_login" />
+			</form>
+		</div>
+		<div class="login-popup-bottom"></div>
+	</div>
+	</div>
+		
+	<div id="header">
+		<h1 style="padding: 0;">
+		<a href="http://robocraft.ru"><img src="http://robocraft.ru/logo_robocraft_80.png" alt="RoboCraft" title="RoboCraft"/></a>
+		<!-- <a href="http://robocraft.ru" style="background: url(http://robocraft.ru/rc80-ny.png) no-repeat scroll 0 -1px transparent; padding-left:80px; padding-top:25px; height:80px; display:block;"><strong>Robo</strong>Craft</a> -->
+		</h1>
+		
+		<ul class="nav-main">
+			<li class="active"><a href="http://robocraft.ru/blog/" style="text-decoration:none;">Блоги</a></li>
+			<!-- <li ><a href="http://robocraft.ru/people/">Люди</a></li>
+			<li ><a href="http://robocraft.ru/page/about/">О проекте</a></li> -->
+			<li ><a href="http://robocraft.ru/page/summary/" style="text-decoration:none; color:white;">Статьи</a></li>
+			<li><a href="http://robocraft.ru/shop/" style="text-decoration:none; font-size: 24px; color:orange;" title="Наш Магазин">Магазин</a></li>
+			<li>
+				<a href="http://robocraft.ru/forum/" style="text-decoration:none;">Форум</a>
+			</li>
+			<li><a href="http://robocraft.ru/development/" style="text-decoration:none; color:orange;" title="Заказать изготовление робота">Заказать</a></li>
+			<li>
+				<a style="text-decoration:none; color: rgb(119, 209, 21);" href="http://robocraft.ru/blog/RoboCraft/3623.html">КиберВесна</a>
+			</li>
+		</ul>
+		
+				<div class="profile guest">
+			<a href="http://robocraft.ru/login/" onclick="return showLoginForm();">Войти</a> или 
+			<a href="http://robocraft.ru/registration/" class="reg">Зарегистрироваться</a>
+		</div>
+				
+	</div>
+	<!-- /Header -->	
+	
+	﻿	<!-- Navigation -->
+	<div id="nav">
+		<div class="left"></div>
+				
+							<ul class="menu">
+		
+			<li >
+				<a href="http://robocraft.ru/">Все</a> 							</li>
+			
+			<li class="active">
+				<a href="http://robocraft.ru/blog/">Тематические</a> 									<ul class="sub-menu" >											
+						<li ><div><a href="http://robocraft.ru/blog/">Хорошие</a></div></li>
+												<li ><div><a href="http://robocraft.ru/blog/bad/">Плохие</a></div></li>
+					</ul>
+							</li>
+			
+			<li >
+				<a href="http://robocraft.ru/log/">Персональные</a> 							</li>
+			
+			<li >
+				<a href="http://robocraft.ru/top/">TOP</a>
+							</li>
+								
+		</ul>
+		
+		
+		
+			
+				
+		<div class="right"></div>
+		<!--<a href="#" class="rss" onclick="return false;"></a>-->
+		<div class="search">
+				 <form method="get" action="http://robocraft.ru/search/">
+                        <input class="text" type="text" id="srch" maxlength="32" name="searchfor" value="Поиск" onclick="if (value=='Поиск') value=''" onkeyup="fast_search();" onblur="close_fast_search();" onfocus="this.select();" autocomplete="off" />
+                        <input class="button" type="submit" value="" />
+			</form>
+		</div>
+	</div>
+	<!-- /Navigation -->
+	
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/banner-slider.css" />
+
+
+<script type="text/javascript">
+
+window.addEvent('domready', function(){	
+	var obj=$('my-slide-banner');
+	var arrow = $('slide-banner-arrow');
+	if(obj && arrow){
+		var bOpen = read_cookie();
+		if(bOpen=='1'){
+			obj.setStyle('display', 'block');
+			arrow.removeClass('opened');
+		}
+		else{
+			obj.setStyle('display', 'none');
+			arrow.removeClass('opened');
+			arrow.toggleClass('opened');
+		}
+		if (obj.getStyle('display')=='none') 
+			arrow.set('title','Открыть');
+		else
+			arrow.set('title','Закрыть');
+	}
+});
+
+function read_cookie()
+{
+	var allcookies = document.cookie;
+	//alert(allcookies);
+	
+	// получаем значения из кукиса :)
+	var pos = allcookies.indexOf("slidebanner=");
+	var slidebanner=1;
+	if (pos != -1){
+		var start = pos + 12; // Начало значения cookie
+		var end = allcookies.indexOf(";", start);
+		if (end == -1) end = allcookies.length;
+		
+		slidebanner = allcookies.substring(start, end); 
+		//alert(slidebanner);
+		return slidebanner;
+	}
+	return slidebanner;
+}
+
+function write_cookie(val)
+{
+	document.cookie = "slidebanner="+val+";path=/; max-age=" + (60*60*24*31);
+}
+
+function toggleSlideBAnnerInfo(link)
+{
+	link=$(link);
+	var obj=$('my-slide-banner');	
+	var slideObj = new Fx.Slide(obj, {
+		onComplete: function(){
+			if(link.get('title')=='Открыть'){
+				link.set('title','Закрыть');
+				write_cookie(1);
+			}
+			else{
+				link.set('title','Открыть');
+				write_cookie(0);
+			}
+	    }
+	});
+	if (obj.getStyle('display')=='none'){
+		slideObj.hide();
+		obj.setStyle('display','block');		
+	}	
+	link.toggleClass('opened');
+	slideObj.toggle();
+}
+</script>
+
+
+<a href="#" id="slide-banner-arrow" class="slide-banner-arrow" onclick="toggleSlideBAnnerInfo(this); return false;"></a>
+
+<div class="block stream" id="my-slide-banner">
+	<div class="tl"><div class="tr"></div></div>
+		<div class="cl"><div class="cr">
+	<div>
+		<div style="margin: 0px; display: block;" id="ny-expand-content" class="ny-expand-content"> 
+			<table width="100%"> 
+				<tbody>
+					<tr>
+						<td width="20%" style="vertical-align: top;"> <a href="http://robocraft.ru/shop/index.php?route=product/product&product_id=422" target="_blank"><img src="http://robocraft.ru/files/craftduino/v2/craftduino-v2-0-small.png" alt="CraftDuino v2.0" title="CraftDuino v2.0"/></a> </td>
+						<td style="vertical-align: top;" class="slide-banner-text">
+						<ul>
+							<li>
+							- это <span class="slide-banner-big" style="color: black;">CraftDuino</span> - наш вариант полностью Arduino-совместимой платы.
+							</li>
+							<li>
+							<a href="http://robocraft.ru/blog/RoboCraft/3294.html">CraftDuino</a> - настоящий конструктор, для очень быстрого прототипирования и реализации идей.
+							</li>
+							<li>
+								Любая возможность автоматизировать что-то с лёгкостью реализуется с <a href="http://robocraft.ru/blog/RoboCraft/3294.html">CraftDuino</a>!
+							</li>
+						</ul>
+							<ul>
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/14.html"><span class="slide-banner-average" style="color: #6293c1;">Что такое Arduino?</span></a>
+								</li>
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/18.html"><span class="slide-banner-average" style="color: #6293c1;">Зачем мне Arduino/CraftDuino?</span></a>
+								</li>
+								
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/98.html"><span class="slide-banner-average" style="color: #6293c1;">Как начать работать с Arduino/CraftDuino?</span></a>
+								</li>
+								
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/53.html"><span class="slide-banner-average" style="color: #6293c1;">Первая программа.</span></a>
+								</li>
+								
+								<li>
+									<a href="http://robocraft.ru/page/summary/#PracticalArduino"><span class="slide-banner-average" style="color: #6293c1;">Что дальше?</span></a> <a href="http://robocraft.ru/blog/projects/"><span class="slide-banner-average" style="color: #6293c1;">Arduino проекты!</span></a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table> 
+			<div style="text-align: center;" class="slide-banner-text">
+				<span class="slide-banner-big" style="color: black; font-size:20px;">Просто добавьте CraftDuino!</span>
+			</div>
+		</div>
+	</div>
+		
+		
+</div></div>
+<div class="bl"><div class="br"></div></div>
+</div>	
+	<!--
+	<div id="extra">
+		<a href="#">К списку постов</a>
+	</div>
+	-->
+	
+	<div id="wrapper" class="update-hide ">
+		
+	
+		<!-- Content -->
+		<div id="content" >
+		
+					
+								<!-- Topic -->			
+			<div class="topic">
+				<div class="favorite fav-guest"><a href="#" onclick="lsFavourite.toggle(640,this,'topic'); return false;"></a></div>
+				<h1 class="title">
+										32. OpenCV шаг за шагом. Нахождение контуров и операции с ними
+									</h1>
+				<ul class="action">					
+					<li><a href="http://robocraft.ru/blog/computervision/">Компьютерное зрение</a>&nbsp;&nbsp;</li>						
+														</ul>				
+				<div class="content">
+				
+							
+				
+				
+					<noindex><a href="http://robocraft.ru/tag/OpenCV/" rel="nofollow"><img src="http://robocraft.ru/files/opencv/opencv-logo-cat.png" align="left"/></a></noindex> <br/>
+<b><noindex><a href="http://robocraft.ru/page/opencv/" rel="nofollow">Оглавление</a></noindex></b><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/264.html" rel="nofollow">1. OpenCV шаг за шагом. Введение.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/265.html" rel="nofollow">2. Установка.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/266.html" rel="nofollow">3. Hello World.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/268.html" rel="nofollow">4. Загрузка картинки.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/page/opencv/" rel="nofollow">...</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/536.html" rel="nofollow">29. Интегральное изображение</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/581.html" rel="nofollow">30. Трансформация изображения — аффинные преобразования, гомография</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/603.html" rel="nofollow">31. Типы данных OpenCV — хранилище памяти, последовательность</a></noindex><br/>
+<b>32. Нахождение контуров и операции с ними</b><br/>
+<br/>
+Контурный анализ — это один из важных и очень полезных методов описания, хранения, распознавания, сравнения и поиска графических образов/объектов. <br/>
+<br/>
+<b>Контур</b> — это внешние очертания (обвод) предмета/объекта.<br/>
+<br/>
+При проведении контурного анализа:<br/>
+* полагается, что контур содержит достаточную информацию о форме объекта;<br/>
+* внутренние точки объекта во внимание не принимаются. <br/>
+<br/>
+Вышеприведённые положения, разумеется, накладывают существенные ограничения на область применения контурного анализа, которые, в основном, связаны с проблемами выделения контура на изображениях:<br/>
+* из-за одинаковой яркости с фоном объект может не иметь чёткой границы, или может быть зашумлён помехами, что приводит к невозможности выделения контура;<br/>
+* перекрытие объектов или их группировка приводит к тому, что контур выделяется неправильно и не соответствует границе объекта.<br/>
+<br/>
+Однако, переход к рассмотрению только контуров объектов позволяет уйти от пространства изображения – к пространству контуров, что существенно снижает сложность алгоритмов и вычислений. <br/>
+<br/>
+Т.о., контурный анализ имеет довольно <b>слабую устойчивость к помехам</b>, и любое пересечение или лишь частичная видимость объекта приводит либо к невозможности детектирования, либо к ложным срабатываниям, но простота и быстродействие контурного анализа, позволяют вполне успешно применять данный подход (при чётко выраженном объекте на контрастном фоне и отсутствии помех).<br/>
+<br/>
+Итак, мы определились, что контур — это некая граница объекта, которая отделяет его от фона (других объектов). Вспомним, как мы можем получить контуры?<br/>
+<br/>
+Разумеется, первым вспоминается <noindex><a href="http://robocraft.ru/blog/computervision/484.html" rel="nofollow">детектор границ Кенни</a></noindex>, а затем можно привести любые другие методы получения двоичного изображения:<br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/357.html" rel="nofollow">пороговое преобразование</a></noindex>,<br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/402.html" rel="nofollow">выделение объекта по цвету</a></noindex><br/>
+<br/>
+Во всех этих случаях мы получаем бинарное изображение, которое явным образом задаёт нам границы объекта. Вот эта совокупность пикселей, составляющих границу объекта и есть контур объекта.<br/>
+<br/>
+Чтобы оперировать полученным контуром, его необходимо как-то представить (закодировать). <br/>
+Например, указывать вершины отрезков, составляющих контур.<br/>
+Другой известный способ кодирования контура – это <b>цепной код Фримена</b>.<br/>
+<br/>
+<b>Цепной код Фримена (Фридмана) (Freeman Chain Code)</b><br/>
+<br/>
+Цепные коды применяются для представления границы в виде последовательности отрезков прямых линий определённой длины и направления. В основе этого представления лежит 4- или 8- связная решётка. Длина каждого отрезка определяется разрешением решётки, а направления задаются выбранным кодом.<br/>
+(для представления всех направлений в 4-связной решётке достаточно 2-х бит, а для 8-связной решётки цепного кода требуется 3 бита)<br/>
+<img src="http://robocraft.ru/files/opencv/freeman_chain_code.png" alt="цепной код Фримена" title="цепной код Фримена"/><br/>
+<br/>
+Библиотека OpenCV реализует удобные методы для детектирования и манипуляции с контурами изображения. <br/>
+<br/>
+Для поиска контуров используется функция <b>cvFindContours()</b>:<br/>
+<pre class="prettyprint"><code>CVAPI(int)  cvFindContours( CvArr* image, CvMemStorage* storage, CvSeq** first_contour,
+                            int header_size CV_DEFAULT(sizeof(CvContour)),
+                            int mode CV_DEFAULT(CV_RETR_LIST),
+                            int method CV_DEFAULT(CV_CHAIN_APPROX_SIMPLE),
+                            CvPoint offset CV_DEFAULT(cvPoint(0,0)));</code></pre> — нахождение контуров на двоичном изображении<br/>
+<br/>
+image — исходное 8-битное одноканальное изображение (ненулевые пиксели обрабатываются как 1, а нулевые — 0)<br/>
+Для получения такого изображения из градаций серого можно, например, использовать функции cvThreshold() или cvCanny()<br/>
+storage — хранилище памяти для хранения данных найденных контуров<br/>
+first_contour — указатель, который будет указывать на первый элемент последовательности, содержащей данные найденных контуров<br/>
+header_size — размер заголовка элемента последовательности<br/>
+mode — режим поиска:<br/>
+<pre class="prettyprint"><code>#define CV_RETR_EXTERNAL 0 // найти только крайние внешние контуры
+#define CV_RETR_LIST     1 // найти все контуры и разместить их списком
+#define CV_RETR_CCOMP    2 // найти все контуры и разместить их в виде 2-уровневой иерархии
+#define CV_RETR_TREE     3 // найти все контуры и разместить их в иерархии вложенных контуров
+</code></pre><br/>
+method — метод аппроксимации:<br/>
+<pre class="prettyprint"><code>#define CV_CHAIN_CODE               0 // цепной код Фридмана
+#define CV_CHAIN_APPROX_NONE        1 // все точки цепного кода переводятся в точки
+#define CV_CHAIN_APPROX_SIMPLE      2 // сжимает горизонтальные, вертикальные и диагональные сегменты и оставляет только их конечные точки
+#define CV_CHAIN_APPROX_TC89_L1     3 // применяется алгоритм
+#define CV_CHAIN_APPROX_TC89_KCOS   4 // аппроксимации Teh-Chin
+#define CV_LINK_RUNS                5 // алгоритм только для CV_RETR_LIST
+</code></pre><br/>
+offset — смещение, на которое сдвигать точки контура (полезно, если контуры извлекаются из ROI и затем должны анализироваться в контексте целого изображения)<br/>
+<br/>
+обратите внимание, что функция cvFindContours() может находить внешние и вложенные контуры и определять их иерархию вложения.<br/>
+<br/>
+а отобразить найденные контуры можно с помощью функции cvDrawContours():<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(void)  cvDrawContours( CvArr *img, CvSeq* contour,
+                             CvScalar external_color, CvScalar hole_color,
+                             int max_level, int thickness CV_DEFAULT(1),
+                             int line_type CV_DEFAULT(8),
+                             CvPoint offset CV_DEFAULT(cvPoint(0,0)));</code></pre> — нарисовать заданные контуры<br/>
+<br/>
+img — изображение на котором будут нарисованы контуры<br/>
+contour — указатель на первый контур<br/>
+external_color — цвет внешних контуров<br/>
+hole_color — цвет внутренних контуров(отверстие)<br/>
+max_level — максимальный уровень для отображения контуров (0 — только данный контур, 1 — данный и все следующие на данном уровне, 2 — все следующие контуры и все контуры на следующем уровне и т.д. ) Если величина отрицательная, то будут нарисованы контуры на предыдущем уровне перед contour.<br/>
+thickness — толщина линии для отображения контуров (если величина отрицательная, то область, ограниченная контуром заливается выбранным цветом )<br/>
+line_type — тип линии<br/>
+<br/>
+<pre class="prettyprint"><code>//
+// пример нахождения контуров с помощью функции cvFindContours()
+//
+// http://robocraft.ru
+//
+
+#include &lt;cv.h&gt;
+#include &lt;highgui.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+IplImage* image = 0;
+IplImage* gray = 0;
+IplImage* bin = 0;
+IplImage* dst = 0;
+
+int main(int argc, char* argv[])
+{
+	// имя картинки задаётся первым параметром
+	char* filename = argc &gt;= 2 ? argv[1] : &quot;Image0.jpg&quot;;
+	// получаем картинку
+	image = cvLoadImage(filename,1);
+
+	printf(&quot;[i] image: %s\n&quot;, filename);
+	assert( image != 0 );
+
+	// создаём одноканальные картинки
+	gray = cvCreateImage( cvGetSize(image), IPL_DEPTH_8U, 1 );
+	bin = cvCreateImage( cvGetSize(image), IPL_DEPTH_8U, 1 );
+	// клонируем
+	dst = cvCloneImage(image);
+	// окно для отображения картинки
+	cvNamedWindow(&quot;original&quot;,CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(&quot;binary&quot;,CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(&quot;contours&quot;,CV_WINDOW_AUTOSIZE);
+
+	// преобразуем в градации серого
+	cvCvtColor(image, gray, CV_RGB2GRAY);
+
+	// преобразуем в двоичное
+	cvInRangeS(gray, cvScalar(40), cvScalar(150), bin); // atoi(argv[2])
+
+	CvMemStorage* storage = cvCreateMemStorage(0);
+	CvSeq* contours=0;
+
+	// находим контуры
+	int contoursCont = cvFindContours( bin, storage,&contours,sizeof(CvContour),CV_RETR_LIST,CV_CHAIN_APPROX_SIMPLE,cvPoint(0,0));
+
+	// нарисуем контуры
+	for(CvSeq* seq0 = contours;seq0!=0;seq0 = seq0-&gt;h_next){
+		cvDrawContours(dst, seq0, CV_RGB(255,216,0), CV_RGB(0,0,250), 0, 1, 8); // рисуем контур
+	}
+
+	// показываем картинки
+	cvShowImage(&quot;original&quot;,image);
+	cvShowImage(&quot;binary&quot;, bin);
+	cvShowImage(&quot;contours&quot;, dst);
+
+	// ждём нажатия клавиши
+	cvWaitKey(0);
+
+	// освобождаем ресурсы
+	cvReleaseImage(&image);
+	cvReleaseImage(&gray);
+	cvReleaseImage(&bin);
+	cvReleaseImage(&dst);
+	// удаляем окна
+	cvDestroyAllWindows();
+	return 0;
+}
+</code></pre><br/>
+<b><noindex><a href="http://robocraft.ru/files/opencv/32-cvFindContours.cpp" rel="nofollow">скачать иcходник (32-cvFindContours.cpp)</a></noindex></b><br/>
+<img src="http://robocraft.ru/files/opencv/cvFindContours.png"/><br/>
+<br/>
+Если задать параметром функции метод <b>CV_CHAIN_CODE</b>, то cvFindContours() вернёт цепной код Фримана, работать с которым можно через методы:<br/>
+<pre class="prettyprint"><code>CVAPI(void) cvStartReadChainPoints( CvChain* chain, CvChainPtReader* reader );</code></pre> — инициализация считывателя точек<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(CvPoint) cvReadChainPoint( CvChainPtReader* reader );</code></pre> — считывает следующую точку цепного кода<br/>
+<br/>
+Обычная последовательность действий при распознавании объектов методом контурного анализа:<br/>
+<b>1.</b> предварительная обработка изображения (сглаживание, фильтрация помех, увеличение контраста);<br/>
+<b>2.</b> бинаризация изображения;<br/>
+<b>3.</b> выделение контуров объектов;<br/>
+<b>4.</b> первичная фильтрация контуров (по периметру, площади и т.п.);<br/>
+<b>5.</b> эквализация контуров (приведение к единой длине, сглаживание) — позволяет добиться инвариантности к масштабу;<br/>
+<b>6.</b> перебор всех найденных контуров и поиск шаблона, максимально похожего на данный контур (или же сортировка контуров по каком-либо признаку, например, площади).<br/>
+<br/>
+<b>Свойства контуров</b><br/>
+<br/>
+OpenCV предоставляет функции для определения таких полезных свойств найденных контуров, как площадь и длина(периметр).<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(double)  cvContourArea( const CvArr* contour,
+                              CvSlice slice CV_DEFAULT(CV_WHOLE_SEQ));</code></pre> — возвращает площадь контура<br/>
+contour — контур (последовательность или массив вершин)<br/>
+slice — начальная и конечные точки контура (по-умолчанию весь контур)<br/>
+<br/>
+<b>ориентация контура влияет на знак</b>, т.о. функция может вернуть отрицательную величину. <br/>
+Можно использовать fabs() чтобы получить абсолютное значение площади.<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(double)  cvArcLength( const void* curve,
+                            CvSlice slice CV_DEFAULT(CV_WHOLE_SEQ),
+                            int is_closed CV_DEFAULT(-1));
+#define cvContourPerimeter( contour ) cvArcLength( contour, CV_WHOLE_SEQ, 1 )</code></pre> — возвращает периметр контура или длину кривой (части контура)<br/>
+curve — последовательность или массив точек кривой (контур)<br/>
+slice — начальная и конечные точки контура (по-умолчанию весь контур)<br/>
+is_closed — определяет закрыта кривая или нет:<br/>
+is_closed = 0 — кривая полагается открытой<br/>
+is_closed &gt; 0 — кривая полагается закрытой<br/>
+is_closed &lt; 0 — если кривая — последовательность, флаг CV_SEQ_FLAG_CLOSED из ((CvSeq*)curve)-&gt;flags проверяется для определения закрыта кривая или нет, в противном случае (кривая представлена массивом (CvMat*) точек) она полагается открытой.<br/>
+<br/>
+функция считает длину кривой, как сумму длин сегментов между последовательностью точек.<br/>
+<br/>
+Простой пример использования этих функций — последующее нахождение отношения этих двух величин (т.н. <b>компактность</b>).<br/>
+Например, как мы все помним ещё со школы, площадь круга равна пи эр квадрат (PI*R^2), а длина окружности при этом равна два пи эр (2*PI*R).<br/>
+Чтобы получить значение инвариантное относительно радиуса разделим площадь круга на квадрат длины окружности:<br/>
+<pre class="prettyprint"><code>PI*R^2 / (2*PI*R)*(2*PI*R) = 1/4*PI ~ 0.079577</code></pre><br/>
+Отлично! Теперь используя значение отношения площади контура к квадрату длины контура и сравнивая его с заданным значением 1/4*PI можно находить окружности!<br/>
+<br/>
+Фактически — площадь — это количество пикселей области, а периметр — количество пикселей на границе области.<br/>
+Отношение квадрата периметра к площади называется компактность.<br/>
+Наиболее компактная фигура — это круг: 4*PI<br/>
+<br/>
+<pre class="prettyprint"><code>//
+// поиск кругов на изображении
+// по отношению площади контура к квадрату его длины
+//
+//
+// http://robocraft.ru
+//
+
+#include &lt;cv.h&gt;
+#include &lt;highgui.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+//  находит и показывает круги на изображении
+void findCircles(IplImage* _image)
+{
+	assert(_image!=0);
+
+	IplImage* bin = cvCreateImage( cvGetSize(_image), IPL_DEPTH_8U, 1);
+
+	// конвертируем в градации серого
+	cvConvertImage(_image, bin, CV_BGR2GRAY);
+	// находим границы
+	cvCanny(bin, bin, 50, 200);
+
+	cvNamedWindow( &quot;bin&quot;, 1 );
+	cvShowImage(&quot;bin&quot;, bin);
+
+	// хранилище памяти для контуров
+	CvMemStorage* storage = cvCreateMemStorage(0);
+	CvSeq* contours=0;
+
+	// находим контуры
+	int contoursCont = cvFindContours( bin, storage,&contours,sizeof(CvContour),CV_RETR_LIST,CV_CHAIN_APPROX_SIMPLE,cvPoint(0,0));
+
+	assert(contours!=0);
+
+	// обходим все контуры
+	for( CvSeq* current = contours; current != NULL; current = current-&gt;h_next ){
+		// вычисляем площадь и периметр контура
+		double area = fabs(cvContourArea(current));
+		double perim = cvContourPerimeter(current);
+
+		// 1/4*CV_PI = 0,079577
+		if ( area / (perim * perim) &gt; 0.07 && area / (perim * perim)&lt; 0.087 ){ // в 10% интервале
+			// нарисуем контур
+			cvDrawContours(_image, current, cvScalar(0, 0, 255), cvScalar(0, 255, 0), -1, 1, 8);
+		}
+	}
+
+	// освобождаем ресурсы
+	cvReleaseMemStorage(&storage);
+	cvReleaseImage(&bin);
+}
+
+int main(int argc, char* argv[])
+{
+	IplImage *src=0, *dst=0;
+
+	// имя картинки задаётся первым параметром
+	char* filename = argc &gt;= 2 ? argv[1] : &quot;Image0.jpg&quot;;
+	// получаем картинку
+	src = cvLoadImage(filename, 1);
+
+	printf(&quot;[i] image: %s\n&quot;, filename);
+	assert( src != 0 );
+
+	// покажем изображение
+	cvNamedWindow( &quot;original&quot;, 1 );
+	cvShowImage( &quot;original&quot;, src );
+
+	dst = cvCloneImage(src);
+
+	// находим круги на изображении
+	findCircles(dst);
+
+	cvNamedWindow( &quot;circles&quot;, 1 );
+	cvShowImage( &quot;circles&quot;, dst);
+
+	// ждём нажатия клавиши
+	cvWaitKey(0);
+
+	// освобождаем ресурсы
+	cvReleaseImage(&src);
+	cvReleaseImage(&dst);
+	// удаляем окна
+	cvDestroyAllWindows();
+	return 0;
+}</code></pre><br/>
+<b><noindex><a href="http://robocraft.ru/files/opencv/32-cvFindContours_findCircles.cpp" rel="nofollow">скачать иcходник (32-cvFindContours_findCircles.cpp)</a></noindex></b><br/>
+<img src="http://robocraft.ru/files/opencv/cvFindContours_findCircles.png" width="600"/><br/>
+<br/>
+Чтобы снизить ложные срабатывания можно ввести нижнее/верхнее ограничения на площадь круга.<br/>
+<br/>
+Дополнительные полезные функции:<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(CvRect)  cvBoundingRect( CvArr* points, int update CV_DEFAULT(0) );</code></pre> — возвращает прямоугольник, которым можно обвести контур<br/>
+points — набор 2D-точек — последовательность или вектор (CvMat) точек<br/>
+update — флаг обновления:<br/>
+0 (CvContour) — прямоугольник не рассчитывается, а берётся из поля rect заголовка контура<br/>
+1 (CvContour) — прямоугольник рассчитывается и записывается в поле rect заголовка контура<br/>
+0 (CvSeq или CvMat) — прямоугольник рассчитывается и возвращается<br/>
+1 (CvSeq или CvMat) — ! ошибка выполнения!<br/>
+<br/>
+функция возвращает прямоугольник, у которого стороны строго вертикальны и горизонтальны (параллельны сторонам(системе координат) изображения).<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(CvBox2D)  cvMinAreaRect2( const CvArr* points,
+                                CvMemStorage* storage CV_DEFAULT(NULL));</code></pre> — возвращает минимально возможный прямоугольник, которым можно обвести контур<br/>
+points — последовательность или массив точек<br/>
+storage — опционально — временное хранилище памяти<br/>
+<br/>
+отличие функции cvMinAreaRect2 от cvBoundingRect в типе возвращаемой структуры. cvMinAreaRect2 возвращает CvBox2D, которая описывает прямоугольник, который может быть повёрнут относительно системы координат изображения на угол angle.<br/>
+<pre class="prettyprint"><code>typedef struct CvBox2D
+{
+    CvPoint2D32f center;  /* Center of the box.                          */
+    CvSize2D32f  size;    /* Box width and length.                       */
+    float angle;          /* Angle between the horizontal axis           */
+                          /* and the first side (i.e. length) in degrees */
+}
+CvBox2D;</code></pre><br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(int)  cvMinEnclosingCircle( const CvArr* points,
+                                  CvPoint2D32f* center, float* radius );</code></pre> — находит окружность минимальной площади, которая содержит данный набор 2D-точек.<br/>
+points — последовательность или ассив 2D-точек<br/>
+center — возвращаемое значение — центр окружности<br/>
+radius — возвращаемое значение — радиус окружности<br/>
+<br/>
+пример, демонстрирующий работу cvMinEnclosingCircle()<br/>
+указатель изображения передаётся функции EnclosingCircle(), которая переводит изображение в градации серого, затем использует детектор Кенни для нахождения границ. cvFindContours() находит все контуры границ, и затем для всех контуров по-очереди применяется функция cvMinEnclosingCircle(). Найденные параметры окружности передаются функции cvCircle() для отображения окружности на рисунке.<br/>
+<br/>
+<pre class="prettyprint"><code>//
+// демонстрация cvMinEnclosingCircle()
+//
+//
+// http://robocraft.ru
+//
+
+#include &lt;cv.h&gt;
+#include &lt;highgui.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+void EnclosingCircle(IplImage* _image)
+{
+	assert(_image!=0);
+
+	IplImage* bin = cvCreateImage( cvGetSize(_image), IPL_DEPTH_8U, 1);
+
+	// конвертируем в градации серого
+	cvConvertImage(_image, bin, CV_BGR2GRAY);
+	// находим границы
+	cvCanny(bin, bin, 50, 200);
+
+	cvNamedWindow( &quot;bin&quot;, 1 );
+	cvShowImage(&quot;bin&quot;, bin);
+
+	// хранилище памяти для контуров
+	CvMemStorage* storage = cvCreateMemStorage(0);
+	CvSeq* contours=0;
+
+	// находим контуры
+	int contoursCont = cvFindContours( bin, storage,&contours,sizeof(CvContour),CV_RETR_LIST,CV_CHAIN_APPROX_SIMPLE,cvPoint(0,0));
+
+	assert(contours!=0);
+
+	// обходим все контуры
+	for( CvSeq* current = contours; current != NULL; current = current-&gt;h_next ){
+		CvPoint2D32f center;
+		float radius=0;
+		// находим параметры окружности
+		cvMinEnclosingCircle(current, & center, &radius);
+		// рисуем
+		cvCircle(_image, cvPointFrom32f(center), radius, CV_RGB(255, 0, 0), 1, 8);
+	}
+
+	// освобождаем ресурсы
+	cvReleaseMemStorage(&storage);
+	cvReleaseImage(&bin);
+}
+
+int main(int argc, char* argv[])
+{
+	IplImage *src=0, *dst=0;
+
+	// имя картинки задаётся первым параметром
+	char* filename = argc &gt;= 2 ? argv[1] : &quot;Image0.jpg&quot;;
+	// получаем картинку
+	src = cvLoadImage(filename, 1);
+
+	printf(&quot;[i] image: %s\n&quot;, filename);
+	assert( src != 0 );
+
+	// покажем изображение
+	cvNamedWindow( &quot;original&quot;, 1 );
+	cvShowImage( &quot;original&quot;, src );
+
+	dst = cvCloneImage(src);
+
+	// показываем
+	EnclosingCircle(dst);
+
+	cvNamedWindow( &quot;circles&quot;, 1 );
+	cvShowImage( &quot;circles&quot;, dst);
+
+	// ждём нажатия клавиши
+	cvWaitKey(0);
+
+	// освобождаем ресурсы
+	cvReleaseImage(&src);
+	cvReleaseImage(&dst);
+	// удаляем окна
+	cvDestroyAllWindows();
+	return 0;
+}</code></pre><br/>
+<b><noindex><a href="http://robocraft.ru/files/opencv/32-cvMinEnclosingCircle.cpp" rel="nofollow">скачать иcходник (32-cvMinEnclosingCircle.cpp)</a></noindex></b><br/>
+<img src="http://robocraft.ru/files/opencv/cvMinEnclosingCircle.png"/><br/>
+<br/>
+использована функция для конвертации CvPoint2D32f в CvPoint:<br/>
+<br/>
+<pre class="prettyprint"><code>CV_INLINE  CvPoint  cvPointFrom32f( CvPoint2D32f point )
+{
+    CvPoint ipt;
+    ipt.x = cvRound(point.x);
+    ipt.y = cvRound(point.y);
+
+    return ipt;
+}
+</code></pre><br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(CvSeq*)  cvApproxPoly( const void* src_seq,
+                             int header_size, CvMemStorage* storage,
+                             int method, double parameter,
+                             int parameter2 CV_DEFAULT(0));</code></pre> — аппроксимация контура(кривой) полигонами<br/>
+src_seq — исходная последовательность или массив точек<br/>
+header_size — размер заголовка кривой(контура)<br/>
+storage — хранилище контуров. Если NULL, то используется хранилище входной последовательности<br/>
+method — метод аппроксимации:<br/>
+<pre class="prettyprint"><code>#define CV_POLY_APPROX_DP 0 // Douglas-Peucker algorithm</code></pre><br/>
+<br/>
+parameter — параметр метода аппроксимации, в случае CV_POLY_APPROX_DP — это желаемая точность<br/>
+parameter2 — Если src_seq — последовательность, то параметр определяет должна ли аппроксимироваться только одна последовательность или все последовательности этого уровня и ниже. Если src_seq — массив CvMat* точек, то параметр определяет закрывается ли кривая (parameter2!=0) или нет (parameter2=0).<br/>
+<br/>
+функция аппроксимирует одну или более кривых и возвращает результат аппроксимации. В случае нескольких кривых(контуров), результирующее дерево имеет ту же структуру, что и входящее.<br/>
+<pre class="prettyprint"><code>
+	// находим контуры
+	int contoursCont = cvFindContours( bin, storage, &contours, sizeof(CvContour), CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE, cvPoint(0,0));
+
+	if(contours!=0){
+		for(CvSeq* seq0 = contours;seq0!=0;seq0 = seq0-&gt;h_next){
+
+			// аппроксимация контура полигонами
+			CvSeq* result = cvApproxPoly( seq0, sizeof(CvContour), storage, CV_POLY_APPROX_DP, 0.1, 0 );
+			printf(&quot;[d] %d %d\n&quot;, seq0-&gt;total, result-&gt;total);
+		}
+	}
+</code></pre><br/>
+<pre class="prettyprint"><code>CVAPI(CvSeq*) cvFindDominantPoints( CvSeq* contour, CvMemStorage* storage,
+                                   int method CV_DEFAULT(CV_DOMINANT_IPAN),
+                                   double parameter1 CV_DEFAULT(0),
+                                   double parameter2 CV_DEFAULT(0),
+                                   double parameter3 CV_DEFAULT(0),
+                                   double parameter4 CV_DEFAULT(0));</code></pre> — поиск ключевых точек контура (последовательности точек)<br/>
+<br/>
+contour — исходная последовательность<br/>
+storage — хранилище контуров.<br/>
+method — метод:<br/>
+<pre class="prettyprint"><code>#define CV_DOMINANT_IPAN 1 // алгоритм IPAN - Image and Pattern Analysis Group</code></pre><br/>
+parameter1 — минимальная дистанция<br/>
+parameter2 — максимальная дистанция<br/>
+parameter3 — дистанция сближения<br/>
+parameter4 — максимальный угол отклонения (в градусах)<br/>
+<br/>
+типичные значения 7, 9, 9, 150<br/>
+<br/>
+далее: <noindex><a href="http://robocraft.ru/blog/computervision/867.html" rel="nofollow">33. Сравнение контуров через суммарные характеристики — моменты</a></noindex><br/>
+<br/>
+<b>Ссылки:</b><br/>
+<noindex><a href="http://en.wikipedia.org/wiki/Chain_code" rel="nofollow">en.wikipedia.org/wiki/Chain_code</a></noindex><br/>
+<noindex><a href="http://habrahabr.ru/blogs/image_processing/118486/" rel="nofollow">Контурный анализ</a></noindex>
+				</div>				
+				<ul class="tags">
+											<li><a href="http://robocraft.ru/tag/OpenCV/">OpenCV</a>, </li>
+											<li><a href="http://robocraft.ru/tag/шаг за шагом/">шаг за шагом</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvFindContours/">cvFindContours</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvDrawContours/">cvDrawContours</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvContourArea/">cvContourArea</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvContourPerimeter/">cvContourPerimeter</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvMinEnclosingCircle/">cvMinEnclosingCircle</a></li>
+														
+				</ul>				
+				<ul class="voting  guest ">
+					<li class="plus"><a href="#" onclick="lsVote.vote(640,this,1,'topic'); return false;"></a></li>
+					<li class="total" title="всего проголосовало: 0"> 0 </li>
+					<li class="minus"><a href="#" onclick="lsVote.vote(640,this,-1,'topic'); return false;"></a></li>
+					<li class="date">13 ноября 2011, 08:34</li>
+										<li class="author"><a href="http://robocraft.ru/profile/noonv/">noonv</a></li>					
+				</ul>
+
+<!-- ������.������ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 61645;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'utf-8';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'block';
+yandex_direct_limit = 4;
+yandex_direct_bg_color = 'FFFFFF';
+yandex_direct_border_color = 'FFFFFF';
+yandex_direct_title_color = '0000CC';
+yandex_direct_url_color = '006600';
+yandex_direct_all_color = '0000CC';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0066FF';
+yandex_direct_favicon = false;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+			</div>
+			<!-- /Topic -->			
+			
+			<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/comments.js"></script>
+
+			<!-- Comments -->
+			<div class="comments">
+								
+				<!-- Comments Header -->
+				<div class="header">
+					<h3>Комментарии (<span id="count-comments">22</span>)</h3>
+					<a name="comments" ></a>
+					<a href="http://robocraft.ru/rss/comments/640/" class="rss">RSS</a>
+					<a href="#" onclick="lsCmtTree.collapseNodeAll(); return false;" onfocus="blur();">свернуть</a> /
+					<a href="#" onclick="lsCmtTree.expandNodeAll(); return false;" onfocus="blur();">развернуть</a>
+				</div>
+				<!-- /Comments Header -->			
+				
+				
+				<script language="JavaScript" type="text/javascript">
+					window.addEvent('domready', function() {
+						
+						lsCmtTree.setIdCommentLast(5579);
+						
+					});					
+				</script>
+				
+				
+																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_2145">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2145" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2145,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2145,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2145" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Из примера-картинки не видно, что да как вообще там образовалось. Может, стоит добавить изображение после поиска границ Канни? (т.е. bin)<br/>
+<br/>
+Цепной код Фримена, как я понял — это последовательность цифр от 0 до 7ми, показывающая все изгибы контура. Как бы можно было выудить эту последовательность?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Zuix/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Zuix/" class="author">Zuix</a></p>
+								<ul>
+									<li class="date">27 декабря 2011, 12:28</li>
+																		
+									<li><a href="#comment2145" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2145" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2145" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2145">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_2147">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2147" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2147,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2147,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2147" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				а еще у тебя в одном месте написано<br/>
+cvMinEnclosingCircle(current, ¢er, &radius);<br/>
+второй аргумент странный
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Zuix/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Zuix/" class="author">Zuix</a></p>
+								<ul>
+									<li class="date">27 декабря 2011, 12:55</li>
+																		
+									<li><a href="#comment2147" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2147" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2147" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2147">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_2189">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2189" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2189,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2189,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2189" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				насчет выудить последовательность — я имелл ввиду, мы получаем CvSeq, а надо нам CvChain. Как к ней перейти?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Zuix/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Zuix/" class="author">Zuix</a></p>
+								<ul>
+									<li class="date">10 января 2012, 06:31</li>
+																		
+									<li><a href="#comment2189" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2189" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2189" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2189">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_2221">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2221" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2221,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2221,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2221" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Использую С#, возникла проблема с вызовом FindContours. Отписал на <noindex><a href="http://programmersforum.ru/showthread.php?p=959246#post959246" rel="nofollow">форуме</a></noindex>, не хочу дублировать…
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Cerebrum/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Cerebrum/" class="author">Cerebrum</a></p>
+								<ul>
+									<li class="date">13 января 2012, 20:37</li>
+																		
+									<li><a href="#comment2221" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2221" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2221" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2221">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_3350">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment3350" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(3350,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(3350,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_3350" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Доброго времени суток!<br/>
+Я работаю с opencv 2.3.1 и она упорно отказывается находить cvFindDominantPoints. В чем может быть проблема?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Altivolus/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Altivolus/" class="author">Altivolus</a></p>
+								<ul>
+									<li class="date">14 августа 2012, 06:47</li>
+																		
+									<li><a href="#comment3350" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_3350" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_3350" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-3350">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_3351">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment3351" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(3351,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(3351,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_3351" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Нашел-таки библиотеку, в которой CvFindDominantPoints.<br/>
+Теперь проблема другая. При вызове этой функции происходит непонятная ошибка.<br/>
+<br/>
+OpenCV Error: Assertion failed ((icvFindDominantpointsIPAN( contour, storage, &corners, dmin*dmin, dmax*dmax, dneigh*dneigh, (float)amax )) &gt;=0) in unknown function, file ..\..\src\opencv\modules\legacy\src\dominants.cpp, line 392<br/>
+<br/>
+Код:<br/>
+<pre class="prettyprint"><code>
+        CvMemStorage* storage_ct = cvCreateMemStorage(0);
+	CvMemStorage* storage_dp = cvCreateMemStorage(0);
+	IplImage* img = cvLoadImage(&quot;image11.jpg&quot;, CV_LOAD_IMAGE_GRAYSCALE);
+	IplImage* can = cvCreateImage(cvGetSize(img),8,1);
+	cvCanny(img,can,50,200,3);
+	int contoursCont;
+	contoursCont = cvFindContours( can, storage_ct, &contours, sizeof(CvContour),
+		CV_RETR_LIST, 2 );
+	if (contoursCont==0) return 0;
+	contours = cvApproxPoly( contours, sizeof(CvContour), storage_ct, CV_POLY_APPROX_DP, 3, 1 );
+	cvDrawContours(img, contours, cvScalarAll(200), cvScalarAll(200), 100,1 );
+	cvNamedWindow( &quot;image&quot;,0 );
+	cvShowImage( &quot;image&quot;, img );
+	dps = cvFindDominantPoints( contours, storage_ct);//, CV_DOMINANT_IPAN, 7, 20, 9, 150 );</code></pre><br/>
+Где может быть ошибка?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Altivolus/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Altivolus/" class="author">Altivolus</a></p>
+								<ul>
+									<li class="date">15 августа 2012, 06:56</li>
+																		
+									<li><a href="#comment3351" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment3350" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_3351" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_3351" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-3351">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div>    				    
+    				<div class="comment" id="comment_id_3601">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment3601" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(3601,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(3601,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_3601" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Внесу что-то свое) Нахождение и рисование контуров на Python 2.7:<br/>
+<pre class="prettyprint"><code>import cv,numpy   #подключение OpenCV
+
+#загрузка изображения
+image = cv.LoadImage('OpenCV.jpg',1)
+
+height = image.height
+width  = image.width
+print height,width
+
+
+#создание изображений
+gray 	= cv.CreateImage(cv.GetSize(image),cv.IPL_DEPTH_8U, 1 )
+binary  = cv.CreateImage(cv.GetSize(image),cv.IPL_DEPTH_8U, 1 )
+dst1 	= cv.CreateImage(cv.GetSize(image),cv.IPL_DEPTH_8U, 1 )
+
+#конвертируем изображение из RGB в gray
+cv.CvtColor(image,gray,cv.CV_RGB2GRAY)
+#преобразуем одноканальное изображение в бинарное
+cv.InRangeS(gray,cv.Scalar(30),cv.Scalar(200),binary)
+
+#создаем хранилище памяти
+storage = cv.CreateMemStorage(0)
+#находим контуры бинарного изображения
+contours = cv.FindContours(binary,storage,
+cv.CV_RETR_TREE,cv.CV_CHAIN_APPROX_SIMPLE ,(0,0))
+
+#рисуем контуры
+while contours!= None:
+    cv.DrawContours(dst1,contours,cv.CV_RGB(250,0,0), cv.CV_RGB(0,0,250),2,1,8)
+    contours = contours.h_next()
+
+#создаем матрицу из изображения dst1
+mat = cv.GetMat(dst1,0)
+
+
+#сохраняем полученную матрицу в xml-файл
+cv.Save('matrix.xml',mat)
+
+#Создаем окна и показываем в них изображения
+cv.NamedWindow('original',cv.CV_WINDOW_AUTOSIZE)
+cv.NamedWindow('gray',cv.CV_WINDOW_AUTOSIZE)
+cv.NamedWindow('Contours',cv.CV_WINDOW_AUTOSIZE)
+cv.NamedWindow('Binary',cv.CV_WINDOW_AUTOSIZE)
+cv.ShowImage('original',image)
+cv.ShowImage('gray',gray)
+cv.ShowImage('Contours',dst1)
+cv.ShowImage('Binary',binary)
+cv.WaitKey(0) #ожидание</code></pre>
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Stesh/"><img src="http://robocraft.ru/uploads/images/1534/avatar_24x24.gif" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Stesh/" class="author">Stesh</a></p>
+								<ul>
+									<li class="date">18 ноября 2012, 17:51</li>
+																		
+									<li><a href="#comment3601" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_3601" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_3601" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-3601">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_3946">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment3946" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(3946,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(3946,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_3946" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Доброго времени суток.<br/>
+А есть ли возможность в Opencv сохранения полученых контуров в DWG, DXF или других CAD форматах?<br/>
+
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Ange5545/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Ange5545/" class="author">Ange5545</a></p>
+								<ul>
+									<li class="date">1 апреля 2013, 12:25</li>
+																		
+									<li><a href="#comment3946" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_3946" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_3946" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-3946">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_3947">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment3947" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(3947,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(3947,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_3947" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				родного — нет, но, мне кажется, ничего не мешает реализовать такое сохранение самостоятельно ;)
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">1 апреля 2013, 22:22</li>
+																		
+									<li><a href="#comment3947" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment3946" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_3947" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_3947" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-3947">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div>    				    
+    				<div class="comment" id="comment_id_3966">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment3966" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(3966,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(3966,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_3966" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Весьма оптимистично)<br/>
+Вот только мне никак не удается найти хотя бы в каком виде храняться данные в DXF(
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Ange5545/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Ange5545/" class="author">Ange5545</a></p>
+								<ul>
+									<li class="date">8 апреля 2013, 00:34</li>
+																		
+									<li><a href="#comment3966" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_3966" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_3966" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-3966">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_5247">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment5247" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(5247,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(5247,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_5247" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				dxf — это, по-моему, zip-архив с данными. Можно в нём полазать и поразбираться.<br/>
+В формат автокада можно перенести через сам автокад (написав к нему плагин), либо воспользоваться сторонними библиотеками (бесплатных не встречал).
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/JohnJ/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/JohnJ/" class="author">JohnJ</a></p>
+								<ul>
+									<li class="date">9 августа 2015, 13:51</li>
+																		
+									<li><a href="#comment5247" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment3966" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_5247" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_5247" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-5247">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div>    				    
+    				<div class="comment" id="comment_id_4027">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment4027" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(4027,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(4027,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_4027" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				как подсчитать колличество кругов<br/>
+
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/tigrito/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/tigrito/" class="author">tigrito</a></p>
+								<ul>
+									<li class="date">8 мая 2013, 19:55</li>
+																		
+									<li><a href="#comment4027" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_4027" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_4027" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-4027">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_4340">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment4340" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(4340,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(4340,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_4340" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Добрый день! решаю следующую задачу распознавания автомобильных номеров, проблема следующая, локализовал номер, затем ищу контуры букв и цифр, нахожу контуры букв и цифр, вырезаю буквы и цифры в цикле и отправляю на распознавание по одной, как сделать чтобы номер был в правильной последовательности, например номер Н080НА55, а на выходе AНА55080, по какому принципу он берет сначала такой контур затем другой… 
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/zobnin/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/zobnin/" class="author">zobnin</a></p>
+								<ul>
+									<li class="date">6 ноября 2013, 07:25</li>
+																		
+									<li><a href="#comment4340" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_4340" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_4340" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-4340">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_4342">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment4342" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(4342,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(4342,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_4342" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				может есть пример сортировки контуров
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/zobnin/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/zobnin/" class="author">zobnin</a></p>
+								<ul>
+									<li class="date">6 ноября 2013, 08:00</li>
+																		
+									<li><a href="#comment4342" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment4340" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_4342" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_4342" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-4342">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_4349">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment4349" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(4349,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(4349,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_4349" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				иерархия контуров есть (см <noindex><a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?void%20findContours(InputOutputArray%20image,%20OutputArrayOfArrays%20contours,%20OutputArray%20hierarchy,%20int%20mode,%20int%20method,%20Point%20offset)#void findContours(InputOutputArray image, OutputArrayOfArrays contours, OutputArray hierarchy, int mode, int method, Point offset)" rel="nofollow">cv::findContours</a></noindex>)<br/>
+однако, она определяет только вхождение одного контура внутрь другого.<br/>
+поэтому, я бы рекомендовал находить номер, далее внутри номера обнаруживать отдельные символы и потом уже последовательно их классифицировать.<br/>
+успехов!
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">8 ноября 2013, 05:39</li>
+																		
+									<li><a href="#comment4349" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment4340" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_4349" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_4349" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-4349">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_4350">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment4350" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(4350,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(4350,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_4350" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Спасибо, символы нахожу опять через контуры, но пока меня результаты не впечатляют, скорость сильно маленькая и изображение необходимо хорошо обработать перед этим, сейчас нашел вот такое описание обнаружения рамки…<br/>
+но подробно нигде нету данного метода, уже все облазил…<br/>
+Сканируем изображение построчно и строим функцию <br/>
+где I(i) значение яркости в соответствующем пикселе. Функция f(x) в области номерной <br/>
+пластины начнет быстро возрастать. После этого сглаживаем функцию f(x) и <br/>
+находим ее производную. Места с высокими значениями производной и есть <br/>
+подозрительные области. Вычислив вторую производную можно определить горизонтальные края пластины (рисунок 16).
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/zobnin/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/zobnin/" class="author">zobnin</a></p>
+								<ul>
+									<li class="date">8 ноября 2013, 05:49</li>
+																		
+									<li><a href="#comment4350" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment4349" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_4350" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_4350" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-4350">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div></div></div>    				    
+    				<div class="comment" id="comment_id_4373">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment4373" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(4373,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(4373,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_4373" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Добрый день! Решил поделится реализацией алгоритма локализации автомобильного номера на С++ с использованием OPENCV. Данный алгоритм не идеален и есть над чем работать, очень помог материал с сайта <noindex><a href="http://robocraft.ru" rel="nofollow">robocraft.ru</a></noindex>, за что очень благодарен. К сожалению я еще сильно не окреп) и не могу создать отдельный пост, выставляю сюда…<br/>
+<br/>
+Выставляю рабочий код с загрузкой видео файла<br/>
+#include &lt;opencv\cv.h&gt;<br/>
+#include &lt;opencv\highgui.h&gt;<br/>
+#include &lt;stdlib.h&gt;<br/>
+#include &lt;stdio.h&gt;<br/>
+<br/>
+// находит и показывает рамку на изображении<br/>
+void findplate(IplImage* _image)<br/>
+{<br/>
+assert(_image!=0);<br/>
+<br/>
+IplImage* temp = cvCreateImage( cvGetSize(_image), IPL_DEPTH_8U, 1);<br/>
+// конвертируем в градации серого<br/>
+cvConvertImage(_image, temp, CV_BGR2GRAY);<br/>
+// смотрим что получилось<br/>
+//cvNamedWindow( «CV_BGR2GRAY», 1 );<br/>
+//cvShowImage(«CV_BGR2GRAY», temp);<br/>
+// делаем гауссовское сглаживание<br/>
+cvSmooth(temp, temp, CV_GAUSSIAN, 3, 0, 0, 0);<br/>
+// Эрозию<br/>
+cvErode(temp, temp, NULL, 1);<br/>
+// расширение<br/>
+cvDilate(temp, temp, NULL, 1);<br/>
+<br/>
+// находим границы<br/>
+cvCanny(temp, temp, 100, 50,3);<br/>
+<br/>
+//cvNamedWindow( «temp», 1 );<br/>
+//cvShowImage(«temp», temp);<br/>
+<br/>
+// хранилище памяти для контуров<br/>
+CvMemStorage* storage = cvCreateMemStorage(0);<br/>
+CvSeq* contour=0;<br/>
+CvSeq* contourLow=0;<br/>
+<br/>
+assert(contours!=0);<br/>
+<br/>
+cvFindContours( temp, storage, &contour, sizeof(CvContour),CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, cvPoint(0, 0) );<br/>
+<br/>
+//оптимизируем контуры<br/>
+contourLow=cvApproxPoly(contour, sizeof(CvContour), storage,CV_POLY_APPROX_DP,0.5,12);<br/>
+// бегаем по контурам <br/>
+for(; contourLow != 0; contourLow = contourLow-&gt;h_next )<br/>
+<br/>
+{<br/>
+//находим соотношения площади к периметру контура<br/>
+double area = fabs(cvContourArea(contourLow));<br/>
+double perim = cvContourPerimeter(contourLow);<br/>
+if ((area/perim)&gt;4)<br/>
+<br/>
+{<br/>
+<br/>
+CvRect rect;<br/>
+CvPoint pt1, pt2;<br/>
+rect=cvBoundingRect(contourLow, NULL); // ищем среди оставшихся прямоугольники<br/>
+pt1.x = rect.x;<br/>
+pt2.x = (rect.x+rect.width);<br/>
+pt1.y = rect.y;<br/>
+pt2.y = (rect.y+rect.height);<br/>
+double ratio=rect.width/rect.height;<br/>
+<br/>
+if ((2.0 &lt; fabs(ratio) && fabs(ratio) &lt; 8.0))<br/>
+{<br/>
+//Show result.<br/>
+cvRectangle(_image, pt1,pt2, cvScalar(0, 0, 255), 1, 8, 0);<br/>
+<br/>
+}<br/>
+<br/>
+}<br/>
+<br/>
+}<br/>
+// освобождаем ресурсы<br/>
+cvReleaseMemStorage(&storage);<br/>
+cvReleaseImage(&temp);<br/>
+}<br/>
+<br/>
+IplImage* frame =0;<br/>
+<br/>
+int main(int argc, char* argv[])<br/>
+{<br/>
+// имя файла задаётся первым параметром<br/>
+char* filename = argc == 2? argv[1]: «VIDEO0003.mp4»;<br/>
+<br/>
+// printf(&quot;[i] file: %s\n&quot;, filename);<br/>
+<br/>
+// окно для отображения картинки<br/>
+cvNamedWindow(«original»,CV_WINDOW_AUTOSIZE);<br/>
+<br/>
+// получаем информацию о видео-файле<br/>
+CvCapture* capture = cvCreateFileCapture( filename );<br/>
+<br/>
+while(1){<br/>
+// получаем следующий кадр<br/>
+frame = cvQueryFrame( capture ); <br/>
+if( !frame ) {<br/>
+break;<br/>
+}<br/>
+<br/>
+// здесь можно вставить<br/>
+// процедуру обработки<br/>
+findplate(frame);<br/>
+// показываем кадр<br/>
+cvShowImage( «original», frame );<br/>
+<br/>
+char c = cvWaitKey(33);<br/>
+if (c == 27) { // если нажата ESC — выходим<br/>
+break;<br/>
+}<br/>
+}<br/>
+<br/>
+// освобождаем ресурсы<br/>
+cvReleaseCapture( &capture );<br/>
+// удаляем окно<br/>
+cvDestroyWindow(«original»);<br/>
+return 0;<br/>
+}<br/>
+<br/>
+В следующем материале покажу как прикрутить tesseract-ocr для распознавания номера…
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/zobnin/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/zobnin/" class="author">zobnin</a></p>
+								<ul>
+									<li class="date">20 ноября 2013, 04:44</li>
+																		
+									<li><a href="#comment4373" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_4373" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_4373" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-4373">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_4623">
+    									
+							<span class="delete">комментарий был удален</span><br><br>
+								
+							<div class="comment-children" id="comment-children-4623">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_5572">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment5572" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(5572,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(5572,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_5572" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Здесь приводится метод детектирования окружностей на изображении по условию «PI*R^2 / (2*PI*R)*(2*PI*R) = 1/4*PI<br/>
+». Как известно, человек с легкостью распознает окружность, если на изображении осталась часть окружности. Поэтому возникает вопрос, как изменится соотношение, если на изображении видно только половину окружности.<br/>
+PI*(R/2)^2 / (2*PI*R/2)*(2*PI*R/2) = R^2/4 / (R)*(PI*R) = 1/4*PI<br/>
+Поэтому можно предположить, что соотношение сохранится для четверти и произвольной части окружности.<br/>
+
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/tester/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/tester/" class="author">tester</a></p>
+								<ul>
+									<li class="date">18 ноября 2016, 10:49</li>
+																		
+									<li><a href="#comment5572" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_5572" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_5572" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-5572">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_5573">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment5573" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(5573,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(5573,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_5573" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Правильная запись: PI*R^2 / ((2*PI*R)*(2*PI*R)) = 1/4*PI или PI*R^2 / (2*PI*R)/(2*PI*R) = 1/4*PI
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/tester/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/tester/" class="author">tester</a></p>
+								<ul>
+									<li class="date">18 ноября 2016, 10:53</li>
+																		
+									<li><a href="#comment5573" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment5572" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_5573" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_5573" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-5573">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_5574">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment5574" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(5574,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(5574,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_5574" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Метод нерабочий. Надо отсекать отсекающюю грань, кроме того она может быть неровной. PI*R^2/2 / (2*PI*R/2)/(2*PI*R/2) = R^2/2 / (R)*(PI*R) = 1/2*PI 
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/tester/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/tester/" class="author">tester</a></p>
+								<ul>
+									<li class="date">18 ноября 2016, 11:14</li>
+																		
+									<li><a href="#comment5574" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment5572" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_5574" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_5574" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-5574">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div>    				    
+    				<div class="comment" id="comment_id_5579">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment5579" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(5579,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(5579,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_5579" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Решил развить поиск окружностей, описанный в этой теме. У меня сложности с регистрацией на форуме, по какой-то причине не приходит письмо для активации, поэтому пишу здесь. <br/>
+Поиск окружностей и их частей на изображении<br/>
+На шаге 32 из цикла уроков «OpenCV шаг за шагом» на robocraft.ru приводится способ определения окружности на изображения. Площадь окружности делится на квадрат ее периметра. Данное отношение постоянно для контура окружности любого диаметра и всегда равно 1/(4*pi) или 1/4*CV_PI = 0,079577 как в уроке (исправлено 21.11.16).<br/>
+. Данный метод позволяет распознать только полностью видимые окружности с контурами, близкими к правильным окружностям. А как осуществить поиск окружности, частично видимой на изображении?<br/>
+Начнем с простого. Возьмем идеальный контур окружности. Для начала выделим ее с помощью прямоугольной области минимального размера. Размеры области можно получить, оперируя с моментами контура окружности. Для окружности область выделения совпадает с описанным квадратом, те получим окружность, вписанную в квадрат. Площадь этого квадрата равна квадрату диаметра или 4 квадратам радиуса, Sкв=4*r^2.<br/>
+Возьмем отношение площади рассматриваемого контура, т.е окружности к площади описанного квадрата. Его значение равно pi/4 и не зависит от размера окружности. Площадь контура можно поискать в моментах.<br/>
+Теперь рассмотрим случай, когда на изображении видно только половину окружности.<br/>
+Я сделал расчеты и получил то же самое отношение — pi/4. См. рисунок. Соотношение сохраняется для случая, когда окружность перекрывается другим изображением по диагонали описанного квадрата, но математические выкладки носят чисто теоретический характер, т.к. на практике достаточно трудно точно определить границы выделяющего треугольника. Возможно, что потребуется использование законов симметрии и отзеркалить видимую часть по диаметру для получения полного изображения окружности. Однако на изображении может остаться только часть дуги окружности и восстановление симметрии позволит получить фигуру, далекую от окружности.<br/>
+В итоге я сделал предположение, что отношение площади любой видимой области окружности к выделяющей области будет постоянным и равным pi/4.<br/>
+Стоит отметить, что данный метод достаточно трудно реализовать на практике и, видимо, есть более надежные методы поиска.<br/>
+<pre class="prettyprint"><code>#include &quot;stdafx.h&quot;
+
+
+#include &lt;cv.h&gt;
+#include &lt;highgui.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+using namespace std;
+using namespace cv;
+
+int main(int argc, char* argv[])
+{
+
+  // Создаёи 8-битную, 1-канальную картинку
+  IplImage *image1 = cvCreateImage( cvSize(200,200), 8,1);
+  // заливаем картинку чёрным цветом
+  cvSet(image1,cvScalar(0,0,0));
+  // Рисуем окружность с радиусом 65, с центром в 100,100
+  cvCircle(image1,cvPoint(100,100),65,cvScalar(255,255,255),1,8);
+
+  // создаем хранилище
+  CvMemStorage* storage1 = cvCreateMemStorage(0);
+  CvSeq* contours = 0;
+
+  cvFindContours( image1, storage1, &contours, sizeof(CvContour),
+			   CV_RETR_TREE ,CV_CHAIN_APPROX_SIMPLE, cvPoint(0,0) );
+//делаем CV...TREE т.к. нам нужно получить внешние и внутренние контуры
+
+
+CvRect Rect;
+double perimeter;
+double s;
+
+for( CvSeq* c=contours; c!=NULL; c=c-&gt;h_next)
+{
+		// как правило, четкие замкнутые контуры можно получить на цветном изображении 
+	    // высокого качества 
+        Rect = cvBoundingRect( c ); // Поиск ограничивающего прямоугольника минимального размера
+		perimeter = cvArcLength(c); // Получаем длину контура
+		s = cvContourArea(c);		// Получаем площадь контура
+        if ( Rect.width &lt; 30 ) continue; // Маленькие контуры меньше 30 пикселей не нужны
+		//printf(&quot;Rect.width=%u \tRect.height=%u\n&quot;,Rect.width,Rect.height);
+		// рисуем прясоугольник
+        cvRectangle( image1, cvPoint( Rect.x, Rect.y ), cvPoint( Rect.x + Rect.width, Rect.y + Rect.height ), CV_RGB(255,0,0), 2 );
+		double Skv = Rect.width*Rect.height;
+		printf(&quot;Rect.width=%u \tRect.height=%u\n&quot;,Rect.width,Rect.height);
+		printf(&quot;s=%f\t\tperimetr=%f\n&quot;, s,perimeter);
+		printf(&quot;Skv=%f\tpi=4*s/Skv=%f\ns/perimeter^2=1/(4*pi)=%f \n\n&quot;, Skv, 4*s/Skv,(float)(s/perimeter/perimeter));
+}
+        
+         // покажем изображение
+        cvNamedWindow( &quot;original&quot;, 1 );
+        cvShowImage( &quot;original&quot;, image1 );
+
+		//считаем моменты здесь, для всего изображения
+		//(типа, отрисовали выбранный контур в отдельном окне для расчета моментов) 
+		CvMoments moments;
+		CvHuMoments HuMoments;
+		
+		cvMoments(image1,&moments);
+		cvGetHuMoments(&moments,&HuMoments);
+
+		printf(&quot;Moments:\t%e\t%e\t%e\t%e\t%e\t%e\t%e\t%e\t%e\t%e\t\n&quot;,moments.m00,moments.m01,moments.m02,
+		moments.m03,moments.m10,moments.m11,moments.m12,moments.m20,moments.m21,moments.m30);
+
+		printf(&quot;HuMoments:\t%e\t%e\t%e\t%e\t%e\t%e\t%e\t\n&quot;,HuMoments.hu1,HuMoments.hu2,HuMoments.hu3
+		,HuMoments.hu4,HuMoments.hu5,HuMoments.hu6,HuMoments.hu7);
+
+		// центр окружности через моменты
+		double xc = moments.m10/moments.m00;
+		double yc = moments.m01/moments.m00;
+		printf(&quot;xc=%f \tyc=%f\n&quot;, xc,yc);
+		// ждём нажатия клавиши
+		cvWaitKey(0);
+		// освобождаем ресурсы
+		cvReleaseMemStorage( &storage1);
+		cvDestroyWindow(&quot;original&quot;);
+		return 0;
+}</code></pre>
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/tester/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/tester/" class="author">tester</a></p>
+								<ul>
+									<li class="date">24 ноября 2016, 04:50</li>
+																		
+									<li><a href="#comment5579" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_5579" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_5579" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-5579">    
+    				    
+    				        				</div></div>    
+    												
+				<span id="comment-children-0"></span>				
+				<br>
+				
+															Только зарегистрированные и авторизованные пользователи могут оставлять комментарии.<br>
+													
+			</div>
+			<!-- /Comments -->	
+
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9788091858425972";
+/* 468x60, ������� 08.09.09 */
+google_ad_slot = "0477976619";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+		</div>
+		<!-- /Content -->
+							<!-- Sidebar -->
+		<div id="sidebar">
+			
+																						
+														<div class="block blogs">
+				<div class="tl"><div class="tr"></div></div>
+				<div class="cl"><div class="cr">
+					
+					<h1>Блоги</h1>
+					
+					<ul class="block-nav">
+						<li class="active"><strong></strong><a href="#" id="block_blogs_top" onclick="lsBlockBlogs.toggle(this,'blogs_top'); return false;">Топ</a><em></em></li>
+											</ul>
+					
+					<div class="block-content">
+					
+						<script language="JavaScript" type="text/javascript">
+						var lsBlockBlogs;
+						window.addEvent('domready', function() {       
+							lsBlockBlogs=new lsBlockLoaderClass();
+						});
+						</script>
+					
+										<ul class="list">
+													<li><div class="total">13.70</div><a href="http://robocraft.ru/blog/arduino/" class="stream-author">Arduino</a></li>						
+													<li><div class="total">10.37</div><a href="http://robocraft.ru/blog/computervision/" class="stream-author">Компьютерное зрение</a></li>						
+													<li><div class="total">8.03</div><a href="http://robocraft.ru/blog/ARM/" class="stream-author">ARM</a></li>						
+													<li><div class="total">5.73</div><a href="http://robocraft.ru/blog/algorithm/" class="stream-author">Программирование</a></li>						
+													<li><div class="total">5.05</div><a href="http://robocraft.ru/blog/projects/" class="stream-author">Проекты и идеи</a></li>						
+													<li><div class="total">3.04</div><a href="http://robocraft.ru/blog/RoboCraft/" class="stream-author">RoboCraft</a></li>						
+													<li><div class="total">2.37</div><a href="http://robocraft.ru/blog/technology/" class="stream-author">Технологии</a></li>						
+													<li><div class="total">2.27</div><a href="http://robocraft.ru/blog/mechanics/" class="stream-author">Механика</a></li>						
+													<li><div class="total">2.26</div><a href="http://robocraft.ru/blog/electronics/" class="stream-author">Электроника</a></li>						
+													<li><div class="total">1.55</div><a href="http://robocraft.ru/blog/news/" class="stream-author">Новости</a></li>						
+													<li><div class="total">1.14</div><a href="http://robocraft.ru/blog/communication/" class="stream-author">Коммуникации</a></li>						
+													<li><div class="total">1.13</div><a href="http://robocraft.ru/blog/beam/" class="stream-author">BEAM роботы</a></li>						
+													<li><div class="total">0.00</div><a href="http://robocraft.ru/blog/sensor/" class="stream-author">Сенсоры и датчики</a></li>						
+											</ul>				
+					</div>
+					
+					<div class="right"><a href="http://robocraft.ru/blogs/">Все блоги</a></div>
+
+					
+				</div></div>
+				<div class="bl"><div class="br"></div></div>
+			</div> 
+															
+																			
+														<div class="block stream">
+
+				<div class="tl"><div class="tr"></div></div>
+				<div class="cl"><div class="cr">
+					
+					<h1>Прямой эфир</h1>
+					
+					<ul class="block-nav">						
+						<li><strong></strong><a href="#" id="block_stream_topic" onclick="lsBlockStream.toggle(this,'topic_stream'); return false;">Публикации</a></li>
+						<li class="active"><a href="#" id="block_stream_comment" onclick="lsBlockStream.toggle(this,'comment_stream'); return false;">Комментарии</a><em></em></li>
+					</ul>					
+					
+					<div class="block-content">
+					
+						<script language="JavaScript" type="text/javascript">
+						var lsBlockStream;
+						window.addEvent('domready', function() { 
+							lsBlockStream=new lsBlockLoaderClass();      						
+						});
+						</script>
+					
+										<ul class="stream-content">
+													<li class="even">
+								<a href="http://robocraft.ru/profile/admin/" class="stream-author">admin</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/RoboCraft/3623.html#comment5668" class="stream-comment">Конкурс - КиберВесна 2017</a>
+								<span> 16</span> в <a href="http://robocraft.ru/blog/RoboCraft/" class="stream-blog">RoboCraft</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/Jurius/" class="stream-author">Jurius</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/projects/2994.html#comment5664" class="stream-comment">Металлоискатель на Arduino</a>
+								<span> 28</span> в <a href="http://robocraft.ru/blog/projects/" class="stream-blog">Проекты и идеи</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/noonv/" class="stream-author">noonv</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/algorithm/560.html#comment5663" class="stream-comment">Нейронная сеть - обучение ИНС с помощью алгоритма обратного распространения</a>
+								<span> 19</span> в <a href="http://robocraft.ru/blog/algorithm/" class="stream-blog">Программирование</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/galaxy5user/" class="stream-author">galaxy5user</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/3130.html#comment5658" class="stream-comment">Raspberry Pi. Поднимаем watchdog</a>
+								<span> 15</span> в <a href="http://robocraft.ru/my/danil_borchevkin/" class="stream-blog">Блог им. danil_borchevkin</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/Zoltberg/" class="stream-author">Zoltberg</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/782.html#comment5653" class="stream-comment">TC15-11 - матрица светодиодная 8х8</a>
+								<span> 7</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/nnovofastovskiy/" class="stream-author">nnovofastovskiy</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/541.html#comment5638" class="stream-comment">Подключаем кучу устройств к Arduino по 5 проводам</a>
+								<span> 51</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/ASDFG123/" class="stream-author">ASDFG123</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/algorithm/785.html#comment5637" class="stream-comment">Библиотека для LCD на базе контроллера HD44780</a>
+								<span> 23</span> в <a href="http://robocraft.ru/blog/algorithm/" class="stream-blog">Программирование</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/nejtr0n/" class="stream-author">nejtr0n</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/270.html#comment5617" class="stream-comment">5. OpenCV шаг за шагом.  Вывод видео</a>
+								<span> 31</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/anton666/" class="stream-author">anton666</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/116.html#comment5585" class="stream-comment">Arduino/CraftDuino и WinAVR - программируем на чистом С</a>
+								<span> 23</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/TotCambIKoka/" class="stream-author">TotCambIKoka</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/519.html#comment5581" class="stream-comment">SPI и Arduino: плодим выходы</a>
+								<span> 36</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/GraninDm/" class="stream-author">GraninDm</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/3126.html#comment5536" class="stream-comment">Программируемый логический контроллер (ПЛК) на базе Arduino + Ethernet shield + 74HC165 + 74HC595</a>
+								<span> 21</span> в <a href="http://robocraft.ru/my/GraninDm/" class="stream-blog">Блог им. GraninDm</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/r2d2/" class="stream-author">r2d2</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/271.html#comment5521" class="stream-comment">6. OpenCV шаг за шагом. Ползунок</a>
+								<span> 15</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/Leon/" class="stream-author">Leon</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/electronics/594.html#comment5486" class="stream-comment">Датчики Холла</a>
+								<span> 11</span> в <a href="http://robocraft.ru/blog/electronics/" class="stream-blog">Электроника</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/realist/" class="stream-author">realist</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/news/3511.html#comment5438" class="stream-comment">Harvest Automation представила своего складского робота TM-100</a>
+								<span> 1</span> в <a href="http://robocraft.ru/blog/news/" class="stream-blog">Новости</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/admin/" class="stream-author">admin</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/30.html#comment5378" class="stream-comment">Программирование Arduino - структура программы, константы</a>
+								<span> 2</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/Aquila/" class="stream-author">Aquila</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/2911.html#comment5345" class="stream-comment">Генератор синусоиды на Arduino или ЦАП R-2R</a>
+								<span> 15</span> в <a href="http://robocraft.ru/my/Ghost_D/" class="stream-blog">Блог им. Ghost_D</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/ursoft2004/" class="stream-author">ursoft2004</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/867.html#comment5344" class="stream-comment">33. OpenCV шаг за шагом. Сравнение контуров  через суммарные характеристики - моменты</a>
+								<span> 6</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/atmega644/" class="stream-author">atmega644</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/beam/3118.html#comment5308" class="stream-comment">Построение BEAM-робота с нейронной сетью</a>
+								<span> 2</span> в <a href="http://robocraft.ru/blog/beam/" class="stream-blog">BEAM роботы</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/Annihilate/" class="stream-author">Annihilate</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/506.html#comment5306" class="stream-comment">OpenCV - Сравнение изображений и генерация картинки отличий</a>
+								<span> 7</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/arno/" class="stream-author">arno</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/news/3439.html#comment5292" class="stream-comment">Военные США протестировали рой из маленьких дронов</a>
+								<span> 1</span> в <a href="http://robocraft.ru/blog/news/" class="stream-blog">Новости</a>
+							</li>						
+										
+					</ul>
+					</div>
+					<div class="right"><a href="http://robocraft.ru/comments/">Весь эфир</a> | <a href="http://robocraft.ru/rss/allcomments/">RSS</a></div>
+
+					
+				</div></div>
+				<div class="bl"><div class="br"></div></div>
+			</div>
+ 
+															
+																			
+														<div class="block tags">
+				<div class="tl"><div class="tr"></div></div>
+				<div class="cl"><div class="cr">
+					
+					<ul class="cloud">
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/3D/">3D</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/3D-печать/">3D-печать</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/AI/">AI</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Android/">Android</a></li>	
+													<li><a class="w10" rel="tag" href="http://robocraft.ru/tag/Arduino/">Arduino</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/ARM/">ARM</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/AVR/">AVR</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/Blink/">Blink</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/Bluetooth/">Bluetooth</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/COM-порт/">COM-порт</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/CraftDuino/">CraftDuino</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/DARPA/">DARPA</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/DIY/">DIY</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/embedded/">embedded</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/IDE/">IDE</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/iRobot/">iRobot</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/Kinect/">Kinect</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/LEGO/">LEGO</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Linux/">Linux</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Open Source/">Open Source</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/OpenCV/">OpenCV</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/Processing/">Processing</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/Python/">Python</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/Raspberry Pi/">Raspberry Pi</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/RoboCraft/">RoboCraft</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Roomba/">Roomba</a></li>	
+													<li><a class="w6" rel="tag" href="http://robocraft.ru/tag/ROS/">ROS</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/swarm/">swarm</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/TurtleBot/">TurtleBot</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Urbi/">Urbi</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/web-камера/">web-камера</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/автоматизация/">автоматизация</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/андроид/">андроид</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/балансировать/">балансировать</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/библиотека/">библиотека</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/бионика/">бионика</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/версия/">версия</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/видео/">видео</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/военный/">военный</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/вопрос/">вопрос</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/датчик/">датчик</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/дрон/">дрон</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/зрение/">зрение</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/игра/">игра</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/ИК/">ИК</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/интернет/">интернет</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/камера/">камера</a></li>	
+													<li><a class="w7" rel="tag" href="http://robocraft.ru/tag/кибервесна/">кибервесна</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/конкурс/">конкурс</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/манипулятор/">манипулятор</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/начинающим/">начинающим</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/наше/">наше</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/нейронная сеть/">нейронная сеть</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/ПКЛ/">ПКЛ</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/подводный/">подводный</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/пылесос/">пылесос</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/работа/">работа</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/распознавание/">распознавание</a></li>	
+													<li><a class="w10" rel="tag" href="http://robocraft.ru/tag/робот/">робот</a></li>	
+													<li><a class="w6" rel="tag" href="http://robocraft.ru/tag/робототехника/">робототехника</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/рука/">рука</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/светодиод/">светодиод</a></li>	
+													<li><a class="w6" rel="tag" href="http://robocraft.ru/tag/сервомашинка/">сервомашинка</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/телеприсутствие/">телеприсутствие</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/УЗ/">УЗ</a></li>	
+													<li><a class="w4" rel="tag" href="http://robocraft.ru/tag/управление/">управление</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/урок/">урок</a></li>	
+													<li><a class="w4" rel="tag" href="http://robocraft.ru/tag/ходить/">ходить</a></li>	
+													<li><a class="w4" rel="tag" href="http://robocraft.ru/tag/шаг за шагом/">шаг за шагом</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/шилд/">шилд</a></li>	
+											</ul>
+					
+				</div></div>
+				<div class="bl"><div class="br"></div></div>
+			</div> 
+															
+							
+					
+			
+		</div>
+		<!-- /Sidebar -->				
+	</div>
+
+<!-- Footer -->
+<div id="footer">
+
+	<ul class="footer-list">
+				<li class="footer-list-header word-wrap">Вы можете</li>
+		<li><a class="js-registration-form-show" href="http://robocraft.ru/registration/">Зарегистрироваться</a></li>
+		<li><a class="js-login-form-show sign-in" href="http://robocraft.ru/login/">Войти</a></li>
+			</ul>
+	
+	<ul class="footer-list">
+		<li class="footer-list-header">Разделы</li>
+		<li><a href="http://robocraft.ru">Топики</a></li>
+		<li><a href="http://robocraft.ru/blogs/">Блоги</a></li>
+		<li><a href="http://robocraft.ru/people/">Люди</a></li>
+		<li><a href="http://robocraft.ru/shop/">Наш Магазин</a></li>
+		<li><a href="http://robocraft.ru/forum/">Форум</a></li>
+	</ul>
+	
+	<ul class="footer-list">
+		<li class="footer-list-header">Инфо</li>
+		<li><a href="http://robocraft.ru/page/about/">О сайте</a></li>
+		<li><a href="http://robocraft.ru/page/about/#rules">Правила</a></li>
+		<li><a href="http://robocraft.ru/page/summary/">Статьи</a></li>
+		<li><a href="http://robocraft.ru/page/faq/">FAQ</a></li>
+	</ul>
+	
+	<ul class="footer-list">
+		<li class="footer-list-header">Купить</li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=47_26" target="_blank">Arduino или CraftDuino</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=47_27" target="_blank">Arduino шилды</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=18_35" target="_blank">Cервомашинки</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=29" target="_blank">Наборы</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=62" target="_blank">MakeBlock</a></li>
+	</ul>
+
+	<div class="copyright">
+	© Сайт работает на <a href="http://livestreet.ru" target="_blank">LiveStreet</a>
+		<div>
+			© 2009-2017
+		</div>
+		<div>
+
+<!--Rating@Mail.ru counter-->
+<script type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3" type="text/javascript"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1656615" target="_top">'+
+'<img src="http://d7.c4.b9.a1.top.mail.ru/counter?id=1656615;t=94;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="18" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_top" href="http://top.mail.ru/jump?from=1656615">
+<img src="http://d7.c4.b9.a1.top.mail.ru/counter?js=na;id=1656615;t=94" 
+height="18" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+		&nbsp;				 	
+		<a href="http://idea2.ru" title="Идеи 2.0" target="_blank"><img src="http://idea2.ru/i2.png" /></a>&nbsp;
+		<a href="http://robocraft.ru" title="RoboCraft" target="_blank"><img src="http://robocraft.ru/rc.png" /></a>		
+		</div>
+	</div>
+
+	<div>Материалы сайта являются авторскими. Копирование и публикация материалов без разрешения запрещены! &nbsp;
+	</div>
+		
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12745905-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body>
+</html>
+

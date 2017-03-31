@@ -4,150 +4,13 @@
  <format version="1" subversion="2"/>
  <content>
   <node crypt="" id="14810525798gt7py836w" name="Computer Vision">
-   <node crypt="" id="1481052586nlbuxhkit4" name="Matlab">
-    <recordtable>
-     <record id="148105549895bel1og4z" name="Matlab" author="" url="" tags="" ctime="20161206231818" dir="14810554988e8i238mxh" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052645pdji3d09i2" name="Octave">
-    <recordtable>
-     <record id="14810555215lqsf8g3x9" name="Octave" author="" url="" tags="" ctime="20161206231841" dir="1481055521buplwo48hf" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="14810526502chz7ydgtx" name="R">
-    <recordtable>
-     <record id="14810555309rntdu4qir" name="R" author="" url="" tags="" ctime="20161206231850" dir="1481055530tglbwr8iak" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052705ibcmb1dk9b" name="wxPython">
-    <recordtable>
-     <record id="1481055541uxpnwhmqk0" name="wxPython" author="" url="" tags="" ctime="20161206231901" dir="14810555415w43rnanm1" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052725qpvuh5n80w" name="PyQt">
-    <recordtable>
-     <record id="1481055567kv0eawt794" name="PyQt" author="" url="" tags="" ctime="20161206231927" dir="1481055567ivbbwxt0qd" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052731k94p9ukfwb" name="Qt">
-    <recordtable>
-     <record id="1481055574hus0ayp1ed" name="Qt" author="" url="" tags="" ctime="20161206231934" dir="14810555745qaf2npf9u" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="148105273618uhtoo64c" name="C++">
-    <recordtable>
-     <record id="1481055582ht8hq5m1jo" name="C++" author="" url="" tags="" ctime="20161206231942" dir="14810555823fstehn9a4" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052743sgtchifahi" name="Python">
-    <node crypt="" id="1481052806oadl5ie7tm" name="Caffe">
-     <recordtable>
-      <record id="14810554067opffl2lbg" name="Caffe" author="" url="" tags="" ctime="20161206231646" dir="1481055406a0ctcz3m5s" file="text.html"/>
-      <record id="1481055451m5tdvt78rf" name="How to install (Windows)" author="" url="" tags="" ctime="20161206231731" dir="14810554511ug2rwo3hd" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481052836pxwpn2a7b1" name="TensorFlow">
-     <recordtable>
-      <record id="1481055632uwakayfep9" name="TensorFlow" author="" url="" tags="" ctime="20161206232032" dir="1481055632eee8r83ig3" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481052844dm0vtou61o" name="Theano">
-     <recordtable>
-      <record id="1481055645qqyuikddqe" name="Theano" author="" url="" tags="" ctime="20161206232045" dir="1481055645t8b4eok84v" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="14810528705wnlo1sop2" name="Lasagne">
-     <recordtable>
-      <record id="1481055660vwp6tstjml" name="Lasagne" author="" url="" tags="" ctime="20161206232100" dir="1481055660gjf7bjoal1" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481052876elsfem1yph" name="Keras">
-     <recordtable>
-      <record id="1481055674j6opy11vaz" name="Keras" author="" url="" tags="" ctime="20161206232114" dir="14810556747iugnf0zgx" file="text.html"/>
-     </recordtable>
-    </node>
-   </node>
-   <node crypt="" id="1481052750d6uuwvagz1" name="OpenCV">
-    <recordtable>
-     <record id="148105325426i2dh66gn" name="OpenCV" author="" url="" tags="" ctime="20161206224054" dir="1481053254l6924zrc7l" file="text.html"/>
-     <record id="1484418314348bzrkly8" name="Учебник на русском" author="" url="http://robocraft.ru/page/opencv/" tags="" ctime="20170114212514" dir="1484418314s9580nel5n" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052758dti88xxmo8" name="OpenGL">
-    <recordtable>
-     <record id="1481055688g2tfs24oeo" name="OpenGL" author="" url="" tags="" ctime="20161206232128" dir="148105568890ez5lwnsu" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052767y8lvikrvaq" name="OpenCL">
-    <recordtable>
-     <record id="148105569994al5k46yi" name="OpenCL" author="" url="" tags="" ctime="20161206232139" dir="1481055699yn8topyerg" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052778vdjc83t3tr" name="OpenMP">
-    <recordtable>
-     <record id="1481055712ugepfy3bh5" name="OpenMP" author="" url="" tags="" ctime="20161206232152" dir="1481055712pfhx4ehvqz" file="text.html"/>
-    </recordtable>
-   </node>
    <node crypt="" id="1481052923qzcx9mie7r" name="Graph computing engines">
-    <node crypt="" id="14810529421a4dwi09ek" name="Giraph">
-     <recordtable>
-      <record id="1481055730d1t9d1nvog" name="Giraph" author="" url="" tags="" ctime="20161206232210" dir="1481055730gglg0fzkzs" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="14810529539bw7yoczhf" name="Giraph++">
-     <recordtable>
-      <record id="14810557424z5tuyykgh" name="Giraph++" author="" url="" tags="" ctime="20161206232222" dir="1481055742x8fwdk6gnz" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481052961mwgvupohx2" name="GraphLab">
-     <recordtable>
-      <record id="1481055758pc1hr6rlmu" name="GraphLab" author="" url="" tags="" ctime="20161206232238" dir="148105575873nsxlumg8" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481052973hav2eyh47f" name="GraphX">
-     <recordtable>
-      <record id="1481055767vxbpnaxpbd" name="GraphX" author="" url="" tags="" ctime="20161206232247" dir="1481055767kiuvjdbobz" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481052983g9qo9z5s70" name="Pregel">
-     <recordtable>
-      <record id="1481055775wg2z7v0h4g" name="Pregel" author="" url="" tags="" ctime="20161206232255" dir="1481055775z95gg3n7q1" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="14810529935svz1nxtrf" name="Pregel++">
-     <recordtable>
-      <record id="148105578502xyd7c0sw" name="Pregel++" author="" url="" tags="" ctime="20161206232305" dir="1481055785suk6mix61n" file="text.html"/>
-     </recordtable>
-    </node>
-   </node>
-   <node crypt="" id="1481053027rpvqm7gedc" name="Version Control System">
-    <node crypt="" id="1481053035nmom7fqoc7" name="SVN">
-     <recordtable>
-      <record id="1481055796svhbumijj9" name="SVN" author="" url="" tags="" ctime="20161206232316" dir="14810557964ku45767vm" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="1481053042d3bmmqu5pk" name="Mercurial">
-     <recordtable>
-      <record id="1481055807u6vbhclt6t" name="Mercurial" author="" url="" tags="" ctime="20161206232327" dir="1481055807ybked6eff4" file="text.html"/>
-     </recordtable>
-    </node>
-    <node crypt="" id="14810530460bxvn7t0qo" name="Git">
-     <recordtable>
-      <record id="14810558254shsrnewlt" name="Git" author="" url="" tags="" ctime="20161206232345" dir="1481055825gbgtcbyst6" file="text.html"/>
-     </recordtable>
-    </node>
-   </node>
-   <node crypt="" id="1481053076kafp0fosg9" name="Bug tracking system">
-    <node crypt="" id="1481053088xj3j6s1uep" name="JIRA">
-     <recordtable>
-      <record id="1481055864bafnssg8qi" name="JIRA" author="" url="" tags="" ctime="20161206232424" dir="1481055864417j7nhd4k" file="text.html"/>
-     </recordtable>
-    </node>
-   </node>
-   <node crypt="" id="14810534430vfku538yv" name="Математическая подготовка">
-    <recordtable>
-     <record id="14812411205cs2p6s8s3" name="Курс алгебры" author="Винсберг" url="" tags="" ctime="20161209025200" dir="14812411201f32sq6bvv" file="text.html"/>
-    </recordtable>
+    <node crypt="" id="14810529421a4dwi09ek" name="Giraph"/>
+    <node crypt="" id="14810529539bw7yoczhf" name="Giraph++"/>
+    <node crypt="" id="1481052961mwgvupohx2" name="GraphLab"/>
+    <node crypt="" id="1481052973hav2eyh47f" name="GraphX"/>
+    <node crypt="" id="1481052983g9qo9z5s70" name="Pregel"/>
+    <node crypt="" id="14810529935svz1nxtrf" name="Pregel++"/>
    </node>
    <node crypt="" id="1481054882ypmgmmcn1e" name="Методы обучения">
     <recordtable>
@@ -182,12 +45,269 @@
      <record id="14814793270fd490au4u" name="ML от google" author="" url="https://classroom.udacity.com/courses/ud730/" tags="" ctime="20161211210207" dir="1481479327f1pe12v0v2" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1490935381ykuqh9fqar" name="OpenCV">
+    <recordtable>
+     <record id="148105325426i2dh66gn" name="OpenCV" author="" url="" tags="" ctime="20170331074316" dir="1481053254l6924zrc7l" file="text.html"/>
+     <record id="1490937454786iv4nivx" name="robocraft" author="" url="http://robocraft.ru/page/opencv/" tags="" ctime="20170331081734" dir="1490937454vvewf5h9k4" file="text.html"/>
+    </recordtable>
+    <node crypt="" id="1490936934oy2esvx4im" name="robocraft">
+     <recordtable>
+      <record id="1490937568huw1jifi12" name="1. Введение" author="" url="http://robocraft.ru/blog/computervision/264.html" tags="" ctime="20170331081928" dir="1490937568fzf5hju5dc" file="text.html">
+       <files>
+        <file id="14909375781jh1l99n21" fileName="264.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909385018kis5wo5mp" name="2. Установка." author="" url="http://robocraft.ru/blog/computervision/265.html" tags="" ctime="20170331083501" dir="1490938501gf5l6i1ix1" file="text.html">
+       <files>
+        <file id="1490938521famx54ffk9" fileName="265.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490937680oi5iorcj1l" name="3. Hello World" author="" url="http://robocraft.ru/blog/computervision/266.html" tags="" ctime="20170331082120" dir="14909376806qiii3bair" file="text.html">
+       <files>
+        <file id="1490937699b2dvotlxxu" fileName="266.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490937732dzqwrl79vq" name="4. Загрузка картинки" author="" url="http://robocraft.ru/blog/computervision/268.html" tags="" ctime="20170331082212" dir="14909377322nh2hij8ht" file="text.html">
+       <files>
+        <file id="1490937741lsww5bw1q3" fileName="268.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909378893poc8om8tw" name="5. Вывод видео" author="" url="http://robocraft.ru/blog/computervision/270.html" tags="" ctime="20170331082449" dir="1490937889bi6p538pt4" file="text.html">
+       <files>
+        <file id="1490937897fcn24cth1c" fileName="270.html" type="file"/>
+       </files>
+      </record>
+      <record id="149093792482nx6m5p6x" name="6. Ползунок" author="" url="http://robocraft.ru/blog/computervision/271.html" tags="" ctime="20170331082524" dir="1490937924tuj6i0t9zy" file="text.html">
+       <files>
+        <file id="1490937933wfq1z8njny" fileName="271.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490937962kkxdugxxf1" name="7. Захват видео с камеры" author="" url="http://robocraft.ru/blog/computervision/275.html" tags="" ctime="20170331082602" dir="1490937962kgk4uzs1r6" file="text.html">
+       <files>
+        <file id="1490937972rmhrzxo89j" fileName="275.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909380165tz661knlv" name="8. Запись видео" author="" url="http://robocraft.ru/blog/computervision/276.html" tags="" ctime="20170331082656" dir="1490938016zdajezrzls" file="text.html">
+       <files>
+        <file id="1490938029ui5d599iqr" fileName="276.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938112sjcokixbtx" name="9. События от мышки" author="" url="http://robocraft.ru/blog/computervision/278.html" tags="" ctime="20170331082832" dir="1490938112yvyfmn86wh" file="text.html">
+       <files>
+        <file id="1490938120zqe7j5wotb" fileName="278.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938140u7tknhlvsx" name="10. Обработка изображения - сглаживание" author="" url="http://robocraft.ru/blog/computervision/281.html" tags="" ctime="20170331082900" dir="1490938140x7s4hokcod" file="text.html">
+       <files>
+        <file id="14909381502ldlctfpyb" fileName="281.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938175p0fwheq1od" name="11. Обработка изображения - изменение размеров" author="" url="http://robocraft.ru/blog/computervision/287.html" tags="" ctime="20170331082935" dir="1490938175o9g1gi12s6" file="text.html">
+       <files>
+        <file id="1490938181t2a7r418op" fileName="287.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938205cqrtgigc09" name="12. ROI - интересующая область изображения" author="" url="http://robocraft.ru/blog/computervision/289.html" tags="" ctime="20170331083005" dir="1490938205z7bfselgot" file="text.html">
+       <files>
+        <file id="1490938212tfo4s8ijcl" fileName="289.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938235gqxj8z0svp" name="13. Типы данных OpenCV" author="" url="http://robocraft.ru/blog/computervision/291.html" tags="" ctime="20170331083035" dir="149093823568wtssqp9t" file="text.html">
+       <files>
+        <file id="1490938244pwcxwzs7zf" fileName="291.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909382690bp7e8et6u" name="14. Матрица" author="" url="http://robocraft.ru/blog/computervision/296.html" tags="" ctime="20170331083109" dir="1490938269uf5lqpnn0x" file="text.html">
+       <files>
+        <file id="1490938276c17cha3mi4" fileName="296.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938304nnutnxmwvq" name="15. Сохранение данных в XML" author="" url="http://robocraft.ru/blog/computervision/299.html" tags="" ctime="20170331083144" dir="14909383041730uqtcsg" file="text.html">
+       <files>
+        <file id="1490938311z16k2gnokl" fileName="299.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938344i6x31k3o1p" name="16. Генерация случайных чисел" author="" url="http://robocraft.ru/blog/computervision/306.html" tags="" ctime="20170331083224" dir="1490938344pimssdmgy8" file="text.html">
+       <files>
+        <file id="1490938351p1q047b17o" fileName="306.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938376l76sv3g0dc" name="17. Обработка изображения - морфологические преобразования" author="" url="http://robocraft.ru/blog/computervision/319.html" tags="" ctime="20170331083256" dir="1490938376gvqiinc7eq" file="text.html">
+       <files>
+        <file id="149093838399hbj8ikqy" fileName="319.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938405fqfr8swd0s" name="18. Обработка изображения - морфологические преобразования 2" author="" url="http://robocraft.ru/blog/computervision/327.html" tags="" ctime="20170331083325" dir="1490938405hoot2yfk1p" file="text.html">
+       <files>
+        <file id="1490938412xrwx7fh14w" fileName="327.html" type="file"/>
+       </files>
+      </record>
+      <record id="149093843330gr4fp3et" name="19. Обработка изображения - заливка части изображения" author="" url="http://robocraft.ru/blog/computervision/338.html" tags="" ctime="20170331083353" dir="1490938433fx0w3zp180" file="text.html">
+       <files>
+        <file id="1490938440erc73pimo7" fileName="338.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938462ouwh5lg48x" name="20. Обработка изображения - альфа-смешивание" author="" url="http://robocraft.ru/blog/computervision/352.html" tags="" ctime="20170331083422" dir="1490938462p4sgwe3ipz" file="text.html">
+       <files>
+        <file id="1490938468cen26s9wh3" fileName="352.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909385491al3bofwzc" name="21. Обработка изображения - пороговое преобразование" author="" url="http://robocraft.ru/blog/computervision/357.html" tags="" ctime="20170331083549" dir="1490938549wi7kzbqdes" file="text.html">
+       <files>
+        <file id="149093855674lvcxs1wf" fileName="357.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938586wipj5as3ow" name="22. Поиск объекта по цвету - RGB." author="" url="http://robocraft.ru/blog/computervision/365.html" tags="" ctime="20170331083626" dir="1490938586lagyk0w69s" file="text.html">
+       <files>
+        <file id="1490938592wwir1lz72z" fileName="365.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938619j2yp293rhi" name="23. Поиск объекта по цвету. Цветовое пространство HSV." author="" url="http://robocraft.ru/blog/computervision/402.html" tags="" ctime="20170331083659" dir="1490938619yntythv50u" file="text.html">
+       <files>
+        <file id="1490938626wcd1t481gh" fileName="402.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938650jj8iibj2v4" name="24. Работа с камерой через библиотеку videoInput." author="" url="http://robocraft.ru/blog/computervision/420.html" tags="" ctime="20170331083730" dir="1490938650wd6kavtssw" file="text.html">
+       <files>
+        <file id="1490938657btk45k4din" fileName="420.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938678htxfyrargm" name="25. Обработка изображения - свёртка." author="" url="http://robocraft.ru/blog/computervision/427.html" tags="" ctime="20170331083758" dir="1490938678k0gaz5vf3z" file="text.html">
+       <files>
+        <file id="1490938685j8u4aoqvxh" fileName="427.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938708e7pgw7phpp" name="26. Обработка изображения — операторы Собеля и Лапласа" author="" url="http://robocraft.ru/blog/computervision/460.html" tags="" ctime="20170331083828" dir="1490938708m3uzia6zdv" file="text.html">
+       <files>
+        <file id="14909387141h7ahys8ys" fileName="460.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938733woyckl14y2" name="27. Обработка изображения — детектор границ Кенни (Canny)" author="" url="http://robocraft.ru/blog/computervision/484.html" tags="" ctime="20170331083853" dir="1490938733lrmquvbrgq" file="text.html">
+       <files>
+        <file id="14909387422fdqnoqtry" fileName="484.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938764uplybc3tt3" name="28. Преобразование Хафа" author="" url="http://robocraft.ru/blog/computervision/502.html" tags="" ctime="20170331083924" dir="14909387649zszeoj58l" file="text.html">
+       <files>
+        <file id="1490938771itr35q3vc3" fileName="502.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938793rpfkbroivo" name="29. Интегральное изображение" author="" url="http://robocraft.ru/blog/computervision/536.html" tags="" ctime="20170331083953" dir="149093879329bw9q2lr4" file="text.html">
+       <files>
+        <file id="1490938800vqp9bx44ap" fileName="536.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938821zncz3txaoe" name="30. Трансформация изображения - аффинные преобразования, гомография" author="" url="http://robocraft.ru/blog/computervision/581.html" tags="" ctime="20170331084021" dir="1490938821n3cwsnathp" file="text.html">
+       <files>
+        <file id="14909388285hpl0ufci3" fileName="581.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938850ql30flrwly" name="31. Типы данных OpenCV - хранилище памяти, последовательность" author="" url="http://robocraft.ru/blog/computervision/603.html" tags="" ctime="20170331084050" dir="1490938850rhdeybs04w" file="text.html">
+       <files>
+        <file id="14909388577060syh99t" fileName="603.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938880bcegpib3d6" name="32. Нахождение контуров и операции с ними" author="" url="http://robocraft.ru/blog/computervision/640.html" tags="" ctime="20170331084120" dir="14909388805nbfyv9r8w" file="text.html">
+       <files>
+        <file id="14909388878kgvjmmeoh" fileName="640.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909389082px0kyqia6" name="33. Сравнение контуров через суммарные характеристики - моменты" author="" url="http://robocraft.ru/blog/computervision/867.html" tags="" ctime="20170331084148" dir="1490938908ss2y3hmqqf" file="text.html">
+       <files>
+        <file id="1490938916u2g7co4alj" fileName="867.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938939o0j5xfhpkf" name="Детектирование объектов - поиск объекта по шаблону (Template matching)" author="" url="http://robocraft.ru/blog/computervision/3046.html" tags="" ctime="20170331084219" dir="1490938939fl8q0urfc1" file="text.html">
+       <files>
+        <file id="1490938946h3wsz7zdwl" fileName="3046.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490938980uryz7cwl26" name="Алгоритм кластеризации k-means" author="" url="http://robocraft.ru/blog/computervision/1061.html" tags="" ctime="20170331084300" dir="14909389805xxjileivh" file="text.html">
+       <files>
+        <file id="14909389914982dcmasn" fileName="1061.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909390773d5o6vldqm" name="Пороговое преобразование над цветной картинкой" author="" url="http://robocraft.ru/blog/computervision/375.html" tags="" ctime="20170331084437" dir="1490939077b6wdthb5t3" file="text.html">
+       <files>
+        <file id="14909390842m253ppmx4" fileName="375.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939104iivbv57wt7" name="Как сжать IplImage в jpeg без промежуточного сохранения в файл?" author="" url="http://robocraft.ru/blog/computervision/378.html" tags="" ctime="20170331084504" dir="1490939104f15jrl9tq9" file="text.html">
+       <files>
+        <file id="1490939116tgk3mss4ue" fileName="378.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939142zu14p8d2r3" name="Как заставить мою программу с OpenCV работать на другом компьютере?" author="" url="http://robocraft.ru/blog/computervision/392.html" tags="" ctime="20170331084542" dir="1490939142xp3bjpdov1" file="text.html">
+       <files>
+        <file id="1490939149weu5i5d3cb" fileName="392.html" type="file"/>
+       </files>
+      </record>
+      <record id="149093916995v3xig4ub" name="Использование OpenCV под C#" author="" url="http://robocraft.ru/blog/computervision/575.html" tags="" ctime="20170331084609" dir="1490939169qdpc35hkt5" file="text.html"/>
+      <record id="1490939206m10pq7qmfh" name="Сравнение изображений и генерация картинки отличий" author="" url="http://robocraft.ru/blog/computervision/506.html" tags="" ctime="20170331084646" dir="14909392067oyz47e0d5" file="text.html">
+       <files>
+        <file id="14909392137t84i7alue" fileName="506.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939233qeqrfxjxt8" name="Сравнение изображений через хэш" author="" url="http://robocraft.ru/blog/computervision/537.html" tags="" ctime="20170331084713" dir="1490939233h1jy1jqltm" file="text.html">
+       <files>
+        <file id="14909392421repxjegyu" fileName="537.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939261d9ywb0bx01" name="Раскрашиваем картинку в градациях серого" author="" url="http://robocraft.ru/blog/computervision/543.html" tags="" ctime="20170331084741" dir="1490939261rpexuvxo8l" file="text.html">
+       <files>
+        <file id="1490939267v6kyam7i79" fileName="543.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939287nctaaqc37n" name="Голографическое кодирование картинки" author="" url="http://robocraft.ru/blog/computervision/549.html" tags="" ctime="20170331084807" dir="1490939287oqnt2iuw4c" file="text.html">
+       <files>
+        <file id="1490939294i4kbxock59" fileName="549.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939315c7bxmb3v7b" name="OpenCV - определение доминирующих цветов на изображении" author="" url="http://robocraft.ru/blog/computervision/1063.html" tags="" ctime="20170331084835" dir="1490939315v1kugj7wpe" file="text.html">
+       <files>
+        <file id="1490939322a9mxpixyxr" fileName="1063.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939352y3yqqx5vsj" name="OpenCV benchmark" author="" url="http://robocraft.ru/blog/computervision/708.html" tags="" ctime="20170331084912" dir="149093935272lu385jod" file="text.html">
+       <files>
+        <file id="14909393689iy1laxebg" fileName="708.html" type="file"/>
+       </files>
+      </record>
+      <record id="1490939390v9un90nbz4" name="Kinect - начало работы - настройка OpenCV" author="" url="http://robocraft.ru/blog/computervision/718.html" tags="" ctime="20170331084950" dir="14909393906q89rdo8ja" file="text.html">
+       <files>
+        <file id="149093939674jxg1xc2c" fileName="718.html" type="file"/>
+       </files>
+      </record>
+      <record id="14909394225jvptpymry" name="OpenCV и работа с видео" author="" url="http://robocraft.ru/blog/computervision/3026.html" tags="" ctime="20170331085022" dir="14909394225151mpurq2" file="text.html">
+       <files>
+        <file id="1490939429qqlnnqiydd" fileName="3026.html" type="file"/>
+       </files>
+      </record>
+     </recordtable>
+    </node>
+   </node>
   </node>
   <node crypt="" id="14810533087dapvrwtbi" name="Работа мозга">
    <node crypt="" id="14810535884j6ll7bm7m" name="Литература">
     <recordtable>
-     <record id="1481054430rzeu9jb6m0" name="Об интеллекте" author="Д.Хокинс С.Блейксли" url="" tags="Хокинс" ctime="20161206230030" dir="1481054430ih1mw58jq1" file="text.html"/>
-     <record id="1483987199udnkl05x0t" name="Иерархическая темпоральная память (HTM)" author="Numenta" url="http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" tags="Хокинс" ctime="20170109213959" dir="1483987199t78a8u9wb2" file="text.html"/>
+     <record id="1481054430rzeu9jb6m0" name="Об интеллекте" author="Д.Хокинс С.Блейксли" url="" tags="" ctime="20161206230030" dir="1481054430ih1mw58jq1" file="text.html"/>
+     <record id="1483987199udnkl05x0t" name="Иерархическая темпоральная память (HTM)" author="Numenta" url="http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" tags="" ctime="20170109213959" dir="1483987199t78a8u9wb2" file="text.html">
+      <files>
+       <file id="1490939489nlitft37w4" fileName="hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" type="file"/>
+      </files>
+     </record>
+    </recordtable>
+   </node>
+  </node>
+  <node crypt="" id="149093550680h5u93i4a" name="Version Control System">
+   <node crypt="" id="14909355068i2aqbxkny" name="SVN"/>
+   <node crypt="" id="1490935506kg7yvwichr" name="Mercurial"/>
+   <node crypt="" id="14909355062lsuwyjmdm" name="Git"/>
+  </node>
+  <node crypt="" id="14909395432dxfvt2pqj" name="Bug tracking system">
+   <node crypt="" id="14909395430cgfobk8v5" name="JIRA">
+    <recordtable>
+     <record id="1481055864bafnssg8qi" name="JIRA" author="" url="" tags="" ctime="20170331085223" dir="1481055864417j7nhd4k" file="text.html"/>
     </recordtable>
    </node>
   </node>

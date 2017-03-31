@@ -1,0 +1,1688 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+
+<head>
+	<title>17. OpenCV шаг за шагом. Обработка изображения - морфологические преобразования / Компьютерное зрение / RoboCraft. Роботы? Это просто!</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />	
+	<meta name="DESCRIPTION" content=" 1. OpenCV шаг за шагом. Введение. 2. Установка. 3. Hello World. 4. Загрузка картинки. 5. Вывод видео 6. Ползунок" />
+	<meta name="KEYWORDS" content="OpenCV,шаг за шагом,cvErode,cvDilate,IplConvKernel,cvCreateStructuringElementEx,cvReleaseStructuringElement" />	
+	<meta name="yandex-verification" content="6fc828c3f4df0bc8" />
+	
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/style.css?v=1" />
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/ie6.css?v=1" /><![endif]-->
+	<!--[if gte IE 7]><link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/ie7.css?v=1" /><![endif]-->	
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/Roar.css" />
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/piechart.css" />
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/Autocompleter.css" />
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/prettify.css" />
+	<!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/simple_comments.css" /><![endif]-->
+		
+	<link href="http://robocraft.ru/templates/skin/new/images/favicon.ico" rel="shortcut icon" />
+	<link rel="search" type="application/opensearchdescription+xml" href="http://robocraft.ru/search/opensearch/" title="RoboCraft. Роботы? Это просто!" />
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="http://robocraft.ru/templates/skin/new/icon/apple-icon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="192x192"  href="http://robocraft.ru/templates/skin/new/icon/android-icon-192x192.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="http://robocraft.ru/templates/skin/new/icon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="http://robocraft.ru/templates/skin/new/icon/favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="http://robocraft.ru/templates/skin/new/icon/favicon-16x16.png" />
+	<link rel="manifest" href="http://robocraft.ru/templates/skin/new/icon/manifest.json" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="http://robocraft.ru/templates/skin/new/icon/ms-icon-144x144.png" />
+	<meta name="theme-color" content="#ffffff" />
+	
+			<link rel="alternate" type="application/rss+xml" href="http://robocraft.ru/rss/comments/319/" title="17. OpenCV шаг за шагом. Обработка изображения - морфологические преобразования" />
+	</head>
+
+<script type="text/javascript">
+var DIR_WEB_ROOT='http://robocraft.ru';
+var DIR_STATIC_SKIN='http://robocraft.ru/templates/skin/new';
+var BLOG_USE_TINYMCE='';
+</script>
+
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/JsHttpRequest/JsHttpRequest.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/mootools-1.2.js?v=1.2.2"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Roal/Roar.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Autocompleter/Observer.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Autocompleter/Autocompleter.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Autocompleter/Autocompleter.Request.js"></script>
+<!--[if IE]>
+	<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Piechart/moocanvas.js"></script>
+<![endif]-->	
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/MooTools_1.2/plugs/Piechart/piechart.js"></script>
+
+<script type="text/javascript" src="http://robocraft.ru/classes/lib/external/prettify/prettify.js"></script>
+
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/vote.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/favourites.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/questions.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/block_loader.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/friend.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/blog.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/other.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/login.js"></script>
+<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/panel.js"></script>
+
+
+
+<script type="text/javascript">
+var tinyMCE=false;
+var msgErrorBox=new Roar({
+			position: 'upperRight',
+			className: 'roar-error',
+			margin: {x: 30, y: 10}
+		});	
+var msgNoticeBox=new Roar({
+			position: 'upperRight',
+			className: 'roar-notice',
+			margin: {x: 30, y: 10}
+		});	
+</script>
+
+
+
+
+<body onload="prettyPrint()">
+
+
+
+<div id="debug" style="border: 2px #dd0000 solid; display: none;"></div>
+
+<div id="container">
+	
+		<!-- Header -->
+		
+	<div style="display: none;">
+	<div class="login-popup" id="login-form">
+		<div class="login-popup-top"><a href="#" class="close-block" onclick="return false;"></a></div>
+		<div class="content">
+			<form action="http://robocraft.ru/login/" method="post">
+				<h3>Авторизация</h3>
+				<div class="lite-note"><a href="http://robocraft.ru/registration/">Зарегистрироваться</a><label for="login-input">Логин или эл. почта</label></div>
+				<p><input type="text" class="input-text" name="login" tabindex="1" id="login-input"/></p>
+				<div class="lite-note"><a href="http://robocraft.ru/login/reminder/" tabindex="-1">Напомнить пароль</a><label >Пароль</label></div>
+				<p><input type="password" name="password" class="input-text" tabindex="2" /></p>
+				<div class="lite-note"><button type="submit" onfocus="blur()"><span><em>Войти</em></span></button><label class="input-checkbox"><input type="checkbox" name="remember" checked tabindex="3" />Запомнить меня</label></div>
+				<input type="hidden" name="submit_login" />
+			</form>
+		</div>
+		<div class="login-popup-bottom"></div>
+	</div>
+	</div>
+		
+	<div id="header">
+		<h1 style="padding: 0;">
+		<a href="http://robocraft.ru"><img src="http://robocraft.ru/logo_robocraft_80.png" alt="RoboCraft" title="RoboCraft"/></a>
+		<!-- <a href="http://robocraft.ru" style="background: url(http://robocraft.ru/rc80-ny.png) no-repeat scroll 0 -1px transparent; padding-left:80px; padding-top:25px; height:80px; display:block;"><strong>Robo</strong>Craft</a> -->
+		</h1>
+		
+		<ul class="nav-main">
+			<li class="active"><a href="http://robocraft.ru/blog/" style="text-decoration:none;">Блоги</a></li>
+			<!-- <li ><a href="http://robocraft.ru/people/">Люди</a></li>
+			<li ><a href="http://robocraft.ru/page/about/">О проекте</a></li> -->
+			<li ><a href="http://robocraft.ru/page/summary/" style="text-decoration:none; color:white;">Статьи</a></li>
+			<li><a href="http://robocraft.ru/shop/" style="text-decoration:none; font-size: 24px; color:orange;" title="Наш Магазин">Магазин</a></li>
+			<li>
+				<a href="http://robocraft.ru/forum/" style="text-decoration:none;">Форум</a>
+			</li>
+			<li><a href="http://robocraft.ru/development/" style="text-decoration:none; color:orange;" title="Заказать изготовление робота">Заказать</a></li>
+			<li>
+				<a style="text-decoration:none; color: rgb(119, 209, 21);" href="http://robocraft.ru/blog/RoboCraft/3623.html">КиберВесна</a>
+			</li>
+		</ul>
+		
+				<div class="profile guest">
+			<a href="http://robocraft.ru/login/" onclick="return showLoginForm();">Войти</a> или 
+			<a href="http://robocraft.ru/registration/" class="reg">Зарегистрироваться</a>
+		</div>
+				
+	</div>
+	<!-- /Header -->	
+	
+	﻿	<!-- Navigation -->
+	<div id="nav">
+		<div class="left"></div>
+				
+							<ul class="menu">
+		
+			<li >
+				<a href="http://robocraft.ru/">Все</a> 							</li>
+			
+			<li class="active">
+				<a href="http://robocraft.ru/blog/">Тематические</a> 									<ul class="sub-menu" >											
+						<li ><div><a href="http://robocraft.ru/blog/">Хорошие</a></div></li>
+												<li ><div><a href="http://robocraft.ru/blog/bad/">Плохие</a></div></li>
+					</ul>
+							</li>
+			
+			<li >
+				<a href="http://robocraft.ru/log/">Персональные</a> 							</li>
+			
+			<li >
+				<a href="http://robocraft.ru/top/">TOP</a>
+							</li>
+								
+		</ul>
+		
+		
+		
+			
+				
+		<div class="right"></div>
+		<!--<a href="#" class="rss" onclick="return false;"></a>-->
+		<div class="search">
+				 <form method="get" action="http://robocraft.ru/search/">
+                        <input class="text" type="text" id="srch" maxlength="32" name="searchfor" value="Поиск" onclick="if (value=='Поиск') value=''" onkeyup="fast_search();" onblur="close_fast_search();" onfocus="this.select();" autocomplete="off" />
+                        <input class="button" type="submit" value="" />
+			</form>
+		</div>
+	</div>
+	<!-- /Navigation -->
+	
+	<link rel="stylesheet" type="text/css" href="http://robocraft.ru/templates/skin/new/css/banner-slider.css" />
+
+
+<script type="text/javascript">
+
+window.addEvent('domready', function(){	
+	var obj=$('my-slide-banner');
+	var arrow = $('slide-banner-arrow');
+	if(obj && arrow){
+		var bOpen = read_cookie();
+		if(bOpen=='1'){
+			obj.setStyle('display', 'block');
+			arrow.removeClass('opened');
+		}
+		else{
+			obj.setStyle('display', 'none');
+			arrow.removeClass('opened');
+			arrow.toggleClass('opened');
+		}
+		if (obj.getStyle('display')=='none') 
+			arrow.set('title','Открыть');
+		else
+			arrow.set('title','Закрыть');
+	}
+});
+
+function read_cookie()
+{
+	var allcookies = document.cookie;
+	//alert(allcookies);
+	
+	// получаем значения из кукиса :)
+	var pos = allcookies.indexOf("slidebanner=");
+	var slidebanner=1;
+	if (pos != -1){
+		var start = pos + 12; // Начало значения cookie
+		var end = allcookies.indexOf(";", start);
+		if (end == -1) end = allcookies.length;
+		
+		slidebanner = allcookies.substring(start, end); 
+		//alert(slidebanner);
+		return slidebanner;
+	}
+	return slidebanner;
+}
+
+function write_cookie(val)
+{
+	document.cookie = "slidebanner="+val+";path=/; max-age=" + (60*60*24*31);
+}
+
+function toggleSlideBAnnerInfo(link)
+{
+	link=$(link);
+	var obj=$('my-slide-banner');	
+	var slideObj = new Fx.Slide(obj, {
+		onComplete: function(){
+			if(link.get('title')=='Открыть'){
+				link.set('title','Закрыть');
+				write_cookie(1);
+			}
+			else{
+				link.set('title','Открыть');
+				write_cookie(0);
+			}
+	    }
+	});
+	if (obj.getStyle('display')=='none'){
+		slideObj.hide();
+		obj.setStyle('display','block');		
+	}	
+	link.toggleClass('opened');
+	slideObj.toggle();
+}
+</script>
+
+
+<a href="#" id="slide-banner-arrow" class="slide-banner-arrow" onclick="toggleSlideBAnnerInfo(this); return false;"></a>
+
+<div class="block stream" id="my-slide-banner">
+	<div class="tl"><div class="tr"></div></div>
+		<div class="cl"><div class="cr">
+	<div>
+		<div style="margin: 0px; display: block;" id="ny-expand-content" class="ny-expand-content"> 
+			<table width="100%"> 
+				<tbody>
+					<tr>
+						<td width="20%" style="vertical-align: top;"> <a href="http://robocraft.ru/shop/index.php?route=product/product&product_id=422" target="_blank"><img src="http://robocraft.ru/files/craftduino/v2/craftduino-v2-0-small.png" alt="CraftDuino v2.0" title="CraftDuino v2.0"/></a> </td>
+						<td style="vertical-align: top;" class="slide-banner-text">
+						<ul>
+							<li>
+							- это <span class="slide-banner-big" style="color: black;">CraftDuino</span> - наш вариант полностью Arduino-совместимой платы.
+							</li>
+							<li>
+							<a href="http://robocraft.ru/blog/RoboCraft/3294.html">CraftDuino</a> - настоящий конструктор, для очень быстрого прототипирования и реализации идей.
+							</li>
+							<li>
+								Любая возможность автоматизировать что-то с лёгкостью реализуется с <a href="http://robocraft.ru/blog/RoboCraft/3294.html">CraftDuino</a>!
+							</li>
+						</ul>
+							<ul>
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/14.html"><span class="slide-banner-average" style="color: #6293c1;">Что такое Arduino?</span></a>
+								</li>
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/18.html"><span class="slide-banner-average" style="color: #6293c1;">Зачем мне Arduino/CraftDuino?</span></a>
+								</li>
+								
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/98.html"><span class="slide-banner-average" style="color: #6293c1;">Как начать работать с Arduino/CraftDuino?</span></a>
+								</li>
+								
+								<li>
+									<a href="http://robocraft.ru/blog/arduino/53.html"><span class="slide-banner-average" style="color: #6293c1;">Первая программа.</span></a>
+								</li>
+								
+								<li>
+									<a href="http://robocraft.ru/page/summary/#PracticalArduino"><span class="slide-banner-average" style="color: #6293c1;">Что дальше?</span></a> <a href="http://robocraft.ru/blog/projects/"><span class="slide-banner-average" style="color: #6293c1;">Arduino проекты!</span></a>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table> 
+			<div style="text-align: center;" class="slide-banner-text">
+				<span class="slide-banner-big" style="color: black; font-size:20px;">Просто добавьте CraftDuino!</span>
+			</div>
+		</div>
+	</div>
+		
+		
+</div></div>
+<div class="bl"><div class="br"></div></div>
+</div>	
+	<!--
+	<div id="extra">
+		<a href="#">К списку постов</a>
+	</div>
+	-->
+	
+	<div id="wrapper" class="update-hide ">
+		
+	
+		<!-- Content -->
+		<div id="content" >
+		
+					
+								<!-- Topic -->			
+			<div class="topic">
+				<div class="favorite fav-guest"><a href="#" onclick="lsFavourite.toggle(319,this,'topic'); return false;"></a></div>
+				<h1 class="title">
+										17. OpenCV шаг за шагом. Обработка изображения - морфологические преобразования
+									</h1>
+				<ul class="action">					
+					<li><a href="http://robocraft.ru/blog/computervision/">Компьютерное зрение</a>&nbsp;&nbsp;</li>						
+														</ul>				
+				<div class="content">
+				
+							
+				
+				
+					<noindex><a href="http://robocraft.ru/tag/OpenCV/" rel="nofollow"><img src="http://robocraft.ru/files/opencv/opencv-logo-cat.png" align="left"/></a></noindex> <noindex><a href="http://robocraft.ru/blog/computervision/264.html" rel="nofollow">1. OpenCV шаг за шагом. Введение.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/265.html" rel="nofollow">2. Установка.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/266.html" rel="nofollow">3. Hello World.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/268.html" rel="nofollow">4. Загрузка картинки.</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/270.html" rel="nofollow">5. Вывод видео</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/271.html" rel="nofollow">6. Ползунок</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/275.html" rel="nofollow">7. Захват видео с камеры</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/276.html" rel="nofollow">8. Запись видео</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/278.html" rel="nofollow">9. События от мышки</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/281.html" rel="nofollow">10. Обработка изображения — сглаживание</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/287.html" rel="nofollow">11. Обработка изображения — изменение размеров</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/289.html" rel="nofollow">12. ROI — интересующая область изображения</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/291.html" rel="nofollow">13. Типы данных OpenCV</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/296.html" rel="nofollow">14. Матрица</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/299.html" rel="nofollow">15. Сохранение данных в XML</a></noindex><br/>
+<noindex><a href="http://robocraft.ru/blog/computervision/306.html" rel="nofollow">16. Генерация случайных чисел</a></noindex><br/>
+<b>17. Обработка изображения — морфологические преобразования</b><br/>
+<br/>
+Основные морфологические преобразования:<br/>
+<b>Erode</b> — размывание(операция сужения) <br/>
+<b>Dilate</b> — растягивание(операция расширения)<br/>
+<br/>
+OpenCV реализует их двумя функциями:<br/>
+<pre class="prettyprint"><code>CVAPI(void)  cvErode( const CvArr* src, CvArr* dst,
+                      IplConvKernel* element CV_DEFAULT(NULL),
+                      int iterations CV_DEFAULT(1) );</code></pre> — размывает(операция сужения) изображение с использованием фильтра(ядра) один или несколько раз, <br/>
+если element == NULL используется ядро 3х3<br/>
+(изображение формируется из локальных минимумов — т.е. <b>будут увеличиваться тёмные области</b>)<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(void)  cvDilate( const CvArr* src, CvArr* dst,
+                       IplConvKernel* element CV_DEFAULT(NULL),
+                       int iterations CV_DEFAULT(1) );</code></pre> — растягивает(операция расширения) изображение с использованием фильтра(ядра) один или несколько раз, <br/>
+если element == NULL используется ядро 3х3<br/>
+(изображение формируется из локальных максимумов — т.е. <b>будут увеличиваться светлые области</b>)<br/>
+<br/>
+// #define CV_DEFAULT(val) = val<br/>
+<br/>
+src — исходное изображение<br/>
+dst — получаемое изображение<br/>
+element — структурирующий элемент (ядро) по-умолчанию NULL — соответствует ядру 3x3 с якорем по-центру.<br/>
+<pre class="prettyprint"><code>[ ][ ][ ]
+[ ][+][ ]
+[ ][ ][ ]</code></pre> <br/>
+структура ядра:<br/>
+<pre class="prettyprint"><code>typedef struct _IplConvKernel
+{
+    int  nCols;
+    int  nRows;
+    int  anchorX;
+    int  anchorY;
+    int *values;
+    int  nShiftR;
+}
+IplConvKernel;</code></pre><br/>
+<br/>
+iterations — число итераций (сколько раз повторить морфологическое преобразование)<br/>
+<br/>
+<b>! обе функции позволяют, чтобы в качесте dst выступало исходное изображение src.</b><br/>
+<br/>
+В cvErode() ядро накладывается на изображение и на месте якоря (центр ядра) остаётся <b>минимальное значение</b>, лежащее под ядром (в случае cvDilate() — наоборот — максимальное )<br/>
+<br/>
+Эрозия (размывание/сужение) изображения обычно используется для избавления от случайных вкраплений на изображении. Идея состоит в том, что вкрапления при размывании устранятся, тогда как крупные и соответсвенно более визуально-значимые регионы остаются.<br/>
+<br/>
+Растягивание (расширение) же, по идее, так же должно устранять шум и способствовать объединению областей изображения, которые были разделены шумом, тенями, etc.<br/>
+Применение же небольшого растягивания должно сплавить эти области в одну.<br/>
+<br/>
+Морфологические операции, чаще всего, применяются над двоичными изображениями, которые получаются после порогового преобразования (thresholding).<br/>
+<br/>
+Создание ядра произвольной формы осуществляется функцией cvCreateStructuringElementEx():<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(IplConvKernel*)  cvCreateStructuringElementEx( int cols, int  rows, int  anchor_x, int  anchor_y, int shape, int* values CV_DEFAULT(NULL) );</code></pre> — создание структурирующего элемента (ядра) для морфологических операций. <br/>
+например, cvErode() или cvDilate()<br/>
+<br/>
+cols — число колонок ядра<br/>
+rows — число стор ядра<br/>
+anchor_x — относительное горизонтальное смещение якоря ядра<br/>
+anchor_y — относительное вертикальное смещение якоря ядра<br/>
+shape — форма ядра:<br/>
+<pre class="prettyprint"><code>#define  CV_SHAPE_RECT      0
+#define  CV_SHAPE_CROSS     1
+#define  CV_SHAPE_ELLIPSE   2
+#define  CV_SHAPE_CUSTOM    100</code></pre><br/>
+ — в последнем случае, форму определяет пользователь через values, которая содержит маску, определяющую какие соседние пиксели должны учитываться<br/>
+<br/>
+values — указатель на массив, в котором ненулевые элементы определяют значимые пиксели. Если values==NULL все элементы считаются ненулевыми.<br/>
+(этот параметр учитывается только в случае shape==CV_SHAPE_CUSTOM)<br/>
+<br/>
+<pre class="prettyprint"><code>CVAPI(void)  cvReleaseStructuringElement( IplConvKernel** element );</code></pre> — освобождение памяти, выделенной под структурирующий элемент(ядро)<br/>
+<br/>
+Выбирая различную структуру ядра можно решать различные задачи обработки изображений:<br/>
+ — подавление шумов;<br/>
+ — выделение границ объекта;<br/>
+ — выделение скелета объекта;<br/>
+<br/>
+<pre class="prettyprint"><code>//
+// пример базовых морфологических преобразований
+// cvErode() и cvDilate()
+//
+
+#include &lt;cv.h&gt;
+#include &lt;highgui.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+IplImage* image = 0;
+IplImage* dst = 0;
+
+IplImage* erode = 0;
+IplImage* dilate = 0;
+
+int radius = 1;
+int radius_max=10;
+
+//
+// функция-обработчик ползунка - 
+// радиус ядра
+void myTrackbarRadius(int pos) {
+	radius = pos;
+}
+
+int iterations = 1;
+int iterations_max = 10;
+
+//
+// функция-обработчик ползунка - 
+// число итераций
+void myTrackbarIterations(int pos) {
+	iterations = pos;
+}
+
+int main(int argc, char* argv[])
+{
+	// имя картинки задаётся первым параметром
+	char* filename = argc == 2 ? argv[1] : &quot;Image0.jpg&quot;;
+	// получаем картинку
+	image = cvLoadImage(filename,1);
+	// клонируем картинку 
+	dst = cvCloneImage(image);
+	erode = cvCloneImage(image);
+	dilate = cvCloneImage(image);
+
+	printf(&quot;[i] image: %s\n&quot;, filename);
+	assert( image != 0 );
+
+	// окно для отображения картинки
+	cvNamedWindow(&quot;original&quot;,CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(&quot;erode&quot;,CV_WINDOW_AUTOSIZE);
+	cvNamedWindow(&quot;dilate&quot;,CV_WINDOW_AUTOSIZE);
+
+	cvCreateTrackbar(&quot;Radius&quot;, &quot;original&quot;, &radius, radius_max, myTrackbarRadius);
+	cvCreateTrackbar(&quot;Iterations&quot;, &quot;original&quot;, &iterations, iterations_max, myTrackbarIterations);
+
+
+	while(1){
+
+		// показываем картинку
+		cvShowImage(&quot;original&quot;,image);
+
+		// создаём ядро
+		IplConvKernel* Kern = cvCreateStructuringElementEx(radius*2+1, radius*2+1, radius, radius, CV_SHAPE_ELLIPSE);
+
+		// выполняем преобразования
+		cvErode(image, erode, Kern, iterations);
+		cvDilate(image, dilate, Kern, iterations);
+
+		// показываем результат
+		cvShowImage(&quot;erode&quot;,erode);
+		cvShowImage(&quot;dilate&quot;,dilate);
+		
+		cvReleaseStructuringElement(&Kern);
+
+		char c = cvWaitKey(33);
+		if (c == 27) { // если нажата ESC - выходим
+			break;
+		}
+	}
+
+	// освобождаем ресурсы
+	cvReleaseImage(&image);
+	cvReleaseImage(&dst);
+	cvReleaseImage(&erode);
+	cvReleaseImage(&dilate);
+	// удаляем окно
+	cvDestroyWindow(&quot;original&quot;);
+	cvDestroyWindow(&quot;erode&quot;);
+	cvDestroyWindow(&quot;dilate&quot;);
+	return 0;
+}</code></pre><br/>
+<img src="http://robocraft.ru/files/opencv/17.png"/><br/>
+<br/>
+Далее: <noindex><a href="http://robocraft.ru/blog/computervision/327.html" rel="nofollow">18. Обработка изображения — морфологические преобразования 2</a></noindex>
+				</div>				
+				<ul class="tags">
+											<li><a href="http://robocraft.ru/tag/OpenCV/">OpenCV</a>, </li>
+											<li><a href="http://robocraft.ru/tag/шаг за шагом/">шаг за шагом</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvErode/">cvErode</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvDilate/">cvDilate</a>, </li>
+											<li><a href="http://robocraft.ru/tag/IplConvKernel/">IplConvKernel</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvCreateStructuringElementEx/">cvCreateStructuringElementEx</a>, </li>
+											<li><a href="http://robocraft.ru/tag/cvReleaseStructuringElement/">cvReleaseStructuringElement</a></li>
+														
+				</ul>				
+				<ul class="voting positive guest ">
+					<li class="plus"><a href="#" onclick="lsVote.vote(319,this,1,'topic'); return false;"></a></li>
+					<li class="total" title="всего проголосовало: 1"> +1 </li>
+					<li class="minus"><a href="#" onclick="lsVote.vote(319,this,-1,'topic'); return false;"></a></li>
+					<li class="date">23 сентября 2010, 10:24</li>
+										<li class="author"><a href="http://robocraft.ru/profile/noonv/">noonv</a></li>					
+				</ul>
+
+<!-- ������.������ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 61645;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'utf-8';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'horizontal';
+yandex_direct_border_type = 'block';
+yandex_direct_limit = 4;
+yandex_direct_bg_color = 'FFFFFF';
+yandex_direct_border_color = 'FFFFFF';
+yandex_direct_title_color = '0000CC';
+yandex_direct_url_color = '006600';
+yandex_direct_all_color = '0000CC';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0066FF';
+yandex_direct_favicon = false;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+
+			</div>
+			<!-- /Topic -->			
+			
+			<script type="text/javascript" src="http://robocraft.ru/templates/skin/new/js/comments.js"></script>
+
+			<!-- Comments -->
+			<div class="comments">
+								
+				<!-- Comments Header -->
+				<div class="header">
+					<h3>Комментарии (<span id="count-comments">18</span>)</h3>
+					<a name="comments" ></a>
+					<a href="http://robocraft.ru/rss/comments/319/" class="rss">RSS</a>
+					<a href="#" onclick="lsCmtTree.collapseNodeAll(); return false;" onfocus="blur();">свернуть</a> /
+					<a href="#" onclick="lsCmtTree.expandNodeAll(); return false;" onfocus="blur();">развернуть</a>
+				</div>
+				<!-- /Comments Header -->			
+				
+				
+				<script language="JavaScript" type="text/javascript">
+					window.addEvent('domready', function() {
+						
+						lsCmtTree.setIdCommentLast(2795);
+						
+					});					
+				</script>
+				
+				
+																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_897">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment897" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(897,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(897,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_897" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Что-то у меня вообще код не идет. Вылетает «прекращена работа lala.exe» и все тут!<br/>
+в чем косяк?=\
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 01:04</li>
+																		
+									<li><a href="#comment897" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_897" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_897" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-897">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_898">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment898" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(898,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(898,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_898" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				сразу после запуска или в процессе работы?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">30 января 2011, 09:57</li>
+																		
+									<li><a href="#comment898" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment897" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_898" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_898" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-898">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_899">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment899" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(899,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(899,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_899" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				да, окно открывается и сразу же вылетает такое сообщение и все.
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 14:13</li>
+																		
+									<li><a href="#comment899" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment898" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_899" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_899" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-899">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_900">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment900" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(900,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(900,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_900" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				странно :) а какая версия OpenCV?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">30 января 2011, 14:18</li>
+																		
+									<li><a href="#comment900" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment899" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_900" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_900" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-900">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div></div></div></div></div>    				    
+    				<div class="comment" id="comment_id_901">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment901" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(901,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(901,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_901" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				2.2. Наверняка с установкой какие-то проблемы=\ у меня Visual Studio 2008 Express Edition стоит, мб в этом косяк?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 16:01</li>
+																		
+									<li><a href="#comment901" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_901" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_901" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-901">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_902">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment902" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(902,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(902,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_902" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Express Edition ни при чём, хотя 2.2 по-дефолту идёт для 2010 студии. 
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">30 января 2011, 16:16</li>
+																		
+									<li><a href="#comment902" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment901" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_902" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_902" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-902">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_903">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment903" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(903,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(903,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_903" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				фэйл… Мда, видимо скелетам придется еще подождать..=(
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 16:59</li>
+																		
+									<li><a href="#comment903" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment902" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_903" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_903" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-903">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div></div></div>    				    
+    				<div class="comment" id="comment_id_904">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment904" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(904,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(904,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_904" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				fatal error LNK1104: cannot open file 'C:\Program.obj'<br/>
+вот что он пишет теперь… 
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 17:04</li>
+																		
+									<li><a href="#comment904" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_904" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_904" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-904">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_905">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment905" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(905,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(905,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_905" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				а у Вас программы с предыдущих шагов работали? :)
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">30 января 2011, 17:08</li>
+																		
+									<li><a href="#comment905" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment904" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_905" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_905" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-905">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_906">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment906" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(906,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(906,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_906" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				с предыдущих вылетал .exe, а теперь тема с этим C:\Program. Но откуда оно взялось, я только что поняла: когда в линкере-инпуте прописываешь пути к .lib, там стоит C:\Program Files\OpenCV и тд. Так вот когда я нажимаю ОК, закрываю все, запускаю прогу, появляется эта ошибка. Если снова зайти в линкер, то там вместо того, что я прописывала, появляется следующая картина:<br/>
+C:\Program<br/>
+Files\OpenCV\и тд. И почему он слово «Files» перекидывает на другую строчку, мне ваще не понятно &gt;&lt;
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 17:21</li>
+																		
+									<li><a href="#comment906" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment905" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_906" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_906" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-906">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_908">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment908" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(908,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(908,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_908" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				щас на VS 2010 все проверили: работает. А у меня так и нет!
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 19:25</li>
+																		
+									<li><a href="#comment908" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment906" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_908" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_908" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-908">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div></div></div></div></div>    				    
+    				<div class="comment" id="comment_id_907">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment907" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(907,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(907,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_907" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				м, кстати, может Вы посоветуете насчет алгоритмом скелетизации и сред для их реализации что-нить? где лучше, какой именно?)
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 19:24</li>
+																		
+									<li><a href="#comment907" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_907" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_907" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-907">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_909">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment909" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(909,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(909,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_909" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				думаю, нужно просто пересобрать библиотеку под 2008-й и всё заработает ;) библиотека пересобирается с помощью CMake так же как описано про <noindex><a href="http://robocraft.ru/blog/computervision/265.html" rel="nofollow">установку 2.0</a></noindex>
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">30 января 2011, 19:44</li>
+																		
+									<li><a href="#comment909" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment907" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_909" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_909" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-909">    
+    				    
+    																		
+					   					    	
+        				</div></div></div></div>    				    
+    				<div class="comment" id="comment_id_910">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment910" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(910,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(910,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_910" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				вроде по инструкции я все поставила, и теперь снова вылетает .exe!!! &gt;&lt;
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">30 января 2011, 21:48</li>
+																		
+									<li><a href="#comment910" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_910" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_910" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-910">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_922">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment922" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(922,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(922,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_922" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Так, наконец-то все заработало)<br/>
+Скажите, а как выделять скелет с помощью этого всего?
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/NoHope/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/NoHope/" class="author">NoHope</a></p>
+								<ul>
+									<li class="date">2 февраля 2011, 16:15</li>
+																		
+									<li><a href="#comment922" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_922" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_922" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-922">    
+    				    
+    																		
+					   					        				</div></div>
+    				    
+    				<div class="comment" id="comment_id_2793">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2793" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2793,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2793,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2793" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Маааленькая ошибочка: <br/>
+// функция-обработчик ползунка — <br/>
+// число итераций<br/>
+void myTrackbarIterations(int pos) {<br/>
+// <u>radius</u> = pos;<br/>
+iterations = pos;<br/>
+}<br/>
+<br/>
+А вопрос мой вот в чём: <br/>
+Позволяет ли OpenCV реализовать слушателей трэкбара без колбэков?<br/>
+(Пишу на JavaCV, с колюэком возникли проблемы, тк функции типа cvCreateTrackbar(...) не принимают в качестве параметра указатель на функцию)
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Kseniya/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Kseniya/" class="author">Kseniya</a></p>
+								<ul>
+									<li class="date">8 апреля 2012, 08:14</li>
+																		
+									<li><a href="#comment2793" class="imglink link"></a></li>	
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2793" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2793" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2793">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_2794">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2794" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2794,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2794,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2794" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				Спасибо! пофиксил.<br/>
+кажется — нет, но ведь никто не мешает использовать вместо OpenCV-х трэкбаров любые другие ;)
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/noonv/"><img src="http://robocraft.ru/uploads/images/2/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/noonv/" class="author">noonv</a></p>
+								<ul>
+									<li class="date">8 апреля 2012, 08:18</li>
+																		
+									<li><a href="#comment2794" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment2793" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2794" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2794" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2794">    
+    				    
+    																		
+					   					        
+    				    
+    				<div class="comment" id="comment_id_2795">
+    												<img src="http://robocraft.ru/templates/skin/new/images/close.gif" alt="+" title="свернуть/развернуть" class="folding" />
+							<a name="comment2795" ></a>							
+							<div class="voting  guest     ">
+								<div class="total">0</div>
+								<a href="#" class="plus" onclick="lsVote.vote(2795,this,1,'topic_comment'); return false;"></a>
+								<a href="#" class="minus" onclick="lsVote.vote(2795,this,-1,'topic_comment'); return false;"></a>
+							</div>						
+							<div id="comment_content_id_2795" class="content ">								
+															
+								<div class="tb"><div class="tl"><div class="tr"></div></div></div>								
+								<div class="text">
+										
+					    				И правда… Спасибо! Так быстрее заработало ;)
+																	
+								</div>				
+								<div class="bl"><div class="bb"><div class="br"></div></div></div>
+							</div>							
+							<div class="info">
+								<a href="http://robocraft.ru/profile/Kseniya/"><img src="http://robocraft.ru/templates/skin/new/images/avatar_24x24.jpg" alt="avatar" class="avatar" /></a>
+								<p><a href="http://robocraft.ru/profile/Kseniya/" class="author">Kseniya</a></p>
+								<ul>
+									<li class="date">8 апреля 2012, 08:46</li>
+																		
+									<li><a href="#comment2795" class="imglink link"></a></li>	
+																			<li class="goto-comment-parent"><a href="#comment2794" onclick="return lsCmtTree.goToParentComment($(this));" title="Ответ на">↑</a></li>
+																		<li class="goto-comment-child hidden"><a href="#" onclick="return lsCmtTree.goToChildComment(this);" title="Обратно к ответу">↓</a></li>
+									   																	
+								</ul>
+							</div>		
+							<div class="comment"><div class="content"><div class="text" id="comment_preview_2795" style="display: none;"></div></div></div>					
+							<div class="reply" id="reply_2795" style="display: none;"></div>	
+								
+							<div class="comment-children" id="comment-children-2795">    
+    				    
+    				        				</div></div></div></div></div></div>    
+    												
+				<span id="comment-children-0"></span>				
+				<br>
+				
+															Только зарегистрированные и авторизованные пользователи могут оставлять комментарии.<br>
+													
+			</div>
+			<!-- /Comments -->	
+
+<br/><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-9788091858425972";
+/* 468x60, ������� 08.09.09 */
+google_ad_slot = "0477976619";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+		</div>
+		<!-- /Content -->
+							<!-- Sidebar -->
+		<div id="sidebar">
+			
+																						
+														<div class="block blogs">
+				<div class="tl"><div class="tr"></div></div>
+				<div class="cl"><div class="cr">
+					
+					<h1>Блоги</h1>
+					
+					<ul class="block-nav">
+						<li class="active"><strong></strong><a href="#" id="block_blogs_top" onclick="lsBlockBlogs.toggle(this,'blogs_top'); return false;">Топ</a><em></em></li>
+											</ul>
+					
+					<div class="block-content">
+					
+						<script language="JavaScript" type="text/javascript">
+						var lsBlockBlogs;
+						window.addEvent('domready', function() {       
+							lsBlockBlogs=new lsBlockLoaderClass();
+						});
+						</script>
+					
+										<ul class="list">
+													<li><div class="total">13.70</div><a href="http://robocraft.ru/blog/arduino/" class="stream-author">Arduino</a></li>						
+													<li><div class="total">10.37</div><a href="http://robocraft.ru/blog/computervision/" class="stream-author">Компьютерное зрение</a></li>						
+													<li><div class="total">8.03</div><a href="http://robocraft.ru/blog/ARM/" class="stream-author">ARM</a></li>						
+													<li><div class="total">5.73</div><a href="http://robocraft.ru/blog/algorithm/" class="stream-author">Программирование</a></li>						
+													<li><div class="total">5.05</div><a href="http://robocraft.ru/blog/projects/" class="stream-author">Проекты и идеи</a></li>						
+													<li><div class="total">3.04</div><a href="http://robocraft.ru/blog/RoboCraft/" class="stream-author">RoboCraft</a></li>						
+													<li><div class="total">2.37</div><a href="http://robocraft.ru/blog/technology/" class="stream-author">Технологии</a></li>						
+													<li><div class="total">2.27</div><a href="http://robocraft.ru/blog/mechanics/" class="stream-author">Механика</a></li>						
+													<li><div class="total">2.26</div><a href="http://robocraft.ru/blog/electronics/" class="stream-author">Электроника</a></li>						
+													<li><div class="total">1.55</div><a href="http://robocraft.ru/blog/news/" class="stream-author">Новости</a></li>						
+													<li><div class="total">1.14</div><a href="http://robocraft.ru/blog/communication/" class="stream-author">Коммуникации</a></li>						
+													<li><div class="total">1.13</div><a href="http://robocraft.ru/blog/beam/" class="stream-author">BEAM роботы</a></li>						
+													<li><div class="total">0.00</div><a href="http://robocraft.ru/blog/sensor/" class="stream-author">Сенсоры и датчики</a></li>						
+											</ul>				
+					</div>
+					
+					<div class="right"><a href="http://robocraft.ru/blogs/">Все блоги</a></div>
+
+					
+				</div></div>
+				<div class="bl"><div class="br"></div></div>
+			</div> 
+															
+																			
+														<div class="block stream">
+
+				<div class="tl"><div class="tr"></div></div>
+				<div class="cl"><div class="cr">
+					
+					<h1>Прямой эфир</h1>
+					
+					<ul class="block-nav">						
+						<li><strong></strong><a href="#" id="block_stream_topic" onclick="lsBlockStream.toggle(this,'topic_stream'); return false;">Публикации</a></li>
+						<li class="active"><a href="#" id="block_stream_comment" onclick="lsBlockStream.toggle(this,'comment_stream'); return false;">Комментарии</a><em></em></li>
+					</ul>					
+					
+					<div class="block-content">
+					
+						<script language="JavaScript" type="text/javascript">
+						var lsBlockStream;
+						window.addEvent('domready', function() { 
+							lsBlockStream=new lsBlockLoaderClass();      						
+						});
+						</script>
+					
+										<ul class="stream-content">
+													<li class="even">
+								<a href="http://robocraft.ru/profile/admin/" class="stream-author">admin</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/RoboCraft/3623.html#comment5668" class="stream-comment">Конкурс - КиберВесна 2017</a>
+								<span> 16</span> в <a href="http://robocraft.ru/blog/RoboCraft/" class="stream-blog">RoboCraft</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/Jurius/" class="stream-author">Jurius</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/projects/2994.html#comment5664" class="stream-comment">Металлоискатель на Arduino</a>
+								<span> 28</span> в <a href="http://robocraft.ru/blog/projects/" class="stream-blog">Проекты и идеи</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/noonv/" class="stream-author">noonv</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/algorithm/560.html#comment5663" class="stream-comment">Нейронная сеть - обучение ИНС с помощью алгоритма обратного распространения</a>
+								<span> 19</span> в <a href="http://robocraft.ru/blog/algorithm/" class="stream-blog">Программирование</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/galaxy5user/" class="stream-author">galaxy5user</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/3130.html#comment5658" class="stream-comment">Raspberry Pi. Поднимаем watchdog</a>
+								<span> 15</span> в <a href="http://robocraft.ru/my/danil_borchevkin/" class="stream-blog">Блог им. danil_borchevkin</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/Zoltberg/" class="stream-author">Zoltberg</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/782.html#comment5653" class="stream-comment">TC15-11 - матрица светодиодная 8х8</a>
+								<span> 7</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/nnovofastovskiy/" class="stream-author">nnovofastovskiy</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/541.html#comment5638" class="stream-comment">Подключаем кучу устройств к Arduino по 5 проводам</a>
+								<span> 51</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/ASDFG123/" class="stream-author">ASDFG123</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/algorithm/785.html#comment5637" class="stream-comment">Библиотека для LCD на базе контроллера HD44780</a>
+								<span> 23</span> в <a href="http://robocraft.ru/blog/algorithm/" class="stream-blog">Программирование</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/nejtr0n/" class="stream-author">nejtr0n</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/270.html#comment5617" class="stream-comment">5. OpenCV шаг за шагом.  Вывод видео</a>
+								<span> 31</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/anton666/" class="stream-author">anton666</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/116.html#comment5585" class="stream-comment">Arduino/CraftDuino и WinAVR - программируем на чистом С</a>
+								<span> 23</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/TotCambIKoka/" class="stream-author">TotCambIKoka</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/519.html#comment5581" class="stream-comment">SPI и Arduino: плодим выходы</a>
+								<span> 36</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/GraninDm/" class="stream-author">GraninDm</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/3126.html#comment5536" class="stream-comment">Программируемый логический контроллер (ПЛК) на базе Arduino + Ethernet shield + 74HC165 + 74HC595</a>
+								<span> 21</span> в <a href="http://robocraft.ru/my/GraninDm/" class="stream-blog">Блог им. GraninDm</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/r2d2/" class="stream-author">r2d2</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/271.html#comment5521" class="stream-comment">6. OpenCV шаг за шагом. Ползунок</a>
+								<span> 15</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/Leon/" class="stream-author">Leon</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/electronics/594.html#comment5486" class="stream-comment">Датчики Холла</a>
+								<span> 11</span> в <a href="http://robocraft.ru/blog/electronics/" class="stream-blog">Электроника</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/realist/" class="stream-author">realist</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/news/3511.html#comment5438" class="stream-comment">Harvest Automation представила своего складского робота TM-100</a>
+								<span> 1</span> в <a href="http://robocraft.ru/blog/news/" class="stream-blog">Новости</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/admin/" class="stream-author">admin</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/arduino/30.html#comment5378" class="stream-comment">Программирование Arduino - структура программы, константы</a>
+								<span> 2</span> в <a href="http://robocraft.ru/blog/arduino/" class="stream-blog">Arduino</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/Aquila/" class="stream-author">Aquila</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/2911.html#comment5345" class="stream-comment">Генератор синусоиды на Arduino или ЦАП R-2R</a>
+								<span> 15</span> в <a href="http://robocraft.ru/my/Ghost_D/" class="stream-blog">Блог им. Ghost_D</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/ursoft2004/" class="stream-author">ursoft2004</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/867.html#comment5344" class="stream-comment">33. OpenCV шаг за шагом. Сравнение контуров  через суммарные характеристики - моменты</a>
+								<span> 6</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/atmega644/" class="stream-author">atmega644</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/beam/3118.html#comment5308" class="stream-comment">Построение BEAM-робота с нейронной сетью</a>
+								<span> 2</span> в <a href="http://robocraft.ru/blog/beam/" class="stream-blog">BEAM роботы</a>
+							</li>						
+													<li class="even">
+								<a href="http://robocraft.ru/profile/Annihilate/" class="stream-author">Annihilate</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/computervision/506.html#comment5306" class="stream-comment">OpenCV - Сравнение изображений и генерация картинки отличий</a>
+								<span> 7</span> в <a href="http://robocraft.ru/blog/computervision/" class="stream-blog">Компьютерное зрение</a>
+							</li>						
+													<li >
+								<a href="http://robocraft.ru/profile/arno/" class="stream-author">arno</a>&nbsp;&#8594;
+								<span class="stream-comment-icon"></span><a href="http://robocraft.ru/blog/news/3439.html#comment5292" class="stream-comment">Военные США протестировали рой из маленьких дронов</a>
+								<span> 1</span> в <a href="http://robocraft.ru/blog/news/" class="stream-blog">Новости</a>
+							</li>						
+										
+					</ul>
+					</div>
+					<div class="right"><a href="http://robocraft.ru/comments/">Весь эфир</a> | <a href="http://robocraft.ru/rss/allcomments/">RSS</a></div>
+
+					
+				</div></div>
+				<div class="bl"><div class="br"></div></div>
+			</div>
+ 
+															
+																			
+														<div class="block tags">
+				<div class="tl"><div class="tr"></div></div>
+				<div class="cl"><div class="cr">
+					
+					<ul class="cloud">
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/3D/">3D</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/3D-печать/">3D-печать</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/AI/">AI</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Android/">Android</a></li>	
+													<li><a class="w10" rel="tag" href="http://robocraft.ru/tag/Arduino/">Arduino</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/ARM/">ARM</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/AVR/">AVR</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/Blink/">Blink</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/Bluetooth/">Bluetooth</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/COM-порт/">COM-порт</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/CraftDuino/">CraftDuino</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/DARPA/">DARPA</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/DIY/">DIY</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/embedded/">embedded</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/IDE/">IDE</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/iRobot/">iRobot</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/Kinect/">Kinect</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/LEGO/">LEGO</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Linux/">Linux</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Open Source/">Open Source</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/OpenCV/">OpenCV</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/Processing/">Processing</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/Python/">Python</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/Raspberry Pi/">Raspberry Pi</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/RoboCraft/">RoboCraft</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Roomba/">Roomba</a></li>	
+													<li><a class="w6" rel="tag" href="http://robocraft.ru/tag/ROS/">ROS</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/swarm/">swarm</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/TurtleBot/">TurtleBot</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/Urbi/">Urbi</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/web-камера/">web-камера</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/автоматизация/">автоматизация</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/андроид/">андроид</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/балансировать/">балансировать</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/библиотека/">библиотека</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/бионика/">бионика</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/версия/">версия</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/видео/">видео</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/военный/">военный</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/вопрос/">вопрос</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/датчик/">датчик</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/дрон/">дрон</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/зрение/">зрение</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/игра/">игра</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/ИК/">ИК</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/интернет/">интернет</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/камера/">камера</a></li>	
+													<li><a class="w7" rel="tag" href="http://robocraft.ru/tag/кибервесна/">кибервесна</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/конкурс/">конкурс</a></li>	
+													<li><a class="w5" rel="tag" href="http://robocraft.ru/tag/манипулятор/">манипулятор</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/начинающим/">начинающим</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/наше/">наше</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/нейронная сеть/">нейронная сеть</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/ПКЛ/">ПКЛ</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/подводный/">подводный</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/пылесос/">пылесос</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/работа/">работа</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/распознавание/">распознавание</a></li>	
+													<li><a class="w10" rel="tag" href="http://robocraft.ru/tag/робот/">робот</a></li>	
+													<li><a class="w6" rel="tag" href="http://robocraft.ru/tag/робототехника/">робототехника</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/рука/">рука</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/светодиод/">светодиод</a></li>	
+													<li><a class="w6" rel="tag" href="http://robocraft.ru/tag/сервомашинка/">сервомашинка</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/телеприсутствие/">телеприсутствие</a></li>	
+													<li><a class="w1" rel="tag" href="http://robocraft.ru/tag/УЗ/">УЗ</a></li>	
+													<li><a class="w4" rel="tag" href="http://robocraft.ru/tag/управление/">управление</a></li>	
+													<li><a class="w2" rel="tag" href="http://robocraft.ru/tag/урок/">урок</a></li>	
+													<li><a class="w4" rel="tag" href="http://robocraft.ru/tag/ходить/">ходить</a></li>	
+													<li><a class="w4" rel="tag" href="http://robocraft.ru/tag/шаг за шагом/">шаг за шагом</a></li>	
+													<li><a class="w3" rel="tag" href="http://robocraft.ru/tag/шилд/">шилд</a></li>	
+											</ul>
+					
+				</div></div>
+				<div class="bl"><div class="br"></div></div>
+			</div> 
+															
+							
+					
+			
+		</div>
+		<!-- /Sidebar -->				
+	</div>
+
+<!-- Footer -->
+<div id="footer">
+
+	<ul class="footer-list">
+				<li class="footer-list-header word-wrap">Вы можете</li>
+		<li><a class="js-registration-form-show" href="http://robocraft.ru/registration/">Зарегистрироваться</a></li>
+		<li><a class="js-login-form-show sign-in" href="http://robocraft.ru/login/">Войти</a></li>
+			</ul>
+	
+	<ul class="footer-list">
+		<li class="footer-list-header">Разделы</li>
+		<li><a href="http://robocraft.ru">Топики</a></li>
+		<li><a href="http://robocraft.ru/blogs/">Блоги</a></li>
+		<li><a href="http://robocraft.ru/people/">Люди</a></li>
+		<li><a href="http://robocraft.ru/shop/">Наш Магазин</a></li>
+		<li><a href="http://robocraft.ru/forum/">Форум</a></li>
+	</ul>
+	
+	<ul class="footer-list">
+		<li class="footer-list-header">Инфо</li>
+		<li><a href="http://robocraft.ru/page/about/">О сайте</a></li>
+		<li><a href="http://robocraft.ru/page/about/#rules">Правила</a></li>
+		<li><a href="http://robocraft.ru/page/summary/">Статьи</a></li>
+		<li><a href="http://robocraft.ru/page/faq/">FAQ</a></li>
+	</ul>
+	
+	<ul class="footer-list">
+		<li class="footer-list-header">Купить</li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=47_26" target="_blank">Arduino или CraftDuino</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=47_27" target="_blank">Arduino шилды</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=18_35" target="_blank">Cервомашинки</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=29" target="_blank">Наборы</a></li>
+		<li><a href="http://robocraft.ru/shop/index.php?route=product/category&path=62" target="_blank">MakeBlock</a></li>
+	</ul>
+
+	<div class="copyright">
+	© Сайт работает на <a href="http://livestreet.ru" target="_blank">LiveStreet</a>
+		<div>
+			© 2009-2017
+		</div>
+		<div>
+
+<!--Rating@Mail.ru counter-->
+<script type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3" type="text/javascript"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1656615" target="_top">'+
+'<img src="http://d7.c4.b9.a1.top.mail.ru/counter?id=1656615;t=94;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="18" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_top" href="http://top.mail.ru/jump?from=1656615">
+<img src="http://d7.c4.b9.a1.top.mail.ru/counter?js=na;id=1656615;t=94" 
+height="18" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+		&nbsp;				 	
+		<a href="http://idea2.ru" title="Идеи 2.0" target="_blank"><img src="http://idea2.ru/i2.png" /></a>&nbsp;
+		<a href="http://robocraft.ru" title="RoboCraft" target="_blank"><img src="http://robocraft.ru/rc.png" /></a>		
+		</div>
+	</div>
+
+	<div>Материалы сайта являются авторскими. Копирование и публикация материалов без разрешения запрещены! &nbsp;
+	</div>
+		
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12745905-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body>
+</html>
+
