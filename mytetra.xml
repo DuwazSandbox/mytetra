@@ -311,5 +311,26 @@
     </recordtable>
    </node>
   </node>
+  <node crypt="" id="149093972538ejykaxqr" name="Windows">
+   <recordtable>
+    <record id="14909402932z31t7kjve" name="Запуск" author="" url="" tags="" ctime="20170331090453" dir="14909402932k5zc82k02" file="text.html"/>
+   </recordtable>
+   <node crypt="" id="1490939762t4hbu8tn88" name="WinDBG">
+    <recordtable>
+     <record id="1490940935gc500tg9hb" name="Описание" author="" url="" tags="" ctime="20170331091535" dir="1490940935gk8hq92yzc" file="text.html"/>
+     <record id="1490941708y88xipbr55" name="blwdbdue.dll" author="" url="" tags="" ctime="20170331092828" dir="1490941708h7wo8nww1j" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1490940019df539xg0qt" name="cmd">
+    <recordtable>
+     <record id="1490940087qi7u6xassg" name="bcdedit" author="" url="" tags="" ctime="20170331090145" dir="1490940087hoxl5xqa7b" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1490940371km5n5e33ym" name="Обучение">
+    <recordtable>
+     <record id="149094039171pxxclmdk" name="Windows kernel: краткий курс молодого бойца (Артем Шишкин) " author="" url="https://www.youtube.com/watch?v=Xv9ckZ4PCmc" tags="" ctime="20170331090631" dir="1490940391emhicgzhc0" file="text.html"/>
+    </recordtable>
+   </node>
+  </node>
  </content>
 </root>
