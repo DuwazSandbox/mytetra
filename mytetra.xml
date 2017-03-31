@@ -6,23 +6,7 @@
   <node crypt="" id="14810525798gt7py836w" name="Computer Vision">
    <node crypt="" id="1481052750d6uuwvagz1" name="OpenCV">
     <recordtable>
-     <record id="148105325426i2dh66gn" name="OpenCV" author="" url="" tags="" ctime="20161206224054" dir="1481053254l6924zrc7l" file="text.html"/>
      <record id="1484418314348bzrkly8" name="Учебник на русском" author="" url="http://robocraft.ru/page/opencv/" tags="" ctime="20170114212514" dir="1484418314s9580nel5n" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052758dti88xxmo8" name="OpenGL">
-    <recordtable>
-     <record id="1481055688g2tfs24oeo" name="OpenGL" author="" url="" tags="" ctime="20161206232128" dir="148105568890ez5lwnsu" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052767y8lvikrvaq" name="OpenCL">
-    <recordtable>
-     <record id="148105569994al5k46yi" name="OpenCL" author="" url="" tags="" ctime="20161206232139" dir="1481055699yn8topyerg" file="text.html"/>
-    </recordtable>
-   </node>
-   <node crypt="" id="1481052778vdjc83t3tr" name="OpenMP">
-    <recordtable>
-     <record id="1481055712ugepfy3bh5" name="OpenMP" author="" url="" tags="" ctime="20161206232152" dir="1481055712pfhx4ehvqz" file="text.html"/>
     </recordtable>
    </node>
    <node crypt="" id="1481052923qzcx9mie7r" name="Graph computing engines">
@@ -105,6 +89,11 @@
      <record id="1483987199udnkl05x0t" name="Иерархическая темпоральная память (HTM)" author="Numenta" url="http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" tags="Хокинс" ctime="20170109213959" dir="1483987199t78a8u9wb2" file="text.html"/>
     </recordtable>
    </node>
+  </node>
+  <node crypt="" id="1490934677xnqhc70h4q" name="OpenGL">
+   <recordtable>
+    <record id="1490934697rrds8spb8i" name="OpenGL" author="" url="" tags="" ctime="20170331073137" dir="1490934697w027ca9exa" file="text.html"/>
+   </recordtable>
   </node>
  </content>
 </root>
