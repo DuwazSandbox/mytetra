@@ -305,11 +305,7 @@
    <node crypt="" id="14909355062lsuwyjmdm" name="Git"/>
   </node>
   <node crypt="" id="14909395432dxfvt2pqj" name="Bug tracking system">
-   <node crypt="" id="14909395430cgfobk8v5" name="JIRA">
-    <recordtable>
-     <record id="1481055864bafnssg8qi" name="JIRA" author="" url="" tags="" ctime="20170331085223" dir="1481055864417j7nhd4k" file="text.html"/>
-    </recordtable>
-   </node>
+   <node crypt="" id="14909395430cgfobk8v5" name="JIRA"/>
   </node>
   <node crypt="" id="149093972538ejykaxqr" name="Windows">
    <recordtable>
