@@ -3,417 +3,422 @@
 <root>
  <format version="1" subversion="2"/>
  <content>
-  <node crypt="1" icon="" id="1494235986c629r211sn" name="UkM1U0lNUAPw4q4YXDUtbY6TqYZLTM/t0lTxd/CWZ48s2mNjfhpDniaB4IMdDl8alyr98Q7yvBA=">
-   <node crypt="1" icon="" id="1494236129klxij031z2" name="UkM1U0lNUAPEXRv2EuRtiEWTQDZ/e3BwzbbwdQICRzMo/EIMpRuQ3Dvjex0k2WDC1lppQiQRJCET8akgGg39eg==">
-    <node crypt="1" icon="" id="1494236140j1d5hh4c4j" name="UkM1U0lNUAOVQ7z1z15M3xV5IF6SEl5MPLIHhRqCf3TRKtkmr3BmimMWOqmsgVyxBLXge8p9LEk=">
-     <node crypt="1" icon="" id="1494236140m8z6q3j2g1" name="UkM1U0lNUAPaAYd05NpWPJ83RduXhLUHBqpRcFvMIVNUxlnBNL5qf+CSFeMOpamLSetNglfZeS6C3WsqwCMYrg==">
-      <node crypt="1" icon="" id="1494236140gwsks3f5nm" name="UkM1U0lNUANc7ltXhckF5RV5flOVEp8GI37SXaBz0ZjZDpnuogP57P785Fx7HnHK"/>
-      <node crypt="1" icon="" id="1494236140lonf0zt4wx" name="UkM1U0lNUAPPW+H7FUBIymPZt+ZREUaX5jyI4DXNMaY37S6Z+qs96oMFMM5bcs+X"/>
-      <node crypt="1" icon="" id="1494236140zwocjk0ew2" name="UkM1U0lNUANL91g0GLjheiHYVlb08vX9Arc5NqAY45SpaRO6bfKe4N2H0xuyCj+m"/>
-      <node crypt="1" icon="" id="1494236140r8rmbgpfvj" name="UkM1U0lNUAMCGKW9rPDfDEmpaMncHZYQP+Dtu+pLMN+4lo5food8c7yXntE+ar0b"/>
-      <node crypt="1" icon="" id="1494236140rsotucixx3" name="UkM1U0lNUANZZeQt8vVia4xxJGkoaucuM8+5ZkgFxMpBPq0RkOfWAKFM5XOMIPaJ"/>
-      <node crypt="1" icon="" id="1494236140hx7i8ghspw" name="UkM1U0lNUAPK2VzuVX3dYoOAnSklXSsm3RdtJgCfnIErpNryHqXrYgWT499KlaqZ"/>
+  <node crypt="0" icon="" id="1494235986c629r211sn" name="Знания">
+   <node crypt="0" icon="" id="1494236129klxij031z2" name="Компьютер">
+    <node crypt="0" icon="" id="1494236140j1d5hh4c4j" name="Computer Vision">
+     <node crypt="0" icon="" id="1494236140m8z6q3j2g1" name="Graph computing engines">
+      <node crypt="0" icon="" id="1494236140gwsks3f5nm" name="Giraph"/>
+      <node crypt="0" icon="" id="1494236140lonf0zt4wx" name="Giraph++"/>
+      <node crypt="0" icon="" id="1494236140zwocjk0ew2" name="GraphLab"/>
+      <node crypt="0" icon="" id="1494236140r8rmbgpfvj" name="GraphX"/>
+      <node crypt="0" icon="" id="1494236140rsotucixx3" name="Pregel"/>
+      <node crypt="0" icon="" id="1494236140hx7i8ghspw" name="Pregel++"/>
      </node>
-     <node crypt="1" icon="" id="1494236140ch7s6r3qrk" name="UkM1U0lNUAPWAnN05eq+x4rBj0/TqjL1xsWBK7nlbDgEnxoWw0OilwdLzRly7pOkcIxjmtqRJiqBmEcPHwdSdQsMKl9Xix6V">
+     <node crypt="0" icon="" id="1494236140ch7s6r3qrk" name="Методы обучения">
       <recordtable>
-       <record id="1481055033d61h0o30ex" name="UkM1U0lNUAOI2HE8iE7wXB0Mmc7fF8QYHZLOsTIVJjf6gVmCHrg3yZ5YO7C7XB4l" author="" url="" tags="" ctime="20170508123540" dir="1481055033btb8txqgnc" file="text.html" crypt="1"/>
-       <record id="1481055063gw91zrdf44" name="UkM1U0lNUAMjm5vULQrnYxob7IgJ9dPCJsGZ2i7kh+XRVRg8Gvj9842XdJIy3neyYEXkqz1RGTLLnwCrp6VvmA==" author="" url="" tags="" ctime="20170508123540" dir="1481055063rf0ih6zic1" file="text.html" crypt="1"/>
-       <record id="1481055097rkp8rzx4p2" name="UkM1U0lNUAN6zHTRKn1bbhv2rMYJ0B3GYcHMpKaqqvzFHyUUNPjEb7h6WjQywYrbm4I+g7C1FSfQMQ86zXCC06WXHz0J93/o" author="" url="" tags="" ctime="20170508123540" dir="1481055097flfbfxv67r" file="text.html" crypt="1"/>
-       <record id="1481055113303nzgz1yp" name="UkM1U0lNUANcAq49hrwdXscubygaVHNG9qBQiz28KyC6yaXGt5Uo+3SRXkAm45RhWERXvRC5cUIHviSGVScyy8ua59BwUcHX" author="" url="" tags="" ctime="20170508123540" dir="1481055113m8yitj8qyu" file="text.html" crypt="1"/>
-       <record id="1481055128oqooix7qru" name="UkM1U0lNUANx689ah0FC4dnI4V8RhgJznOTQ43m1nFWJcemGhlVaXkmUki7pt4cu/Pq/PlVEx/lrkilKrDSPHA==" author="" url="" tags="" ctime="20170508123540" dir="1481055128kmihudu74m" file="text.html" crypt="1"/>
-       <record id="14810551441nl0kkqips" name="UkM1U0lNUAMc2KejKg8dMfz310ALFI4NbHlmWYQV+R1d60MP15Th5rGp/Kcy31eP+yjkSP49OpMQdrPw5SPJlw==" author="" url="" tags="" ctime="20170508123540" dir="1481055144572f1wb7cu" file="text.html" crypt="1"/>
-       <record id="1481055161blbm4gp99c" name="UkM1U0lNUAPFv3VU5BxomunZ/sez1vExQTRwkTQbERWacuqOqgP4XrtCffmKsTKnCL85m5XxNDzAbR7wekWT9w==" author="" url="" tags="" ctime="20170508123540" dir="1481055161awhniy62s4" file="text.html" crypt="1"/>
-       <record id="1481055176tozkbv2o9h" name="UkM1U0lNUANeB1PMtqXE2WeXQTtjXFdLleSQw8S3I8huuJz918TyupAtFPnTJUV7" author="" url="" tags="" ctime="20170508123540" dir="14810551760u8je4j71h" file="text.html" crypt="1"/>
-       <record id="1481055188lbp6pmizxg" name="UkM1U0lNUAMjuakuUMnzJ0OJWhhK41awlozjdn0gWsB1DmFQuY2etl+eFIcod5J8l3HgZKrIbhe+zynvXKtJfQ==" author="" url="" tags="" ctime="20170508123540" dir="1481055188ps9ji6ozl6" file="text.html" crypt="1"/>
-       <record id="1481055201u7zppfj87r" name="UkM1U0lNUAORlvd1TT+sjZ3Bu4VYtfUio3tpBkEHwAGoU9WbR5LJG2D49hBs3PiznwjcaELvZqku4Uz6XeXlLg==" author="" url="" tags="" ctime="20170508123540" dir="1481055201qe3rf8xvqb" file="text.html" crypt="1"/>
-       <record id="1481055219g3hn4bzi9h" name="UkM1U0lNUANRVmYIHZveE6hJP+Sa//bTQy7sMfzMnHSXkLmiX9L1o7MdhwXi4SiL" author="" url="" tags="" ctime="20170508123540" dir="1481055219pil8qi4ki8" file="text.html" crypt="1"/>
-       <record id="1481055927cy0kvcn7rz" name="UkM1U0lNUAMxDGRTkOYvJaJm3746tBo/mpn5V7QH/BI0K6yus3p4XjhYqRtH7AUJ981ZrC/BC4jf0p0ccVIxOztQ8SnaOTlp" author="" url="" tags="" ctime="20170508123540" dir="14810559272j4zv3lvid" file="text.html" crypt="1"/>
-       <record id="1481056675fadqgys02r" name="UkM1U0lNUAOBJ0I+DkPpmuQKBg8jmHyzwTL+oJQMoLeGY+NlvM6Khj4nAQEQwlQdG6zFbwXGn36ukb63oU+b4Q==" author="" url="" tags="" ctime="20170508123540" dir="1481056675w77niqgmj1" file="text.html" crypt="1"/>
-       <record id="1481057656e95zuj6665" name="UkM1U0lNUAONBI0YLjjqU/vtUpWHR+0jjq4DB0SiLtQdqe84I4M/2YrlodfCxq/osJQu+aiNPPtVweITDMHMvQ==" author="" url="" tags="" ctime="20170508123540" dir="1481057656n5uuc0s2jd" file="text.html" crypt="1"/>
-       <record id="1481058223t5rfv26ui1" name="UkM1U0lNUANqZvmY4QZKV9DhhiQpfpmWFaM/NbOQgdVFdzrrhQy2/+0kMuU0PlO9" author="" url="" tags="" ctime="20170508123540" dir="1481058223gqxsmpunkl" file="text.html" crypt="1"/>
-       <record id="1481060990ywkhq9xfyk" name="UkM1U0lNUAOY+GtMK3Kj8wRUcBjA0jfBKJJtuUoZHaiZgr90UAxOKyZM//6om0PZjRVSgUqKUN0=" author="" url="" tags="" ctime="20170508123540" dir="148106099037l7khnezk" file="text.html" crypt="1"/>
-       <record id="14812391338nwj1o33qe" name="UkM1U0lNUAOloXfHzoP98KJagd3zGObm3oGjCGyvjwWB4EqWVLRR10B3QfVLu5i4fKIfshwr94V0Jakhdqcvag==" author="" url="" tags="" ctime="20170508123540" dir="1481239133gg1ij6d7e3" file="text.html" crypt="1"/>
-       <record id="1481147702gpf9oafssp" name="UkM1U0lNUAOfi78t890bY6pP6qINoTwDY22yBbOpeJUtN2eYmwiR+23Ncd6gJhQB" author="" url="" tags="" ctime="20170508123540" dir="1481147702t592dv9d7u" file="text.html" crypt="1"/>
+       <record id="1481055033d61h0o30ex" name="Dropout" author="" url="" tags="" ctime="20170508123540" dir="1481055033btb8txqgnc" file="text.html" crypt="0"/>
+       <record id="1481055063gw91zrdf44" name="Unsupervised learning" author="" url="" tags="" ctime="20170508123540" dir="1481055063rf0ih6zic1" file="text.html" crypt="0"/>
+       <record id="1481055097rkp8rzx4p2" name="Stochastic gradient descent" author="" url="" tags="" ctime="20170508123540" dir="1481055097flfbfxv67r" file="text.html" crypt="0"/>
+       <record id="1481055113303nzgz1yp" name="Deep feedforward networks" author="" url="" tags="" ctime="20170508123540" dir="1481055113m8yitj8qyu" file="text.html" crypt="0"/>
+       <record id="1481055128oqooix7qru" name="Monte-carlo methods" author="" url="" tags="" ctime="20170508123540" dir="1481055128kmihudu74m" file="text.html" crypt="0"/>
+       <record id="14810551441nl0kkqips" name="Convolutional networks" author="" url="" tags="" ctime="20170508123540" dir="1481055144572f1wb7cu" file="text.html" crypt="0"/>
+       <record id="1481055161blbm4gp99c" name="Deep recurrent networks" author="" url="" tags="" ctime="20170508123540" dir="1481055161awhniy62s4" file="text.html" crypt="0"/>
+       <record id="1481055176tozkbv2o9h" name="RNN" author="" url="" tags="" ctime="20170508123540" dir="14810551760u8je4j71h" file="text.html" crypt="0"/>
+       <record id="1481055188lbp6pmizxg" name="Bidirectional RNNs" author="" url="" tags="" ctime="20170508123540" dir="1481055188ps9ji6ozl6" file="text.html" crypt="0"/>
+       <record id="1481055201u7zppfj87r" name="Model compression" author="" url="" tags="" ctime="20170508123540" dir="1481055201qe3rf8xvqb" file="text.html" crypt="0"/>
+       <record id="1481055219g3hn4bzi9h" name="LSTM" author="" url="" tags="" ctime="20170508123540" dir="1481055219pil8qi4ki8" file="text.html" crypt="0"/>
+       <record id="1481055927cy0kvcn7rz" name="Обучение Хебба" author="" url="" tags="" ctime="20170508123540" dir="14810559272j4zv3lvid" file="text.html" crypt="0"/>
+       <record id="1481056675fadqgys02r" name="Thompson sampling" author="" url="" tags="" ctime="20170508123540" dir="1481056675w77niqgmj1" file="text.html" crypt="0"/>
+       <record id="1481057656e95zuj6665" name="Logistic classifier" author="" url="" tags="" ctime="20170508123540" dir="1481057656n5uuc0s2jd" file="text.html" crypt="0"/>
+       <record id="1481058223t5rfv26ui1" name="SoftMax" author="" url="" tags="" ctime="20170508123540" dir="1481058223gqxsmpunkl" file="text.html" crypt="0"/>
+       <record id="1481060990ywkhq9xfyk" name="Cross-entropy" author="" url="" tags="" ctime="20170508123540" dir="148106099037l7khnezk" file="text.html" crypt="0"/>
+       <record id="14812391338nwj1o33qe" name="Supervised learning" author="" url="" tags="" ctime="20170508123540" dir="1481239133gg1ij6d7e3" file="text.html" crypt="0"/>
+       <record id="1481147702gpf9oafssp" name="ReLU" author="" url="" tags="" ctime="20170508123540" dir="1481147702t592dv9d7u" file="text.html" crypt="0"/>
       </recordtable>
      </node>
-     <node crypt="1" icon="" id="1494236140km64e0lzll" name="UkM1U0lNUAN7EKjMygJ3sGSrD0cn1Xr6ledBU5m1l4A1JcEwXu8o01Broqx0SsKwIq725fYnQlq99LyPn9pPzg==">
+     <node crypt="0" icon="" id="1494236140km64e0lzll" name="Литература">
       <recordtable>
-       <record id="1481057276nnild3xn6n" name="UkM1U0lNUAMOVgp1DHC6rPcqjiMLqNTSHUz3ExvSH1kJhHLYbGS3hAKLX7u8X9ARLtvecoT27KlpRkGx5Ha2M44LHItN5dZyKhLTYcQldnRmx6AbpdIKMbZ4tJREhgNl" author="UkM1U0lNUAO0gjS5iW5uU59ZPRFD1pgfLEfwJJa0PaL6PsXjtof7VhjLMNIshYCAhZUaMnmaQL2MYQ3nWx6RrA2becc/y+3I" url="" tags="" ctime="20170508123540" dir="1481057276bann3cbk0k" file="text.html" crypt="1"/>
-       <record id="14839868986nts8ul730" name="UkM1U0lNUAM/P5molDcHoOra6W5sVu0d8LIqTNPqWyha8jW6FVb0POyJ2VFU0N1ABZ2H2u33dxK+LTuxVfMtCr+Y0E4EyJpM8JJOxLVGjYIY/458UalNRGqGDnbgEJR4heySYHBb7jw=" author="UkM1U0lNUAOe1RpC0jVCKgbEwy4N4J0NJVg2cVJEOdbd6h/XhcykyrpmWWOpY0Ihk/p9MsBwkgWFVRrQ48o92sRp6D4EwiTzV5JXO5C0zo4=" url="" tags="" ctime="20170508123540" dir="14839868988dfq5sxk98" file="text.html" crypt="1"/>
+       <record id="1481057276nnild3xn6n" name="Нейронные сети Полный курс" author="Саймон Хайкин" url="" tags="" ctime="20170508123540" dir="1481057276bann3cbk0k" file="text.html" crypt="0"/>
+       <record id="14839868986nts8ul730" name="Цифровая обработка изображений" author="Р. Гонсалес, Р. Вудс" url="" tags="" ctime="20170508123540" dir="14839868988dfq5sxk98" file="text.html" crypt="0"/>
       </recordtable>
      </node>
-     <node crypt="1" icon="" id="14942361401pf85wle2l" name="UkM1U0lNUANV4MerpHe1BvvAEiHL1Vsclev/Eu2xZ+Nn7F5zgpKeUm+hdmR3WicKkb2F0Ki8GZc=">
+     <node crypt="0" icon="" id="14942361401pf85wle2l" name="Обучалки">
       <recordtable>
-       <record id="14814793270fd490au4u" name="UkM1U0lNUANtqhQk+40C1JWVoMnOJsoSA4ESCy6vChOUit6bhv5pMDSR3Oaui8LvTS1Ek/5bNW8=" author="" url="UkM1U0lNUAPLRkBD2uJTkFFvKlEJIrV7MdYMESPWHZn/fi68u5Znud7VGEWp0nxEIi0hTS2r1vsZ4yZm2p/zMV7tRhGU1hFj4vaGE6bl2VClqc+XeJQ6vQ==" tags="" ctime="20170508123540" dir="1481479327f1pe12v0v2" file="text.html" crypt="1"/>
+       <record id="14814793270fd490au4u" name="ML от google" author="" url="https://classroom.udacity.com/courses/ud730/" tags="" ctime="20170508123540" dir="1481479327f1pe12v0v2" file="text.html" crypt="0"/>
       </recordtable>
      </node>
-     <node crypt="1" icon="" id="1494236140pcvnqap0wb" name="UkM1U0lNUAMjUK8T03q+eGKuxObeWnC7xeb4KXIy+tXhdUW8QJWaDrURzK0VcbiZ">
+     <node crypt="0" icon="" id="1494236140pcvnqap0wb" name="OpenCV">
       <recordtable>
-       <record id="148105325426i2dh66gn" name="UkM1U0lNUAOOqLYp7nXKvbRNxm3zJ82CEwCqpjx+n1bbyr+TFYb6417aZsJSyLPR" author="" url="" tags="" ctime="20170508123540" dir="1481053254l6924zrc7l" file="text.html" crypt="1"/>
-       <record id="1490937454786iv4nivx" name="UkM1U0lNUAPIS8wY+nRVuBY1ghwTmoxPnOb0jmFhmcYn397LM9og/muj25PAbiugUqxc237Ijmo=" author="" url="UkM1U0lNUAMqxsf3wnxs8DWY871ys+B8Zq+ImdosXKh+VReVAek7g99vAPyj4q/yDej9L9K4qFJVlF129cUHBGYyb3JIZlmG" tags="" ctime="20170508123540" dir="1490937454vvewf5h9k4" file="text.html" crypt="1"/>
+       <record id="148105325426i2dh66gn" name="OpenCV" author="" url="" tags="" ctime="20170508123540" dir="1481053254l6924zrc7l" file="text.html" crypt="0"/>
+       <record id="1490937454786iv4nivx" name="robocraft" author="" url="http://robocraft.ru/page/opencv/" tags="" ctime="20170508123540" dir="1490937454vvewf5h9k4" file="text.html" crypt="0"/>
       </recordtable>
-      <node crypt="1" icon="" id="1494236140y2jra9ei6y" name="UkM1U0lNUAObN6c+tsG1SriSO5cBxzY90E16S8ZrXlI4WCqjnf7EV9UNI+g5GBdXhkEUtkMulE4=">
+      <node crypt="0" icon="" id="1494236140y2jra9ei6y" name="robocraft">
        <recordtable>
-        <record id="1490937568huw1jifi12" name="UkM1U0lNUANgUjLfoe948xe1ehvP1Av5jFCAvgjUsGamRXj1yJKk+V8029ToW8nOgRab7X9A+ZHCq5iouOtqMg==" author="" url="UkM1U0lNUAORddU+WjGXU4byl8c0W9DsvuSFoMykAoyrowV3SHHP6r0Xh0DTpAyMlxuneOHh3/rxR4v39RoQ0pHdfE81Wm7lS2zt3N0J2yyxgjeG3fhzCQ==" tags="" ctime="20170508123540" dir="1490937568fzf5hju5dc" file="text.html" crypt="1">
+        <record id="1490937568huw1jifi12" name="1. Введение" author="" url="http://robocraft.ru/blog/computervision/264.html" tags="" ctime="20170508123540" dir="1490937568fzf5hju5dc" file="text.html" crypt="0">
          <files>
-          <file id="14909375781jh1l99n21" fileName="UkM1U0lNUAPjV/Kwe/sEuU95eSY/YOtZPOkIkAsEEAnVpXhnZj5Mgwjv5voQpv7a" type="file" crypt="1"/>
+          <file id="14909375781jh1l99n21" fileName="264.html" type="file"/>
          </files>
         </record>
-        <record id="14909385018kis5wo5mp" name="UkM1U0lNUAPu8uxhhn+L7QxzIH8wUpilnvTaXelXRuAZFElXzM3s89dAVtQffSxOBkSwSugS2ir1hxzTXw7/Ww==" author="" url="UkM1U0lNUANvNmooD2bqsORmdjZZFymZXq9yD/4zle2mbNiHFCbKsTF/LJalcJNxG6AnvjbtBSrsLVBqaYplYGfw390YGaAtQn4kWnOW1Vhp8ATcBCkn7A==" tags="" ctime="20170508123541" dir="1490938501gf5l6i1ix1" file="text.html" crypt="1">
+        <record id="14909385018kis5wo5mp" name="2. Установка." author="" url="http://robocraft.ru/blog/computervision/265.html" tags="" ctime="20170508123541" dir="1490938501gf5l6i1ix1" file="text.html" crypt="0">
          <files>
-          <file id="1490938521famx54ffk9" fileName="UkM1U0lNUANO2KxG56mkY5Tp53/fj0dkGrbP5AuLU5AkCrXzO0pWNem3eBEFGr1A" type="file" crypt="1"/>
+          <file id="1490938521famx54ffk9" fileName="265.html" type="file"/>
          </files>
         </record>
-        <record id="1490937680oi5iorcj1l" name="UkM1U0lNUANeBw8b/+86NU9uJNL7xndeomB3qVesMUOztXsGg9YmzCPJlw5dayOKOLRgRenlS50=" author="" url="UkM1U0lNUAMsJzPIz5cZsslf6odYpFdet+Z61VTtqO5h7SBjdx9SHfUk3ieYBqSCWaq0B9m22TWStzrLczcIH4ZdxyVxjLi9RL+PCADeUBlP7G/B6VrGPA==" tags="" ctime="20170508123542" dir="14909376806qiii3bair" file="text.html" crypt="1">
+        <record id="1490937680oi5iorcj1l" name="3. Hello World" author="" url="http://robocraft.ru/blog/computervision/266.html" tags="" ctime="20170508123542" dir="14909376806qiii3bair" file="text.html" crypt="0">
          <files>
-          <file id="1490937699b2dvotlxxu" fileName="UkM1U0lNUAN3iaWLl+OisKxsHfXbD0mEfgTCvqERa8LeOCwnaUbLUVi4cTy4OXAo" type="file" crypt="1"/>
+          <file id="1490937699b2dvotlxxu" fileName="266.html" type="file"/>
          </files>
         </record>
-        <record id="1490937732dzqwrl79vq" name="UkM1U0lNUAMoPYj26sXEA6neUvCghEXIkMBpxYDxxpDhW4BM0Sk3qWSIjTncAgBPx7y+S0eJ+P35F+GWG2hhmqKPXKDeV0LJWVppJXIGIfA=" author="" url="UkM1U0lNUAOd3WTtJnFfFUcF0jkU3lWD0wpbWUDMf4IuyrPPfa6wpURa73xE9tX5xJK2vhB8twiyP30TLnLgaAx6nldpcD6p9lAI0x8kRcLon+yf5xlIyw==" tags="" ctime="20170508123543" dir="14909377322nh2hij8ht" file="text.html" crypt="1">
+        <record id="1490937732dzqwrl79vq" name="4. Загрузка картинки" author="" url="http://robocraft.ru/blog/computervision/268.html" tags="" ctime="20170508123543" dir="14909377322nh2hij8ht" file="text.html" crypt="0">
          <files>
-          <file id="1490937741lsww5bw1q3" fileName="UkM1U0lNUANHd5Qi9nLJTebfcHhOrurPacAJIZU/6N4C/+rsInx8uIdoCtRj70FB" type="file" crypt="1"/>
+          <file id="1490937741lsww5bw1q3" fileName="268.html" type="file"/>
          </files>
         </record>
-        <record id="14909378893poc8om8tw" name="UkM1U0lNUAPxMuShX/PC4kS7SvJbsLkF9EfTuKlAIAubmmT+9irVWaOKXqggi5QGFrA5VIKT+o8R32et1iAmCg==" author="" url="UkM1U0lNUAPHWPs9Zda3obih/mic3dn3NPdRz9Ci/5S1JmCvOcyLVLPGTkIrgodJLrV67mFglYFv1cI5FY6rb7vm4kNCDycIrckbHNhtb8fm1SyBJMfUQw==" tags="" ctime="20170508123543" dir="1490937889bi6p538pt4" file="text.html" crypt="1">
+        <record id="14909378893poc8om8tw" name="5. Вывод видео" author="" url="http://robocraft.ru/blog/computervision/270.html" tags="" ctime="20170508123543" dir="1490937889bi6p538pt4" file="text.html" crypt="0">
          <files>
-          <file id="1490937897fcn24cth1c" fileName="UkM1U0lNUAPS24J3SnENNCpis9Razp43RuvRJadH5frOg80lWQJ1ckzvDtyNd1su" type="file" crypt="1"/>
+          <file id="1490937897fcn24cth1c" fileName="270.html" type="file"/>
          </files>
         </record>
-        <record id="149093792482nx6m5p6x" name="UkM1U0lNUAPiUbG6jvcBRnoQSVBqOUA1Vw8vxrin0mA0e5DiK7ncBDq1ugNbc7xkQIdhzlbRhOq/DXfq82shJw==" author="" url="UkM1U0lNUAMvt4RhsP6Vu3dNrcP7NFWzb5wtGXtUEcn6qiJdfR9q0QbiCu0T8/QbWue7YNHCugbcd1+5TKGdh7TPLFfoqS8ZIavGPrj2qP9/4JFFsMF74g==" tags="" ctime="20170508123544" dir="1490937924tuj6i0t9zy" file="text.html" crypt="1">
+        <record id="149093792482nx6m5p6x" name="6. Ползунок" author="" url="http://robocraft.ru/blog/computervision/271.html" tags="" ctime="20170508123544" dir="1490937924tuj6i0t9zy" file="text.html" crypt="0">
          <files>
-          <file id="1490937933wfq1z8njny" fileName="UkM1U0lNUAOXvkXykmmus+bml8v5losPwkciXttqzrVYPBd6nJJOYuQdlzyajfeK" type="file" crypt="1"/>
+          <file id="1490937933wfq1z8njny" fileName="271.html" type="file"/>
          </files>
         </record>
-        <record id="1490937962kkxdugxxf1" name="UkM1U0lNUANzynXRUgCYXCmiCPTxV3D7K1H02PSQbiTNiaCSNF63/iTuB56cLx+eU9k/5rIMBjZ9P3AyU7XjbfFzAVDr+eDf2RM3VleAdFUG4vkGtKcwsw==" author="" url="UkM1U0lNUAM7vJnQ8qrbJruH5taIP97J6Mr+b0pmRx1FXvje9WNreY8fv1aqaGGcDT5EtJTqP/3/TWdoX9jzkP6X0t/V9bjQnMcMUy32/x4LWEts805t4g==" tags="" ctime="20170508123545" dir="1490937962kgk4uzs1r6" file="text.html" crypt="1">
+        <record id="1490937962kkxdugxxf1" name="7. Захват видео с камеры" author="" url="http://robocraft.ru/blog/computervision/275.html" tags="" ctime="20170508123545" dir="1490937962kgk4uzs1r6" file="text.html" crypt="0">
          <files>
-          <file id="1490937972rmhrzxo89j" fileName="UkM1U0lNUAOBLCPG9wkVndiFcwAa9tDv3BG6jkhxuUmX54XJoQgIJSOUow8ZahG1" type="file" crypt="1"/>
+          <file id="1490937972rmhrzxo89j" fileName="275.html" type="file"/>
          </files>
         </record>
-        <record id="14909380165tz661knlv" name="UkM1U0lNUAN0RdVM5dHXkytKGCXbvp9nG3vlcMOFm9W7Qam5wralr8oeROAkJN/xsIm7EEHYO/UTi9V5rRVXfV8C5MTEmYOA" author="" url="UkM1U0lNUAMPhEdKUjQKxiJ5zac5hlYjZWXWPTjvNj+YgdNecM9AuTxYb/oPnTXRB2dGDVgcyT+q+yIBJ3qNDSC/vU/qTfc7AXeEOND0kQavmNK+9NTQSg==" tags="" ctime="20170508123546" dir="1490938016zdajezrzls" file="text.html" crypt="1">
+        <record id="14909380165tz661knlv" name="8. Запись видео" author="" url="http://robocraft.ru/blog/computervision/276.html" tags="" ctime="20170508123546" dir="1490938016zdajezrzls" file="text.html" crypt="0">
          <files>
-          <file id="1490938029ui5d599iqr" fileName="UkM1U0lNUAM9futD0wyTnaDFkjYF3wN/6zWVFPqfXENGPn8V/5C2s9LbDcFt/GNL" type="file" crypt="1"/>
+          <file id="1490938029ui5d599iqr" fileName="276.html" type="file"/>
          </files>
         </record>
-        <record id="1490938112sjcokixbtx" name="UkM1U0lNUAM2lUR/5aEWZzeV7hSckK0d9hXiv6uASdcqC5Oknt8GOsFDo7yrA0A5xXu4FGBM6xRhgQBlzHAWXXq/woAWB1hXx46rf0f+AHE=" author="" url="UkM1U0lNUANaNsQmjZ3RfTZAg2jPcH6/dqNcrITfw2nGhHoycEBADbPaJHoLzFLTHzzntbmBDJvqH409+sYoPhIS/9RIKkihFFraToKy0hvz4C2zvn7oAw==" tags="" ctime="20170508123547" dir="1490938112yvyfmn86wh" file="text.html" crypt="1">
+        <record id="1490938112sjcokixbtx" name="9. События от мышки" author="" url="http://robocraft.ru/blog/computervision/278.html" tags="" ctime="20170508123547" dir="1490938112yvyfmn86wh" file="text.html" crypt="0">
          <files>
-          <file id="1490938120zqe7j5wotb" fileName="UkM1U0lNUAOoWxsHradm1YdRFO+swwNIcFFNmb2SBL5/t1mRBOfl/14Wq1rJrCjB" type="file" crypt="1"/>
+          <file id="1490938120zqe7j5wotb" fileName="278.html" type="file"/>
          </files>
         </record>
-        <record id="1490938140u7tknhlvsx" name="UkM1U0lNUAPcBqSsYI0Zbp3Iy4nD9O8Vi/TmWawC6Xl72Ku+c/FvJ4mXDKltmVwDycFrKZcSaDUkRi7wDXsaW3xSuuEIG5XbKpSJT+Qri78/cW7+JnhoQmotAIHJ+hIr34+bvhiA37FfI3IKjTfF3w==" author="" url="UkM1U0lNUANpb2AyuGIlSRlS0S3T6QONi2vmwm0hxtawSUvQi3e6yMWbjNruQwu5InjkVQt6b84LXAMFLwz/u115Vu98M3oYXNsPYHs7fd5hbvHMQn3ygQ==" tags="" ctime="20170508123548" dir="1490938140x7s4hokcod" file="text.html" crypt="1">
+        <record id="1490938140u7tknhlvsx" name="10. Обработка изображения - сглаживание" author="" url="http://robocraft.ru/blog/computervision/281.html" tags="" ctime="20170508123548" dir="1490938140x7s4hokcod" file="text.html" crypt="0">
          <files>
-          <file id="14909381502ldlctfpyb" fileName="UkM1U0lNUANoAF/6cO3NVWlViP7qcCNpKfTTzahq5+z3koxkRu/GQjcgzlxiUQE1" type="file" crypt="1"/>
+          <file id="14909381502ldlctfpyb" fileName="281.html" type="file"/>
          </files>
         </record>
-        <record id="1490938175p0fwheq1od" name="UkM1U0lNUAOSITSqbh3NeWEbon6GF//25xSxpImuiweK53Woas61XIKTpgtCEeJV56TZ6KaP0L0CrX//o0+t6vWXElRD4ti55ZO7ShzA2pOr5p3Ple5yjy54denIjANA9ZtccDHIGfUlLNKxYZCNyxuU0F+5ij4nlhYLkZsWW0s=" author="" url="UkM1U0lNUAODvMisWfgW+U3dhqKb1T61nWiAdQ5Gp4RurPp7ceWs5TUHtlk6mDAKbjdLWeHF8NIbdKtdfn5MwE3Ru+Id8oMvhpgUxXS5iWZMfG6f6Rp24w==" tags="" ctime="20170508123548" dir="1490938175o9g1gi12s6" file="text.html" crypt="1">
+        <record id="1490938175p0fwheq1od" name="11. Обработка изображения - изменение размеров" author="" url="http://robocraft.ru/blog/computervision/287.html" tags="" ctime="20170508123548" dir="1490938175o9g1gi12s6" file="text.html" crypt="0">
          <files>
-          <file id="1490938181t2a7r418op" fileName="UkM1U0lNUAM72WxftJvk/ORLZmIblR02ftmfEvVxcMFLZwywCC2TsSSY3zN0VdbM" type="file" crypt="1"/>
+          <file id="1490938181t2a7r418op" fileName="287.html" type="file"/>
          </files>
         </record>
-        <record id="1490938205cqrtgigc09" name="UkM1U0lNUAPXtRyQJ79RN7R2IOtAOGicFmLGHI6PPN4rmmNTUuNYvQZR4uIP0pUiQ1Krr/O79ErOPPg2kLB9SdwqLJ35ftZi3KuwKzU7jaUSfKIifbGfagSCPKK46yCpqlcLY9TsYX6szu0uyedwOA==" author="" url="UkM1U0lNUAO0CtiuYN0YAar03iB7SXuWHmxw/mkKxvlBw/2ujHBT2jvf0ZMgIhLk86RdLqACDDPmOjvVOclWboe1q4YtZPR/UFExynQD3FoBkhOTjI/JOw==" tags="" ctime="20170508123549" dir="1490938205z7bfselgot" file="text.html" crypt="1">
+        <record id="1490938205cqrtgigc09" name="12. ROI - интересующая область изображения" author="" url="http://robocraft.ru/blog/computervision/289.html" tags="" ctime="20170508123549" dir="1490938205z7bfselgot" file="text.html" crypt="0">
          <files>
-          <file id="1490938212tfo4s8ijcl" fileName="UkM1U0lNUAMtGTngyp7ZuW1vevrvEvk2Rs9T/jdrlC+118hKjMDYCr4FUqh1H5dh" type="file" crypt="1"/>
+          <file id="1490938212tfo4s8ijcl" fileName="289.html" type="file"/>
          </files>
         </record>
-        <record id="1490938235gqxj8z0svp" name="UkM1U0lNUAMQWDZsh3G1zt6sAxXZxzzvw0s/I6J6TYQyMQHqC3vNDXdm1Bm/V3Kkhu4rrBAx9gb3Ukfnu3ZcLz9581+VEYzC" author="" url="UkM1U0lNUAOam0kcP3DF/Qs5qkY3TyoZtlnc0YnLy9N3dB1WTq4S0LT+Gg8fnpc5uc0WQblN3fKPe4gqZL68VhARuuUzQQdXwDiuh3FVFBPokqhdJMPYpA==" tags="" ctime="20170508123550" dir="149093823568wtssqp9t" file="text.html" crypt="1">
+        <record id="1490938235gqxj8z0svp" name="13. Типы данных OpenCV" author="" url="http://robocraft.ru/blog/computervision/291.html" tags="" ctime="20170508123550" dir="149093823568wtssqp9t" file="text.html" crypt="0">
          <files>
-          <file id="1490938244pwcxwzs7zf" fileName="UkM1U0lNUAN9dDjiMs0JGSoNn/0UMs/+STcGSP3NpuO97MmFa09Wbgtwj5xCtmkn" type="file" crypt="1"/>
+          <file id="1490938244pwcxwzs7zf" fileName="291.html" type="file"/>
          </files>
         </record>
-        <record id="14909382690bp7e8et6u" name="UkM1U0lNUANac/b3ioE2NH1VVb6bZc9Se1i18SU6xT8G4gtqnQR6x96l30xgxE47mVmr2l+8d8XE0EVJS1dkwA==" author="" url="UkM1U0lNUANOCrh5iFM+CyeB5HSyjFitYdVRm6pBCUgwmfwwsZwlfnFgAOF3t1/lLaQ7mRM1xrOAw59xkjTYnTa94layPkjBwZLpwbiHEdWNwEEnDYWDpg==" tags="" ctime="20170508123551" dir="1490938269uf5lqpnn0x" file="text.html" crypt="1">
+        <record id="14909382690bp7e8et6u" name="14. Матрица" author="" url="http://robocraft.ru/blog/computervision/296.html" tags="" ctime="20170508123551" dir="1490938269uf5lqpnn0x" file="text.html" crypt="0">
          <files>
-          <file id="1490938276c17cha3mi4" fileName="UkM1U0lNUAN2xJnKXKhsGk/3j77t8NKZ1uia3/ULnKGMxwsedRyQRiw3BLwSKhWI" type="file" crypt="1"/>
+          <file id="1490938276c17cha3mi4" fileName="296.html" type="file"/>
          </files>
         </record>
-        <record id="1490938304nnutnxmwvq" name="UkM1U0lNUAM3yWi8mxoyXTfzHvld6HwLx9WOuPJxBVjdkRCsj8/9GQ4zJKRqCkFILEq2g+WVd9W93C7nd0g6+qnqNQzsY7hrH8B7YiVhP9MBSJgvzZHp2w==" author="" url="UkM1U0lNUAN/iRmNOsw5uZApPVo1d89Zh/2YkjZ7VUTDUj6myd+5BlezJW0TwQ9z+f+MgpWfC4O9sCZjVzoKCr8ZKalNNHadPvBJysOSc55MbdriEPv8tw==" tags="" ctime="20170508123551" dir="14909383041730uqtcsg" file="text.html" crypt="1">
+        <record id="1490938304nnutnxmwvq" name="15. Сохранение данных в XML" author="" url="http://robocraft.ru/blog/computervision/299.html" tags="" ctime="20170508123551" dir="14909383041730uqtcsg" file="text.html" crypt="0">
          <files>
-          <file id="1490938311z16k2gnokl" fileName="UkM1U0lNUAPHAIeKJxP5ePkuPnMqCsk1noG5NCyU3QLUGADzIiIXpFrzhHbmjdcC" type="file" crypt="1"/>
+          <file id="1490938311z16k2gnokl" fileName="299.html" type="file"/>
          </files>
         </record>
-        <record id="1490938344i6x31k3o1p" name="UkM1U0lNUAP8EwV7ZDuyRj9Zhq6/sP0NgWwt71I7ee89eFoBlZ+Y6z879n+Vil+GLkpkLwQLql/p3Fmyy7grlRWjddYLjyQdkkX8Wc+TpCP2xY2ahnwesJbXsJ199TGU" author="" url="UkM1U0lNUAMkjYP8sKVD5PQKrVLwQ6NDgRcSuuFIBnhtbx4U5Q88x0LV9FQeNp7wBROTNzIpdTxJyLDSahsH1jZ6ySwz50zirdZ6SIzlKWMliBmUMtYJBA==" tags="" ctime="20170508123552" dir="1490938344pimssdmgy8" file="text.html" crypt="1">
+        <record id="1490938344i6x31k3o1p" name="16. Генерация случайных чисел" author="" url="http://robocraft.ru/blog/computervision/306.html" tags="" ctime="20170508123552" dir="1490938344pimssdmgy8" file="text.html" crypt="0">
          <files>
-          <file id="1490938351p1q047b17o" fileName="UkM1U0lNUAN7zrFqSP+TncH7DBgR8mkIWjXzRMngbocPkWbFT3TTv7n/ifk3ZUaz" type="file" crypt="1"/>
+          <file id="1490938351p1q047b17o" fileName="306.html" type="file"/>
          </files>
         </record>
-        <record id="1490938376l76sv3g0dc" name="UkM1U0lNUANGhPk5DociaeTuKO7azkwmctCNpSEwVRflj1kS2jdCock4HK0+HRG9v+egAkg8NCBOLxlq0DKq/MXmRuPBddH1cZicEJyiy7/x58ddYzODASrgfkKqOwZpRPPBsgZCAU48tnRa7SeIueFtH5YeafHh4qChTHI8j/pBKZgbR7TWdV7EPLOKCnEjGlbzXV/NiTk=" author="" url="UkM1U0lNUAN3UVzjCFdg17tRjqv8s19tFpW26zuKtxu8CkSzNM9KmES07Jeu1mwiPqCfGHSuRtxM5svGKXBjyZTa5P0NPJye+SHVZh+AyZ7gt+3WPaKG7g==" tags="" ctime="20170508123553" dir="1490938376gvqiinc7eq" file="text.html" crypt="1">
+        <record id="1490938376l76sv3g0dc" name="17. Обработка изображения - морфологические преобразования" author="" url="http://robocraft.ru/blog/computervision/319.html" tags="" ctime="20170508123553" dir="1490938376gvqiinc7eq" file="text.html" crypt="0">
          <files>
-          <file id="149093838399hbj8ikqy" fileName="UkM1U0lNUAOOGXWX/hXdjFd+Dsj8Efo41xEuRWbj75cwrTKzKcHDyXkt8r3frnQ+" type="file" crypt="1"/>
+          <file id="149093838399hbj8ikqy" fileName="319.html" type="file"/>
          </files>
         </record>
-        <record id="1490938405fqfr8swd0s" name="UkM1U0lNUAP9mpItAgcgSEIBu7MZ/UYuNMjo/Pd2Wc+XHswfwxPrObHrwcSr/dc2pqtxPYpRR3Q504nCacNg0SnKoyapFrbu9UEn0WkXq3vzu0h5GOvXGGFgIpHVyx8EU0fc+YdZF+V/rrNwsWpULQ34ZTqWyjgMderzgRey4RKdeUZ8/5eleuB5QhW/27wgHooooILnJ0o=" author="" url="UkM1U0lNUAMD39IPBkiBis+5T6Y0N6gm6Jq/ybk7pVnvyG/yOZXqNCJ0SSVOdzwNs6gsATdp9eFUgMLG/iQHuJhuUNbv2nI9Q+7f0wNyDYTjg//i59eeLw==" tags="" ctime="20170508123554" dir="1490938405hoot2yfk1p" file="text.html" crypt="1">
+        <record id="1490938405fqfr8swd0s" name="18. Обработка изображения - морфологические преобразования 2" author="" url="http://robocraft.ru/blog/computervision/327.html" tags="" ctime="20170508123554" dir="1490938405hoot2yfk1p" file="text.html" crypt="0">
          <files>
-          <file id="1490938412xrwx7fh14w" fileName="UkM1U0lNUAPM87irPbOAgs2/uSs7pa3vpwwjEIvoEhroOGL4x7L/YvYWOc1fH0sQ" type="file" crypt="1"/>
+          <file id="1490938412xrwx7fh14w" fileName="327.html" type="file"/>
          </files>
         </record>
-        <record id="149093843330gr4fp3et" name="UkM1U0lNUANILqjpjBzzCRr8AqHpxBfaMbpfsIdRrBr36ijZwku6+vyK8MDdI3Dfp2x59VqIKltboCuE1yBaX/53hVDzQYatHffG8aIZtmbSkEXoEJI9rJbsEQf9EVk0hLxsZQRCoWkTwKUjhRIebKB+VQWA9yG9zK5D9weC0y+pU3Z9aCPH9Q==" author="" url="UkM1U0lNUAOjMey3zNu6LxUdwL/KJN9+ilI9BYFtcLv7uJKRDRDKMWgARIRTOzy8Jezlu15YEYYsb29AoJLsfj0gbaFbF0dIeSpg4tCtSqwa6OUpUnA0cw==" tags="" ctime="20170508123554" dir="1490938433fx0w3zp180" file="text.html" crypt="1">
+        <record id="149093843330gr4fp3et" name="19. Обработка изображения - заливка части изображения" author="" url="http://robocraft.ru/blog/computervision/338.html" tags="" ctime="20170508123554" dir="1490938433fx0w3zp180" file="text.html" crypt="0">
          <files>
-          <file id="1490938440erc73pimo7" fileName="UkM1U0lNUAM3Bb1hfrs3VSH5BvBgC7PYGyrozBAiVwgvhvD6SnNVVjFL/rqzPLmd" type="file" crypt="1"/>
+          <file id="1490938440erc73pimo7" fileName="338.html" type="file"/>
          </files>
         </record>
-        <record id="1490938462ouwh5lg48x" name="UkM1U0lNUAP/3STVokwPuDCYxOxbtLYwe4AWjXCoPvianSMDAj03nogMgATzjYN75D4xa+TWzS74qW03Xc/59QhfF0Msa6JIq35wGx4yq6sGyyTGaDBEb3TYi7+cirmrGgi0vSk9//bCJ8nGagrjxvN9F3PdNcG6" author="" url="UkM1U0lNUAPTT7B8/L/hql/CuvbgMA/PxzCthuL9vTalwl/5WIwhNFGO3zmU4VFkzdYoD2VIRWACgARwBW4jjF88bFTcohw8k9idwKsBwNFmzp6dpiJYLA==" tags="" ctime="20170508123555" dir="1490938462p4sgwe3ipz" file="text.html" crypt="1">
+        <record id="1490938462ouwh5lg48x" name="20. Обработка изображения - альфа-смешивание" author="" url="http://robocraft.ru/blog/computervision/352.html" tags="" ctime="20170508123555" dir="1490938462p4sgwe3ipz" file="text.html" crypt="0">
          <files>
-          <file id="1490938468cen26s9wh3" fileName="UkM1U0lNUAPQS7UabKNs+Qf43cKYToQZ8ElQvUN5NWJlJ7NEFalNmKMm1B0/7HMI" type="file" crypt="1"/>
+          <file id="1490938468cen26s9wh3" fileName="352.html" type="file"/>
          </files>
         </record>
-        <record id="14909385491al3bofwzc" name="UkM1U0lNUAO+ar1sV9/a5WvzHaeYA5opILcEG8N0iPRsnucspT7oYrryB1CGRYSl8p3dlQDJGelnLW33oA6Lmgtkxmn1Wxykz1mVM65A0/7WC30iKIuDxWozjNaJjf3Ztr7FMlF3FHCpAN0mkfTwcy74iOu53eGhx0jdCDIa2QW+4JqO8+yW0Q==" author="" url="UkM1U0lNUAMyku9R7EN3JerEFKaSQjIXNEhRQDxyb/7rx4DFLi10sHoE+TXP6l23Hepl7LJyWZ95/2/ZEf0+28kWE4Vn5Wi8sidaYGHeaB5ppz3A4S4xGA==" tags="" ctime="20170508123556" dir="1490938549wi7kzbqdes" file="text.html" crypt="1">
+        <record id="14909385491al3bofwzc" name="21. Обработка изображения - пороговое преобразование" author="" url="http://robocraft.ru/blog/computervision/357.html" tags="" ctime="20170508123556" dir="1490938549wi7kzbqdes" file="text.html" crypt="0">
          <files>
-          <file id="149093855674lvcxs1wf" fileName="UkM1U0lNUANqnf+bbTeES0jvXJ5Uxr6FXxXWF5wNIH8pPWP3fzI5aveLAn1EApvK" type="file" crypt="1"/>
+          <file id="149093855674lvcxs1wf" fileName="357.html" type="file"/>
          </files>
         </record>
-        <record id="1490938586wipj5as3ow" name="UkM1U0lNUAPNgPKtM66LtaBEIwfibacEWYGE+JWjIyw+wNZ8jat6StmpXd8wWJgK7b1Om9wbfxdXRtmWfXmdsVaalB3xvdQ4VZjNdT6DR3eLzAlWuC+zS6kFIKuccoMb" author="" url="UkM1U0lNUAMzpjpjJlfMBvtdlj6mJuvgR0SXlozGzRwxWqrsCp4pX5DXALtWQPjpSmnEtV7hL/V0FFXZxsXy5QBJDsNdIujKEoEDtlsg6Lpao5Bio8HmWg==" tags="" ctime="20170508123556" dir="1490938586lagyk0w69s" file="text.html" crypt="1">
+        <record id="1490938586wipj5as3ow" name="22. Поиск объекта по цвету - RGB." author="" url="http://robocraft.ru/blog/computervision/365.html" tags="" ctime="20170508123556" dir="1490938586lagyk0w69s" file="text.html" crypt="0">
          <files>
-          <file id="1490938592wwir1lz72z" fileName="UkM1U0lNUAM8Djp8UyoG/uSbbjpKy9tdBIfim5aVEMeBOZPYa6GKln+C6F8RM4fP" type="file" crypt="1"/>
+          <file id="1490938592wwir1lz72z" fileName="365.html" type="file"/>
          </files>
         </record>
-        <record id="1490938619j2yp293rhi" name="UkM1U0lNUAO34UTiY8IuxBW0mn4y4n44LKdzP/vNFl90VUvbWFv7JSEcEiARJBocll+OWkGtUNWNCnNqJEu6HDUuV4IAB4Vlke8NX3UvGsQXvy4bMoLUjIuBVXWQwaEHAwLyct72dLu403pkxDrPncxEk/0iCdc8r3+c0ul84VZUpV0N0wE/Og==" author="" url="UkM1U0lNUAPxsuQebi/Kkqj6BCxrmnGwVM2fn3MraVjfFATlcn1guhPpl/hfgDTgyXDNyJC/eznMdUrtsgW/ws7rZrUhI30D1OtI8aLcYA0HNJ/9bSzFqw==" tags="" ctime="20170508123557" dir="1490938619yntythv50u" file="text.html" crypt="1">
+        <record id="1490938619j2yp293rhi" name="23. Поиск объекта по цвету. Цветовое пространство HSV." author="" url="http://robocraft.ru/blog/computervision/402.html" tags="" ctime="20170508123557" dir="1490938619yntythv50u" file="text.html" crypt="0">
          <files>
-          <file id="1490938626wcd1t481gh" fileName="UkM1U0lNUAMOpw+u955YjPODGtGg6L7o1+xiccvgTNFTQSp2A2Pijv839x0AELyf" type="file" crypt="1"/>
+          <file id="1490938626wcd1t481gh" fileName="402.html" type="file"/>
          </files>
         </record>
-        <record id="1490938650jj8iibj2v4" name="UkM1U0lNUAPNJF2j7u3BgXM2kxHroR7SlHuMoUGK1f0dgJWlDJLH1gsmxsWBLt7+qiY+429NMwwNaemFoXeh+EQOiltswry+4rogxyoKcAnCJiZlrbJPotPaqaP4yCWWM+9mfiAIUS19wzIfOLcZQSL+78d/iCeC" author="" url="UkM1U0lNUAMsck/fJhrVEyMMRhN99zgyyqgmzbZgc5mw6qQ+Hfpi2jxl8FsZuH9/mCz48tLeLJVBBWzttL/WZ2Him+cZ+11x2eV/f++GtX/gmtjpLaLLnw==" tags="" ctime="20170508123558" dir="1490938650wd6kavtssw" file="text.html" crypt="1">
+        <record id="1490938650jj8iibj2v4" name="24. Работа с камерой через библиотеку videoInput." author="" url="http://robocraft.ru/blog/computervision/420.html" tags="" ctime="20170508123558" dir="1490938650wd6kavtssw" file="text.html" crypt="0">
          <files>
-          <file id="1490938657btk45k4din" fileName="UkM1U0lNUAPYXhygzE8gTPWoItiXtViv4itKGxM28B7uXfgK4/2hKJslWdQ/QZrR" type="file" crypt="1"/>
+          <file id="1490938657btk45k4din" fileName="420.html" type="file"/>
          </files>
         </record>
-        <record id="1490938678htxfyrargm" name="UkM1U0lNUANM/nNmxXO90Dv5z2GM8YKW9NKMedVaJw0+KzoZscmrHs96wu2mamt3Q1N7KlSf0mDEQqvVRKgd2W9RvUlnPrWn+TfGcgxTt/6w7uIgGUwyPvrxNeDjVxuWZ5i7CXj4jDI=" author="" url="UkM1U0lNUAPtomeZ88WdXhhWDGkGziYOvG8/gzF53F3li7bZhmmkQNXdKyPItjhfkxzU5iUJs0GNbwtvJsw9FCJOWljtd0USj4x1US3K5bA3yw2F9u6GAw==" tags="" ctime="20170508123559" dir="1490938678k0gaz5vf3z" file="text.html" crypt="1">
+        <record id="1490938678htxfyrargm" name="25. Обработка изображения - свёртка." author="" url="http://robocraft.ru/blog/computervision/427.html" tags="" ctime="20170508123559" dir="1490938678k0gaz5vf3z" file="text.html" crypt="0">
          <files>
-          <file id="1490938685j8u4aoqvxh" fileName="UkM1U0lNUAMWTvrnfwkknXE5CCCI23s+YYGEZU5orpYe3phtqSueNzbAUt35zhd2" type="file" crypt="1"/>
+          <file id="1490938685j8u4aoqvxh" fileName="427.html" type="file"/>
          </files>
         </record>
-        <record id="1490938708e7pgw7phpp" name="UkM1U0lNUAPa24K772iz4Nc06O6cstQuKbamEDN8Uc/YcG3hCJAbd8uPkv+hoI6sQWuLRn1aoKWcoAXRz/L0q+YCv9c5kCg+DbguUpmV+HEjuJBAqWo4rUhobi9BA7ZfTPCwaSOVdmTdpN7s3Dq4BwbFbekG9dmANahwkF0tzzFw8ZIXd0nLK8C545/bRUAE" author="" url="UkM1U0lNUAPAhVrcCVkPbIesJuxAYj/Ooa0GpIAEFjQnu72NSzOW1W+JSAIAaNYdVDYrLRpA4KzxxecDZeYt8QNIKP+D8Mavy/OFZIBP5/bLtMyU/0utEg==" tags="" ctime="20170508123600" dir="1490938708m3uzia6zdv" file="text.html" crypt="1">
+        <record id="1490938708e7pgw7phpp" name="26. Обработка изображения — операторы Собеля и Лапласа" author="" url="http://robocraft.ru/blog/computervision/460.html" tags="" ctime="20170508123600" dir="1490938708m3uzia6zdv" file="text.html" crypt="0">
          <files>
-          <file id="14909387141h7ahys8ys" fileName="UkM1U0lNUANH/F/ktdHCVWOD8J1hqOR56Yqetyww7Y4N9Om6dIM7kJGR/p4qImwG" type="file" crypt="1"/>
+          <file id="14909387141h7ahys8ys" fileName="460.html" type="file"/>
          </files>
         </record>
-        <record id="1490938733woyckl14y2" name="UkM1U0lNUANvLaEz4Rhfsb8mcMcKUPrFGLWQvZTFugoAd96c85w2bUgaFB0JF4zqXSPenmWqXvh9FkK2bBXFaF9xv4SIvt7cg7+BLO4wjloUDfLTphkwlRj6r9txR41eHD2gxRC/O5rt7KOSAvI+fUP+uHqwbUfEUyIG5mr6Nmi+H2/kOrxpVlWugGWNKfV+" author="" url="UkM1U0lNUAOP0I1L4pgypBjbiCqxTdvWjdl1iarP6Jf8enh+4E5/dLPnyaHL28dKP8ZqsOBu+46ovOYhZ8F62Mlw2bas3Ae1Hr4MgosXOm7JfddezvcHYA==" tags="" ctime="20170508123600" dir="1490938733lrmquvbrgq" file="text.html" crypt="1">
+        <record id="1490938733woyckl14y2" name="27. Обработка изображения — детектор границ Кенни (Canny)" author="" url="http://robocraft.ru/blog/computervision/484.html" tags="" ctime="20170508123600" dir="1490938733lrmquvbrgq" file="text.html" crypt="0">
          <files>
-          <file id="14909387422fdqnoqtry" fileName="UkM1U0lNUAPKn0XP8MdDuSWdOwMoXNeJVnfCZAwCnAtUSd1BHfwoyU1k0IJKi4RU" type="file" crypt="1"/>
+          <file id="14909387422fdqnoqtry" fileName="484.html" type="file"/>
          </files>
         </record>
-        <record id="1490938764uplybc3tt3" name="UkM1U0lNUAO5Mm299jtNZ6fk7M4TixQn48WmsAnFd9+5xyX3CbQa9tyhpSbPR1H+YXR7qekYXwgs93IoN0yeYdHuMkMC2iZpE7O1Mq1CqSSl87zX8v9YGw==" author="" url="UkM1U0lNUAN384tMWm/gMlIagWlAQDOfunpLHWmuIa/OwS6xCeE/+HTGIxILDIMV4vliYeUVpClN1cbnvuInGVLBVTbLpeoR6GJP3XIarl5WUirxMJ7/HA==" tags="" ctime="20170508123601" dir="14909387649zszeoj58l" file="text.html" crypt="1">
+        <record id="1490938764uplybc3tt3" name="28. Преобразование Хафа" author="" url="http://robocraft.ru/blog/computervision/502.html" tags="" ctime="20170508123601" dir="14909387649zszeoj58l" file="text.html" crypt="0">
          <files>
-          <file id="1490938771itr35q3vc3" fileName="UkM1U0lNUAP5CKtBL7+z3XFZHEzuoUeookStnCZY52fXYou2Ephqy0TDB4Gi6zxR" type="file" crypt="1"/>
+          <file id="1490938771itr35q3vc3" fileName="502.html" type="file"/>
          </files>
         </record>
-        <record id="1490938793rpfkbroivo" name="UkM1U0lNUAPAqyHPiTr5/eHK+5ia7/28dH7lfMYjg7NGXHVuUu5YalHloN0OJvAQX7jOaETZo/8MgKESbIWY41dyFXeZDyKpPYE7hZDxIatXno3ZFsrr3jGW9NfDmlm4" author="" url="UkM1U0lNUANorpuLw24i23FmXOcl8BB0C7472VBTRodHjaud2D6fb3i4wmYJnWCDVjBizoFBKarD3xjfSiEisp9IYHmQI72+qQecItA8+xgP+ZoP1Htg1w==" tags="" ctime="20170508123602" dir="149093879329bw9q2lr4" file="text.html" crypt="1">
+        <record id="1490938793rpfkbroivo" name="29. Интегральное изображение" author="" url="http://robocraft.ru/blog/computervision/536.html" tags="" ctime="20170508123602" dir="149093879329bw9q2lr4" file="text.html" crypt="0">
          <files>
-          <file id="1490938800vqp9bx44ap" fileName="UkM1U0lNUAP5yPJfSx9MeHhqVxgZ3rNqm5jFpMPzOlRcTYQoByD29GoVwcdjuS8f" type="file" crypt="1"/>
+          <file id="1490938800vqp9bx44ap" fileName="536.html" type="file"/>
          </files>
         </record>
-        <record id="1490938821zncz3txaoe" name="UkM1U0lNUAM0A9AvbZebfCKRwe2J2fWOcantsx7khBPz7IMx6sNTLn2D17bMxLJcRp7h7L5hQ2QzkYYHwuONBy9pJIaD0DeXa6lCceUAW/tUBQBfDhsg0I8jvh/5GUrT5JD1wjGhSwDWs9KfAS9bvC6qnk5JFkJtx5IIqcl969j8C6WznxhoLJCGNBlTzZxvKFZsuKyx5hgq3xlP33NAatd7Wv1ObWsc" author="" url="UkM1U0lNUAP43vnzEMnjc7YWfpBq+AahkyQ2qn0QlRKDeJTQb1MAr7Gi6CU3vug99ZZZ4eQqULAQClVcWtVwp68HXImsyLes2QEP2eWZHEobejwIY/7y0g==" tags="" ctime="20170508123603" dir="1490938821n3cwsnathp" file="text.html" crypt="1">
+        <record id="1490938821zncz3txaoe" name="30. Трансформация изображения - аффинные преобразования, гомография" author="" url="http://robocraft.ru/blog/computervision/581.html" tags="" ctime="20170508123603" dir="1490938821n3cwsnathp" file="text.html" crypt="0">
          <files>
-          <file id="14909388285hpl0ufci3" fileName="UkM1U0lNUAMERXSHGe0ChDLPa+O+P42EiE2SfCIom+5Oou7AXQYoLCrvst5ITD4i" type="file" crypt="1"/>
+          <file id="14909388285hpl0ufci3" fileName="581.html" type="file"/>
          </files>
         </record>
-        <record id="1490938850ql30flrwly" name="UkM1U0lNUAN5nsybkyvVtZ994LWtug9/6Fx2hWIUbPdBJd3nA+vIUQbtY7mnoZWKNGIEA6e72iyUk3IbnAvtHCPVPWtwenYKiP7nhpbIYW/xeWlm5qWv68GVreyj51WwLgZCSBvietamM+jfqWTM5t83bvYCwCmfQ5lITR7dEtn2EBC0NwlVDzzkePNuon9P" author="" url="UkM1U0lNUAOoT4OhibZxp2q6sj2E5X1gG36PsafHkGHUrIMyWil9HXFkeqSbvV34L7saPVqXimi7yy/Nqs5T+7wSC/afB+bDThMVc//lT6gQW1xBTEt33Q==" tags="" ctime="20170508123603" dir="1490938850rhdeybs04w" file="text.html" crypt="1">
+        <record id="1490938850ql30flrwly" name="31. Типы данных OpenCV - хранилище памяти, последовательность" author="" url="http://robocraft.ru/blog/computervision/603.html" tags="" ctime="20170508123603" dir="1490938850rhdeybs04w" file="text.html" crypt="0">
          <files>
-          <file id="14909388577060syh99t" fileName="UkM1U0lNUAN3nHFa1m13HYBt5US+F2nd9aF2auPealkLZ6ayV+YNjZY4vmJMIvFR" type="file" crypt="1"/>
+          <file id="14909388577060syh99t" fileName="603.html" type="file"/>
          </files>
         </record>
-        <record id="1490938880bcegpib3d6" name="UkM1U0lNUAORv2VQp0yTjlB0jQg0LI2hj2DgWqjg63QtnlQ29oU+XJC4MinPhJnNFvwYRazUB51sXyoIQlCdjTvpkdx8UKTLDvWpjxC8dzOYI/eNROL4qGwCYf+ASmk/OJCi36OfkXuX7noJ03Q5zB3Psoc3GA7C" author="" url="UkM1U0lNUAM4mD0zDfymdpw15vYARWJzdCHaesvnGJ5eGe/XwbgE0Ko0FbuCdpo2jG++FUgIT2BKovpUdFyfqxSQZ956qhMSPLGd5Lc8dzgw36DFjNkUOA==" tags="" ctime="20170508123604" dir="14909388805nbfyv9r8w" file="text.html" crypt="1">
+        <record id="1490938880bcegpib3d6" name="32. Нахождение контуров и операции с ними" author="" url="http://robocraft.ru/blog/computervision/640.html" tags="" ctime="20170508123604" dir="14909388805nbfyv9r8w" file="text.html" crypt="0">
          <files>
-          <file id="14909388878kgvjmmeoh" fileName="UkM1U0lNUAP/UZttmhi77VITWRVRb6W8N+hi/0uxkuJYlo1cSqfZF52QqcNaPqIL" type="file" crypt="1"/>
+          <file id="14909388878kgvjmmeoh" fileName="640.html" type="file"/>
          </files>
         </record>
-        <record id="14909389082px0kyqia6" name="UkM1U0lNUAMgrmQP2I7wLjEjA9w93hZlKbammtP0TUCzlT/b3SGH+haBu4H+zwzD7o7vLNvXps3Y6wGJDFB9f+koY4ckvxJ89B/G4MM6qy7PdobmFLHVWJXqq9rX/3FFKBqNkb1uL1HRxGZqaGDLfQJIwSZe7M4G3GluAnbOblKFMt7ge8pOGAKCr/JMWSUVs+pp8pboINtVNo+ha9aTpg==" author="" url="UkM1U0lNUAOHujDRUFqXAlVtOOLqRDUk2I21nsG9fRVhIcVE3Btc65eLCoTkttUQ37UUaQLT6uwMV+bYINMWdv1+xGK5xNqDXwYf8G/ub4EI5enYN0ISXA==" tags="" ctime="20170508123605" dir="1490938908ss2y3hmqqf" file="text.html" crypt="1">
+        <record id="14909389082px0kyqia6" name="33. Сравнение контуров через суммарные характеристики - моменты" author="" url="http://robocraft.ru/blog/computervision/867.html" tags="" ctime="20170508123605" dir="1490938908ss2y3hmqqf" file="text.html" crypt="0">
          <files>
-          <file id="1490938916u2g7co4alj" fileName="UkM1U0lNUAMDVfwjkA/pRjHWyeVEDq5Z1rr1hCTJckHqT7lkrs0mZCSdJGN7VqG4" type="file" crypt="1"/>
+          <file id="1490938916u2g7co4alj" fileName="867.html" type="file"/>
          </files>
         </record>
-        <record id="1490938939o0j5xfhpkf" name="UkM1U0lNUAOOFc/iVqWjF/op6/71NwPjQPxSsVfZsR82KDj5TcUQPJUefXr2FrkuUIvleTvCOAR785FwnHDVzPowRSvNzWGYE5QyoxBvj1rR0dfLqTMlcX+UGy6sWgficA8mL1uB1u8tGXx53OCA5NHEgqqSxU0Cw3/Tt4swPt7fneM7VH7eNWQjjym/Zk4yx2SdfjV4t6eGroNyqw8k0Q==" author="" url="UkM1U0lNUAMqWsWAiDp0wJvCofZZgdZgTTQY9MFAW9Sv1csjzMfMtadrGL4veVPL6lhgxfncUzzZmK+ri1lL4KdgLLn9IUmWl8BUZiSui16VRhKoblG97WsrQ/yLQL23" tags="" ctime="20170508123606" dir="1490938939fl8q0urfc1" file="text.html" crypt="1">
+        <record id="1490938939o0j5xfhpkf" name="Детектирование объектов - поиск объекта по шаблону (Template matching)" author="" url="http://robocraft.ru/blog/computervision/3046.html" tags="" ctime="20170508123606" dir="1490938939fl8q0urfc1" file="text.html" crypt="0">
          <files>
-          <file id="1490938946h3wsz7zdwl" fileName="UkM1U0lNUAOesMYSNanl2EiXBproqZvnNcTruVyai/xDsCtX684ywJCNJR85zlYX2TPsXHPFj4A=" type="file" crypt="1"/>
+          <file id="1490938946h3wsz7zdwl" fileName="3046.html" type="file"/>
          </files>
         </record>
-        <record id="1490938980uryz7cwl26" name="UkM1U0lNUAPA7RoqH/+T7IVNLDW3d8micOV0vIKn1py8oSg+2Tb5jzV7rE2VEFZYp7DMrvYuw1GokMKorqS1JzXfIfqvHp7U2h+V3ZVKxFthteFHncwxS5YK6A8u0H30" author="" url="UkM1U0lNUANF9qNNbxmZjdn582ImFgTDmTY0VUTZrlGPO10A8aLGBz2NDzvGXGeZDkbyMs+c4o01/79Z4Bl0v6PVmyFNrxsv51rbnrk2uLLtAqRswdAYQivr9tBmQwI+" tags="" ctime="20170508123606" dir="14909389805xxjileivh" file="text.html" crypt="1">
+        <record id="1490938980uryz7cwl26" name="Алгоритм кластеризации k-means" author="" url="http://robocraft.ru/blog/computervision/1061.html" tags="" ctime="20170508123606" dir="14909389805xxjileivh" file="text.html" crypt="0">
          <files>
-          <file id="14909389914982dcmasn" fileName="UkM1U0lNUANToWjqDhpDzXW75R4M8btx093OZGouvTkaQTrgeIxjrjOWEVqKTFhlfZghalrTGUw=" type="file" crypt="1"/>
+          <file id="14909389914982dcmasn" fileName="1061.html" type="file"/>
          </files>
         </record>
-        <record id="14909390773d5o6vldqm" name="UkM1U0lNUAOMSCaI3CZsXAUJBDGZg/3ne1ef5qDfuoyWwxISe4H7Bh3e0UynPwkYALPUU/cyAAJhM+PVIp+chEcM+aqkQCZZqeuYMRF/aLBGtvtzkF5EhUTfgHd12O08hDEJt68vxFnor8Qo/DABupBRQV4DIffizRowf0BKF1M=" author="" url="UkM1U0lNUAMHt8GBGXrNn12BJKJXsqlXP70hbFuHbsEp7w0W9spd07s/UxxozLGgaWo6Fe2kSWeEuVRnRyddS9l4yTdNrJv5TnNiKBXsoXyJ/AmUioBScg==" tags="" ctime="20170508123607" dir="1490939077b6wdthb5t3" file="text.html" crypt="1">
+        <record id="14909390773d5o6vldqm" name="Пороговое преобразование над цветной картинкой" author="" url="http://robocraft.ru/blog/computervision/375.html" tags="" ctime="20170508123607" dir="1490939077b6wdthb5t3" file="text.html" crypt="0">
          <files>
-          <file id="14909390842m253ppmx4" fileName="UkM1U0lNUAMi3uFjqSW0MSoZeN7Kim5coAHdzVUHh04ZJrmAMpW1+zilZQSiH8QF" type="file" crypt="1"/>
+          <file id="14909390842m253ppmx4" fileName="375.html" type="file"/>
          </files>
         </record>
-        <record id="1490939104iivbv57wt7" name="UkM1U0lNUANkZD8Kwr0ULGAXasYp8bec3Jf0PAUXT0EVeInIcrSM14BqqGVbUUgn9AO32yHk29Xs9Zs35UPE9uSuZwRkwr9E3cOponAmfjVBcYv9p33WGlaSAPWZOJw9Yx/AeDYY147QhP0w3ECQEH48e4KPyO3nK6/lUMXpPxivjvRGDgrbvPSKokJtAXVC" author="" url="UkM1U0lNUANPiZwTz6S4s7Vp4zV1pdyzKw0ppeG6VJs1Q/rGA3pNj7jFyzoTmzIDj64Gj5woHDcFAB0p2WGHcoGDAi1qwYipEnBftLfvoIBgTiujpaU7Gg==" tags="" ctime="20170508123608" dir="1490939104f15jrl9tq9" file="text.html" crypt="1">
+        <record id="1490939104iivbv57wt7" name="Как сжать IplImage в jpeg без промежуточного сохранения в файл?" author="" url="http://robocraft.ru/blog/computervision/378.html" tags="" ctime="20170508123608" dir="1490939104f15jrl9tq9" file="text.html" crypt="0">
          <files>
-          <file id="1490939116tgk3mss4ue" fileName="UkM1U0lNUANl/CDtCKO9oFOLXerj2vF/Gbl62m33FXcbK1b6zbTB6Yjpsxj+EHtN" type="file" crypt="1"/>
+          <file id="1490939116tgk3mss4ue" fileName="378.html" type="file"/>
          </files>
         </record>
-        <record id="1490939142zu14p8d2r3" name="UkM1U0lNUAO5aAiRaXbC+JU6phPH3R4ZjbZP6HnCt5dAndjtbCj++0IqT0376lNdq8N1itMK/chYuyXKddD6TXN8ANZCikjiwbpUdzGJHHCyvruJuvjebotfY5VOBw9cznlydzrnJbi0gugOu1oFG9pW8xB7RHvsvOmPAdVTJW9OB4+RopHmsSpEvAHxM9ZkP8gs831yGOLUxrm8zKlNwQ==" author="" url="UkM1U0lNUAPG/q6GeKLRMfY1S24BISjYYpzUaJCHbgh5A7tOeWUEIXC3jJzPxp6uAuhM+hGgkF8mr74NmJqIWbhDSElWg9BFPqs7MQuoqQubhNp/i7ZhBg==" tags="" ctime="20170508123609" dir="1490939142xp3bjpdov1" file="text.html" crypt="1">
+        <record id="1490939142zu14p8d2r3" name="Как заставить мою программу с OpenCV работать на другом компьютере?" author="" url="http://robocraft.ru/blog/computervision/392.html" tags="" ctime="20170508123609" dir="1490939142xp3bjpdov1" file="text.html" crypt="0">
          <files>
-          <file id="1490939149weu5i5d3cb" fileName="UkM1U0lNUAOwflGTTJOYbacCMZhQYwyGfud5vI9fsKPdTRFSYbsOscr6sky/STku" type="file" crypt="1"/>
+          <file id="1490939149weu5i5d3cb" fileName="392.html" type="file"/>
          </files>
         </record>
-        <record id="149093916995v3xig4ub" name="UkM1U0lNUAPCc3SlJlrF26L6qmSrGZ/ag2oUHoC9ai7MY5mEV9Hjjf1ak6uaBq8WXFYHk+GQ90mK1WzjtP/852UJcovZIXPwD79mFWI8P97EEcBWWGLMQQ==" author="" url="UkM1U0lNUAOm4QuodVdDedjCdWIjoOVndioJx162QPot9nm5vXFD+5YVXch5FI1SyhiiHiYAin4M3XrgX1kAVf85CX58yQICjr/jGr1KYZwt5DXIrBdcZQ==" tags="" ctime="20170508123609" dir="1490939169qdpc35hkt5" file="text.html" crypt="1"/>
-        <record id="1490939206m10pq7qmfh" name="UkM1U0lNUAOwm3c1d+3Guo8hxi/lXkbh1sk2Roi34r8+ufTmJVs+vlVJNFXZXXx77xAgGaIi96Th0c8yW5plK652aZMO6NHc7xfz2CfTCCJPHt0rdt6X1FQsUl5Y1/WPcV3k2RYMDLPdnTztViXwj4MIU8DaXf3k7drBYIULUhoi+YwpQMGKFQ==" author="" url="UkM1U0lNUAPeGohJl+xjC2T0X0xzmhry1Hsaqc3W9/sTATYVkeFQ0nJ1PWJjb/vzr39e83IzErpnMpYfsNLhL7dhKsNc5L4+IDlTncF6juETtZZ84IiCPw==" tags="" ctime="20170508123609" dir="14909392067oyz47e0d5" file="text.html" crypt="1">
+        <record id="149093916995v3xig4ub" name="Использование OpenCV под C#" author="" url="http://robocraft.ru/blog/computervision/575.html" tags="" ctime="20170508123609" dir="1490939169qdpc35hkt5" file="text.html" crypt="0"/>
+        <record id="1490939206m10pq7qmfh" name="Сравнение изображений и генерация картинки отличий" author="" url="http://robocraft.ru/blog/computervision/506.html" tags="" ctime="20170508123609" dir="14909392067oyz47e0d5" file="text.html" crypt="0">
          <files>
-          <file id="14909392137t84i7alue" fileName="UkM1U0lNUAPMSOn3aujXAWHjJWFKGVkcwFHAHxQXX0pgs9qbX7+7fGYvzxUn0hJd" type="file" crypt="1"/>
+          <file id="14909392137t84i7alue" fileName="506.html" type="file"/>
          </files>
         </record>
-        <record id="1490939233qeqrfxjxt8" name="UkM1U0lNUAMa6lIHzbh0NHU6kBDwrSYI3CHrATuRZg8Z+N+yDq1FSQG8oGfdcmyJ9LjVNtBC+1ua2T8Y6RoLUFkg+aEOywzcy7OLOydHud7mKuaAtjjkmizr0ZK228sLn8Pa/FVtRa4=" author="" url="UkM1U0lNUAP30FY/BV6/Co6fabvm+H6oLJ6imnFJsn7sxTOT6OxbCEl0T30lplqtKr+PunJ67i7mAXPgKFV9uA8zJ1YtFGhqZHMelqmgN+ndCxTCLTx0MA==" tags="" ctime="20170508123610" dir="1490939233h1jy1jqltm" file="text.html" crypt="1">
+        <record id="1490939233qeqrfxjxt8" name="Сравнение изображений через хэш" author="" url="http://robocraft.ru/blog/computervision/537.html" tags="" ctime="20170508123610" dir="1490939233h1jy1jqltm" file="text.html" crypt="0">
          <files>
-          <file id="14909392421repxjegyu" fileName="UkM1U0lNUAP9gz+Ss/GGS4aki6cjyuSUNB8kl2Koicz7gAUvM0ETJiv2G1yiVaHX" type="file" crypt="1"/>
+          <file id="14909392421repxjegyu" fileName="537.html" type="file"/>
          </files>
         </record>
-        <record id="1490939261d9ywb0bx01" name="UkM1U0lNUANMWpxD9hhw4cUFW6tbcFWYqoTvHW5C7BSFY09IFkbOzYIDMpSUC1EDOgIKkqUPwkWEbrqSa9W+jlriYrE82BuPAAev5A88oLSC4OI1lTttVwGCQYggdtroXmQjTC+NGtNAzGjQRRyA1VLKc9Z3pQYw" author="" url="UkM1U0lNUAMx3jynx3O4vG+PODd6KjkIRWV6c6CTJKK/po1juYk8eQfuMSjLY+HP+gfnxrYwpXFwBZqxpBVCRiAAGn+3tiXtKaQWR3ByTWlNdrPLcMs2yg==" tags="" ctime="20170508123611" dir="1490939261rpexuvxo8l" file="text.html" crypt="1">
+        <record id="1490939261d9ywb0bx01" name="Раскрашиваем картинку в градациях серого" author="" url="http://robocraft.ru/blog/computervision/543.html" tags="" ctime="20170508123611" dir="1490939261rpexuvxo8l" file="text.html" crypt="0">
          <files>
-          <file id="1490939267v6kyam7i79" fileName="UkM1U0lNUANaK7XSQNjWOQPa5sdnJ0QrWeK5pqybUIyHXjVd6x543EWViAztpTVd" type="file" crypt="1"/>
+          <file id="1490939267v6kyam7i79" fileName="543.html" type="file"/>
          </files>
         </record>
-        <record id="1490939287nctaaqc37n" name="UkM1U0lNUANOv//2oOGSk3PqcvhSIn7Yvhl4Mvv6d//JyzuT4pW7rvdIQUUCA3odCMfaSeNJpcJtzjD5XDSj9HaCTtnbmr97JENaEBipVt2j4mqbmASazdrmWLfYphNeNBT7jQEnREyOvQpZYifjfg==" author="" url="UkM1U0lNUANWzQR3BB47kty48TR+otSJmpoYx+RqS2U1JUB8Crxe5372rrR3vxvKQoCR5gds28VU3p9f605fRu4YMWx7xMe2vH6XPSM0GYO6dvSgvshjXg==" tags="" ctime="20170508123612" dir="1490939287oqnt2iuw4c" file="text.html" crypt="1">
+        <record id="1490939287nctaaqc37n" name="Голографическое кодирование картинки" author="" url="http://robocraft.ru/blog/computervision/549.html" tags="" ctime="20170508123612" dir="1490939287oqnt2iuw4c" file="text.html" crypt="0">
          <files>
-          <file id="1490939294i4kbxock59" fileName="UkM1U0lNUAM2PGekYrom+OCaHD1RKmO2bnSa7T8aC+q0KgT03h3BQ8QqSbKunUiy" type="file" crypt="1"/>
+          <file id="1490939294i4kbxock59" fileName="549.html" type="file"/>
          </files>
         </record>
-        <record id="1490939315c7bxmb3v7b" name="UkM1U0lNUAPIWWgmoMOTp7HOsDCCG0GfkdiRchZBDp1Bb8Bjnj2s++nSL5Nbsoo/t7yhoruR0wqgHx7wdRnKriokR42SVCTPTd9dkE7iKhP7LHOd+H7UqvYY0HZ1khRMq6+upDcVnm0H+MsC3NeNFnA1/2JPZqZr/SbMFOlDfBlIVrFh6gnDIx4IBf6RZZwg" author="" url="UkM1U0lNUAOU3DlyCPfCiTq7w/dgrDZ+FqxZvtGa9+YDUerl10ugU9wrhHRWpwq85oBxtgwEEmIwCoY7PKBkJyXtlw283+xO+N77BiKFHZeoskEuFnn/QiEYbnXPhh1s" tags="" ctime="20170508123612" dir="1490939315v1kugj7wpe" file="text.html" crypt="1">
+        <record id="1490939315c7bxmb3v7b" name="OpenCV - определение доминирующих цветов на изображении" author="" url="http://robocraft.ru/blog/computervision/1063.html" tags="" ctime="20170508123612" dir="1490939315v1kugj7wpe" file="text.html" crypt="0">
          <files>
-          <file id="1490939322a9mxpixyxr" fileName="UkM1U0lNUANMJC/GjYXoSqtB3OKoMiMiBz6I52zOEQGfDE+yu9D6z0+/xoKwgPNZnPSn1dzMCAc=" type="file" crypt="1"/>
+          <file id="1490939322a9mxpixyxr" fileName="1063.html" type="file"/>
          </files>
         </record>
-        <record id="1490939352y3yqqx5vsj" name="UkM1U0lNUAMnydSOwjEvA5NY5/QKuhA/Ao3FJjHmj8dGCqGrjGpyXzwu9UN7g0RPKm53ujN74xc=" author="" url="UkM1U0lNUAMPfvEFbH3tZcTOWZhfzVePneIz0QE327JCdzWw+6ylF21VwMPmIg6d0bYmUZd/uKjELDad47aPiMyc+veqEIybkJZwHR69+HXWLD7FvVqKIA==" tags="" ctime="20170508123613" dir="149093935272lu385jod" file="text.html" crypt="1">
+        <record id="1490939352y3yqqx5vsj" name="OpenCV benchmark" author="" url="http://robocraft.ru/blog/computervision/708.html" tags="" ctime="20170508123613" dir="149093935272lu385jod" file="text.html" crypt="0">
          <files>
-          <file id="14909393689iy1laxebg" fileName="UkM1U0lNUAN2wrIXORciwDCVzsrEYeh5mQ0iaI6nVSpJT6FEQPpP/JyP2NGhuvmP" type="file" crypt="1"/>
+          <file id="14909393689iy1laxebg" fileName="708.html" type="file"/>
          </files>
         </record>
-        <record id="1490939390v9un90nbz4" name="UkM1U0lNUAMwGvuuAHyhlBAmUMw/ONskwx5Rdwa4crhtyjRZjD42KvzWn0SDml2LemFzu5ZNo8KYDYZpU/Wtqz0mxv9iSnhH0dgp1ICuKwKCjZe6x7FzP399lz0SOA9/LlaDNXR2oBs=" author="" url="UkM1U0lNUAOSF7/OfQz7D4iR/qGali7uebodR2hJs3Sya/9tLdsSQgkRLMbhXa0LPN4iWO/+EJsG6NkUBRZydLVLrVm2D1kL/viHpVTxNoPrl5V8gvlO7Q==" tags="" ctime="20170508123614" dir="14909393906q89rdo8ja" file="text.html" crypt="1">
+        <record id="1490939390v9un90nbz4" name="Kinect - начало работы - настройка OpenCV" author="" url="http://robocraft.ru/blog/computervision/718.html" tags="" ctime="20170508123614" dir="14909393906q89rdo8ja" file="text.html" crypt="0">
          <files>
-          <file id="149093939674jxg1xc2c" fileName="UkM1U0lNUAO9Bv7MrtXpSMPcw5dB0MBDv77kxWhhddG+xl1YaRBEbJ5Bq85idJiU" type="file" crypt="1"/>
+          <file id="149093939674jxg1xc2c" fileName="718.html" type="file"/>
          </files>
         </record>
-        <record id="14909394225jvptpymry" name="UkM1U0lNUAMGmiMq4kWlWQsz+F7u0li0iuMDRzD0VJkLFjxD8xqIyk2pFoW9YsXAAEpyNtTKzOltXVBHp5eCdV6Suu3hCldObPMWkrDdC4Y=" author="" url="UkM1U0lNUAOweLO9IV2kThZeLSGmiJN3xvuZhXsuwzip9W5MOTZxk0ZN+qlAUhdK/EPm2xJNHMwmQFrwp8XulX7K50wBnKC5p/wvK5CsK0QAmSxZI3V4z+7AA/gDsI7b" tags="" ctime="20170508123615" dir="14909394225151mpurq2" file="text.html" crypt="1">
+        <record id="14909394225jvptpymry" name="OpenCV и работа с видео" author="" url="http://robocraft.ru/blog/computervision/3026.html" tags="" ctime="20170508123615" dir="14909394225151mpurq2" file="text.html" crypt="0">
          <files>
-          <file id="1490939429qqlnnqiydd" fileName="UkM1U0lNUAPDH88k5pMiZfrYNyIWE6Ljc9Iv2vyz2oxXdgKOb5eN17gmo6fBkdGN+vYZtpJQvr0=" type="file" crypt="1"/>
+          <file id="1490939429qqlnnqiydd" fileName="3026.html" type="file"/>
          </files>
         </record>
        </recordtable>
       </node>
      </node>
     </node>
-    <node crypt="1" icon="" id="1494236439v38ud1b0bz" name="UkM1U0lNUAOb1RW8/z9TyTZNsb77xDiJV8EwuGnQrKu79NIKLELZKhV+T1Pft3Yf93eM7cQWMSQCP9GVWcC40w==">
-     <node crypt="1" icon="" id="1494236439wasaov5fmu" name="UkM1U0lNUAOP+crcBZ0RsGLjG+lvvRums54miLirqiMYRaFvfxsTVwAgw+7tzjUM"/>
-     <node crypt="1" icon="" id="1494236439cir3vcqole" name="UkM1U0lNUANVsus+fI+ge1D6wztBXf6OHR56mdtfPxdxMuD3BS6NObeyRDjjxrzYdxPPK17FfC8="/>
-     <node crypt="1" icon="" id="149423643990qzcaxbid" name="UkM1U0lNUAOOZQpRxrR0Rt/QYwDIhDJrE6cHhq4IMP8vUFsQFPGPCEDT+3mWfPSP"/>
+    <node crypt="0" icon="" id="1494236439v38ud1b0bz" name="Version Control System">
+     <node crypt="0" icon="" id="1494236439wasaov5fmu" name="SVN"/>
+     <node crypt="0" icon="" id="1494236439cir3vcqole" name="Mercurial"/>
+     <node crypt="0" icon="" id="149423643990qzcaxbid" name="Git"/>
     </node>
-    <node crypt="1" icon="" id="1494236470t39xprqtmh" name="UkM1U0lNUAPD72jxpRDt72Gar48G1mmtwsBCc+PwDI4o1r9qKdPuXhrW6DCGBe26DPOUOEKVimPUxRwqQNH5Lw==">
-     <node crypt="1" icon="" id="14942364701m2e7ie8d3" name="UkM1U0lNUAMoGJNtbXBMPhWS0JZp+UlH5fjQsAzyaSDIsTLV9/0QmVS8BuC/GtbX"/>
+    <node crypt="0" icon="" id="1494236470t39xprqtmh" name="Bug tracking system">
+     <node crypt="0" icon="" id="14942364701m2e7ie8d3" name="JIRA"/>
     </node>
-    <node crypt="1" icon="" id="14942364818poi46ktxe" name="UkM1U0lNUAP2jVWC3tLOe4bxDi9VLAwXptuQfF9MLUJCtKC5DLe/UE4+6Pm7Tv0o">
+    <node crypt="0" icon="" id="14942364818poi46ktxe" name="OS">
      <recordtable>
-      <record id="1493563666qsdi0y714i" name="UkM1U0lNUAPupOPwmpxENhFQqLVoLDHsFyUal+Z3nF/vy8mUZBnvTV/394XzSdR2" author="" url="" tags="" ctime="20170508124121" dir="1493563666b4h6ynxkdq" file="text.html" crypt="1"/>
-      <record id="1493563753l3zrt1zil4" name="UkM1U0lNUAOQ6QsR7vuTgOyurMOKa0xVYqGG1OnEkWrWqk/X+4qVKnfsW6tXAk72" author="" url="" tags="" ctime="20170508124121" dir="1493563753rezc3qy9fe" file="text.html" crypt="1"/>
+      <record id="1493563666qsdi0y714i" name="TLSF" author="" url="" tags="" ctime="20170508124121" dir="1493563666b4h6ynxkdq" file="text.html" crypt="0"/>
+      <record id="1493563753l3zrt1zil4" name="ASLR" author="" url="" tags="" ctime="20170508124121" dir="1493563753rezc3qy9fe" file="text.html" crypt="0"/>
      </recordtable>
-     <node crypt="1" icon="" id="1494236481b451yjensx" name="UkM1U0lNUAM8wqtv2+Ke4oScPu6cgma8pbCqNH5szjQoklHhs/3znOw6uKGFwbyS">
+     <node crypt="0" icon="" id="1494236481b451yjensx" name="Windows">
       <recordtable>
-       <record id="14909402932z31t7kjve" name="UkM1U0lNUAPUWfq7+mqAOxn/freYRYBLauGuJ2+xEn+N1+pjb3FAuL+ZTAUnMLublrHveeCd+Js=" author="" url="" tags="" ctime="20170508124121" dir="14909402932k5zc82k02" file="text.html" crypt="1"/>
+       <record id="14909402932z31t7kjve" name="Запуск" author="" url="" tags="" ctime="20170508124121" dir="14909402932k5zc82k02" file="text.html" crypt="0"/>
       </recordtable>
-      <node crypt="1" icon="" id="1494236481wcn40ntomg" name="UkM1U0lNUAPt1+lwEUFt4pC5grwGfxaPV0rM9+fnoO3ud/AZONbu1AKmcK1riXkx">
+      <node crypt="0" icon="" id="1494236481wcn40ntomg" name="WinDBG">
        <recordtable>
-        <record id="1490940935gc500tg9hb" name="UkM1U0lNUANMGI3ShZnJIpC0TlURAWzjbHMc//Ya6lpH3SiCY8QZZKMamDnBomz/22tYOGC1is0=" author="" url="" tags="" ctime="20170508124121" dir="1490940935gk8hq92yzc" file="text.html" crypt="1"/>
-        <record id="1490941708y88xipbr55" name="UkM1U0lNUAM+OLZsagK0m98MG8NJK9wYD+gpiKO//2xVyM8DBeOYdHRF/4tn/FMz/eTgKCMud28=" author="" url="" tags="" ctime="20170508124121" dir="1490941708h7wo8nww1j" file="text.html" crypt="1"/>
-        <record id="1490946507h5fln5k4dk" name="UkM1U0lNUAMnzVta0r70lEnz/WF4E5jt16UZ8+YkmwqdSbG64nQPDw2kz3lWvJ9+0kuu8myquZsO4ZTRQyBRZkhTFy/9y0p90W9v0RlXHWlgHq2SJQjg3nOiA2XVrzFty908a2bMKF2TkB7raUEq+mvFpYorcNaYqYfVfy/C2uwBAE2IeUAtig==" author="" url="" tags="" ctime="20170508124121" dir="14909465079q9t6ukaqi" file="text.html" crypt="1"/>
+        <record id="1490940935gc500tg9hb" name="Описание" author="" url="" tags="" ctime="20170508124121" dir="1490940935gk8hq92yzc" file="text.html" crypt="0"/>
+        <record id="1490941708y88xipbr55" name="blwdbdue.dll" author="" url="" tags="" ctime="20170508124121" dir="1490941708h7wo8nww1j" file="text.html" crypt="0"/>
+        <record id="1490946507h5fln5k4dk" name="Если не получилось сразу подключиться через kernel Debug" author="" url="" tags="" ctime="20170508124121" dir="14909465079q9t6ukaqi" file="text.html" crypt="0"/>
        </recordtable>
       </node>
-      <node crypt="1" icon="" id="1494236481l519qztu7r" name="UkM1U0lNUANqgOpb7rdFkEnXW+ofCBg1yePi3njGbIyyHqJNw3dARHKro/dTtYsL">
+      <node crypt="0" icon="" id="1494236481l519qztu7r" name="cmd">
        <recordtable>
-        <record id="1490940087qi7u6xassg" name="UkM1U0lNUANoz6mbNFGvJH9X7CVfxrZ7fdM3e/6PojaqKxU1vcTLJd0YVS31IAoV" author="" url="" tags="" ctime="20170508124121" dir="1490940087hoxl5xqa7b" file="text.html" crypt="1"/>
+        <record id="1490940087qi7u6xassg" name="bcdedit" author="" url="" tags="" ctime="20170508124121" dir="1490940087hoxl5xqa7b" file="text.html" crypt="0"/>
        </recordtable>
       </node>
-      <node crypt="1" icon="" id="14942364811d3c6xwh84" name="UkM1U0lNUAMWFRUMctOjSBhEkl82GLsUJQWA95MZz6bNeqeoy4QdzPa0T1T8AjkNDFemQ3+gX9o=">
+      <node crypt="0" icon="" id="14942364811d3c6xwh84" name="Обучение">
        <recordtable>
-        <record id="149094039171pxxclmdk" name="UkM1U0lNUAP3tNTdM9JFbIHDaOVzx/XfmNZcSXmjU1qG8VoueH4p2dm8BYjM47ov9M/s9JBQC5mZROmzIBFcCB9v6JgD80h8u8QtOeKxiN36g1lVDvmhHzLCzMyS/ZqkVk0YZEkB4baRBnVInU0F8FMzwgbxdvhdfBj9bFBLlQTXIUeuXTaVqQ==" author="" url="UkM1U0lNUAO4KeOBd5TwsuYowQN/SNmMbZgAHGYXEaNRBUj8APwrW1x55KKq/gsy24nBtgvgCzwLdSIBiliC7+3umGBmp1dau4f0cJmS1UrOajlc1metrg==" tags="" ctime="20170508124121" dir="1490940391emhicgzhc0" file="text.html" crypt="1"/>
+        <record id="149094039171pxxclmdk" name="Windows kernel: краткий курс молодого бойца (Артем Шишкин) " author="" url="https://www.youtube.com/watch?v=Xv9ckZ4PCmc" tags="" ctime="20170508124121" dir="1490940391emhicgzhc0" file="text.html" crypt="0"/>
        </recordtable>
       </node>
      </node>
-     <node crypt="1" icon="" id="149423648120kbpvt1rr" name="UkM1U0lNUAOaFR3M3vij6SsRgOr60Jo63NrPMOpJPAXpYILjkRxsd4MvQqLa+lGymzcQqDr/63U=">
+     <node crypt="0" icon="" id="149423648120kbpvt1rr" name="Память">
       <recordtable>
-       <record id="1493564057wt4pkdipai" name="UkM1U0lNUAPR8rJ20MQUDbQnsa0D3hkcLCAH9BAeigIsLB/0tYkk/eYjhp8ar7vZrrl/w0Bg6K4=" author="" url="" tags="" ctime="20170508124121" dir="14935640572jnhoajzxo" file="text.html" crypt="1"/>
+       <record id="1493564057wt4pkdipai" name="Память" author="" url="" tags="" ctime="20170508124121" dir="14935640572jnhoajzxo" file="text.html" crypt="0"/>
       </recordtable>
-      <node crypt="1" icon="" id="1494236481zonjt3329r" name="UkM1U0lNUAMEjv353JtYo3KKYIBWRdItG2BLTOgeasICBhBeNjVLJ9Oj8ibao71p">
+      <node crypt="0" icon="" id="1494236481zonjt3329r" name="BSS">
        <recordtable>
-        <record id="1493564274b1zfluliai" name="UkM1U0lNUAOjcZrTuztE/8NaABLrzJIiIIFvsKb3mmB/6UDWhSWfwN7iGvpK+SHL" author="" url="" tags="" ctime="20170508124121" dir="1493564274fa1gucrx21" file="text.html" crypt="1"/>
+        <record id="1493564274b1zfluliai" name="BSS" author="" url="" tags="" ctime="20170508124121" dir="1493564274fa1gucrx21" file="text.html" crypt="0"/>
        </recordtable>
       </node>
-      <node crypt="1" icon="" id="14942364817vy0avxu4o" name="UkM1U0lNUAO9ux+MZ6EFUr4l1wJ8sAcivwbgHCc3+ud6F6FLyOKvli1LO2Mc/JbAw3+e80OiXNM=">
+      <node crypt="0" icon="" id="14942364817vy0avxu4o" name="data segment">
        <recordtable>
-        <record id="149356446169ethk3j4y" name="UkM1U0lNUAOhM12u+FXAbcAY3ZsZ18abE8jFV8OjjO6Gxikaw4WIQEYA7SUmlgNYJFUWkB4OJ10=" author="" url="" tags="" ctime="20170508124121" dir="1493564461wvzspuv2v0" file="text.html" crypt="1"/>
+        <record id="149356446169ethk3j4y" name="data segment" author="" url="" tags="" ctime="20170508124121" dir="1493564461wvzspuv2v0" file="text.html" crypt="0"/>
        </recordtable>
       </node>
      </node>
     </node>
-    <node crypt="1" icon="" id="1494709575t4syprvahx" name="UkM1U0lNUAN3/dtfLK6d3j5mUnhcvK98n/f5aTyUZ94yVsw3MEenmz5TSsWlzwoZKU1Kbw5nbc/6wvL3eFPEQKuTXTaAu/JKFalke8B6KhiyflKsngYzWQ==">
+    <node crypt="0" icon="" id="1494709575t4syprvahx" name="Языки программирования">
      <recordtable>
-      <record id="1494709604iqjmg4ooc9" name="UkM1U0lNUANU4wNsShCI9BRNb3vWKSV+b7ANqDvQ3sfUrvYJK+2nzMwntYKOwHu5Ib/8nWg7dgRvQZKBkhD8bg==" author="" url="" tags="" ctime="20170514000644" dir="14947096043oeezyisv3" file="text.html" crypt="1"/>
+      <record id="1494709604iqjmg4ooc9" name="Выравнивание" author="" url="" tags="" ctime="20170514000644" dir="14947096043oeezyisv3" file="text.html" crypt="0"/>
      </recordtable>
-     <node crypt="1" icon="" id="1497017394qo7h34b49j" name="UkM1U0lNUAN5FQkE/QjzQBCkR/4UEguEWPUpxKKQDEsjjhqxJ7r9wBLa+Ofq3n+BXJ+v0+d602M=">
+     <node crypt="0" icon="" id="1497017394qo7h34b49j" name="Google Dart">
       <recordtable>
-       <record id="1497017443ob7lmkutc3" name="UkM1U0lNUAMiE0RSNZi9ESmAjT2lL8mX3b5De8nW2aflSZxMU2CtibTjPvjLT8iI" author="" url="" tags="" ctime="20170609171043" dir="1497017443851610d44j" file="text.html" crypt="1"/>
+       <record id="1497017443ob7lmkutc3" name="About" author="" url="" tags="" ctime="20170609171043" dir="1497017443851610d44j" file="text.html" crypt="0"/>
       </recordtable>
      </node>
-     <node crypt="1" icon="" id="1497017403gva5tjt3d4" name="UkM1U0lNUANgVduNV0i7BJswRfCe9FCvEsyNhoaAN5yQwjDiFviTSrTkXbEPIKL5">
+     <node crypt="0" icon="" id="1497017403gva5tjt3d4" name="Kotlin">
       <recordtable>
-       <record id="1497017459vqr8nt69j4" name="UkM1U0lNUAPpctoK7dt+xBGs2GrHdARJ0hcEZ3m4EgikBX+Ncipn8coak01VKSvF" author="" url="" tags="" ctime="20170609171059" dir="1497017459r2qnmsncl7" file="text.html" crypt="1"/>
+       <record id="1497017459vqr8nt69j4" name="About" author="" url="" tags="" ctime="20170609171059" dir="1497017459r2qnmsncl7" file="text.html" crypt="0"/>
       </recordtable>
      </node>
+    </node>
+    <node crypt="" id="1503138940x9l1m8yvzm" name="Сортировка">
+     <recordtable>
+      <record id="1503138964x5wgrcva0i" name="About" author="" url="https://habrahabr.ru/post/335920/[iz-pesochnitsy]-opisanie-algoritmov-sorti" tags="" ctime="20170819133604" dir="1503138964qcai632rgl" file="text.html"/>
+     </recordtable>
     </node>
    </node>
-   <node crypt="1" icon="" id="1494236501i1fww4sqif" name="UkM1U0lNUAMaS5s2MYifMtqmUhMBrGDoUg65taMCdfh2P4s7RL2X/3OvoyO5izm1dMPU05s2/zE=">
-    <node crypt="1" icon="" id="1494236514ta2m7xznwh" name="UkM1U0lNUAOGSVtCqstHZLA+4x/b0UwpYLsfWdVA3vH43RvTlTinFFlFdsY00OAvmGO3QDZ1iMiGqiEocgYczQ==">
-     <node crypt="1" icon="" id="14942365144ax8fb7o6u" name="UkM1U0lNUANFiNoA7vSc6SfT8vxfLsdDILR48C5unezo5og670PqLYeCeCz5GuK99wfkqVYqpzmnCRzP95hg3A==">
+   <node crypt="0" icon="" id="1494236501i1fww4sqif" name="Биология">
+    <node crypt="0" icon="" id="1494236514ta2m7xznwh" name="Работа мозга">
+     <node crypt="0" icon="" id="14942365144ax8fb7o6u" name="Литература">
       <recordtable>
-       <record id="1481054430rzeu9jb6m0" name="UkM1U0lNUANPJWSRw7BMgZItJhnJKguDL5W7fDLifiSnfGrjsMz7MWYmfDLyYRKP2d1AOQLMZoBusmJahythnog5GuLm6Hhs" author="UkM1U0lNUAN2282I0+pvcoPJxzZrJX5rEvNL/N9li1iuLEXud0gSYySfHfZ/0ORO2NgEBSe3O6X8RXTAYR8F6exTmTO7ydximYD/wD0tYg0=" url="" tags="" ctime="20170508124154" dir="1481054430ih1mw58jq1" file="text.html" crypt="1"/>
-       <record id="1483987199udnkl05x0t" name="UkM1U0lNUAOGrzbL/Ei1qmAAd4HoFv0G54862aCI9Kg7POF9HDdlZHeGpqkdvVU384T7lLKvTApRfUuxA85g4eiBBz6wWg+HADKhw3pKQDOJ0K9uxtk2vYbeQ46LwKKLyayJQlrFsLFRGKwy9qhkog==" author="UkM1U0lNUAOY9Ba9k94IFlTjY3JspI4INbn5XWWr3dM7YbVrZ7pqWSP1Ulpc6Iev" url="UkM1U0lNUAM+EMMh1MWBj7jRuR+DTD5c1pXM1IE20HihRfZ6A1Gu422NydziT2ehQaTbuIpIWeln1fbzNpn2OFTDzgjcI9AQFROTZO2GSd8ICF0VRrKIqOvp3JzusalcZJ476ubKc6DqbZpmsqbkw7EIMWWb0Uq75WiMdjktlupGyIZ3tYRILNhVKSxW2+GlbmqKuMGcPFE=" tags="" ctime="20170508124154" dir="1483987199t78a8u9wb2" file="text.html" crypt="1">
+       <record id="1481054430rzeu9jb6m0" name="Об интеллекте" author="Д.Хокинс С.Блейксли" url="" tags="" ctime="20170508124154" dir="1481054430ih1mw58jq1" file="text.html" crypt="0"/>
+       <record id="1483987199udnkl05x0t" name="Иерархическая темпоральная память (HTM)" author="Numenta" url="http://numenta.com/assets/pdf/whitepapers/hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" tags="" ctime="20170508124154" dir="1483987199t78a8u9wb2" file="text.html" crypt="0">
         <files>
-         <file id="1490939489nlitft37w4" fileName="UkM1U0lNUAPuhAYep4yO4mW9VcciySon4rG980hgg+SpFESXTfUKYRF0HB/e85xlwYDkezTyo2iPsnNmsvSViy1A3Dzbs03LJNgnUrg3bVXJxA0dZ16cwywVdl09fOOS3qJLPZYyzwJpaey5es5FbQ==" type="file" crypt="1"/>
+         <file id="1490939489nlitft37w4" fileName="hierarchical-temporal-memory-cortical-learning-algorithm-0.2.1-ru.pdf" type="file"/>
         </files>
        </record>
       </recordtable>
      </node>
     </node>
-    <node crypt="1" icon="" id="149743508703i1dk5pht" name="UkM1U0lNUAMBmiDKhtdK8k95gEigFi5ROXHmY/InlATdO4EPNI/liGJ8uKJ5R1Dpa8orR00FuGc=">
+    <node crypt="0" icon="" id="149743508703i1dk5pht" name="Опухоли">
      <recordtable>
-      <record id="149743558372bwwm5uyj" name="UkM1U0lNUANGY0rQvt15rg6nQIcZouzGilvaaryO88mURNoTA8VlyGm8POqQPiJo" author="" url="" tags="" ctime="20170614131943" dir="1497435583qk58vw1f1u" file="text.html" crypt="1"/>
+      <record id="149743558372bwwm5uyj" name="About" author="" url="" tags="" ctime="20170614131943" dir="1497435583qk58vw1f1u" file="text.html" crypt="0"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1503141159eau56j3udb" name="Боль">
+     <recordtable>
+      <record id="1503143310lme15s5e1n" name="About" author="" url="https://cyberleninka.ru/article/v/tipy-boli-i-osnovnye-gruppy-antinotsitseptivnyh-sredstv" tags="" ctime="20170819144830" dir="1503143310zs7gv6l8t9" file="text.html"/>
      </recordtable>
     </node>
    </node>
-   <node crypt="1" icon="" id="1496955994x1wtfyvvy2" name="UkM1U0lNUAM+hd35KjqOtVxY/1iK7bUjC0yTVz3CO9MZfICSPYIEkBRkMTG/Wk2yGrbEGCGp4rQ=">
-    <node crypt="1" icon="" id="1496956010vwci45cqvy" name="UkM1U0lNUANT51FUea+QFLgBbLPZTeicUYB1W4Dy9cEWUNrcCKzwAAaob35HmlDePKxRXXXIUmY=">
+   <node crypt="0" icon="" id="1496955994x1wtfyvvy2" name="Политика">
+    <node crypt="0" icon="" id="1496956010vwci45cqvy" name="Пиночет">
      <recordtable>
-      <record id="1496956139lyt4xq12vb" name="UkM1U0lNUAN/5KnqKVsmD5MGrE+MTVSaVVENalZ5wqTTfjhzGW7pK06TBlK0UAX9XYMEFMNyJlYaM7G0L/ptfj8PeyTHSAia" author="" url="" tags="" ctime="20170609000859" dir="1496956139zp3cil15a4" file="text.html" crypt="1"/>
-      <record id="14969563083m86h7a221" name="UkM1U0lNUAP6pWQXmuhuvJ6UE+wZJDEasDRu60Xw7lPkOZo4J0iAmarz5ZrhuMp6BcX6E9SJpuo=" author="" url="" tags="" ctime="20170609001148" dir="149695630841jrqe9nbi" file="text.html" crypt="1"/>
+      <record id="1496956139lyt4xq12vb" name="Символ борьбы" author="" url="" tags="" ctime="20170609000859" dir="1496956139zp3cil15a4" file="text.html" crypt="0"/>
+      <record id="14969563083m86h7a221" name="Общее" author="" url="" tags="" ctime="20170609001148" dir="149695630841jrqe9nbi" file="text.html" crypt="0"/>
      </recordtable>
     </node>
    </node>
   </node>
-  <node crypt="1" icon="" id="1494236530myfkf0jhcp" name="UkM1U0lNUANnZoMQLTvS+lo33hWxBrZgDU8BNfTMTlIEiD5/l0L2ggcB+6pHlI3UAeycJS0lp3OH0Lx0NEbYl4x5omjqAqXY">
-   <node crypt="1" icon="" id="1494236552jttszxq5p4" name="UkM1U0lNUANA+NfTBigEWQpQTbebw55QLWOf1gVCvuLRfgQsIDkrQy/lRYlywzow1S9kQeguczQ=">
+  <node crypt="0" icon="" id="1494236530myfkf0jhcp" name="Предположения">
+   <node crypt="0" icon="" id="1494236552jttszxq5p4" name="Биология">
     <recordtable>
-     <record id="1494236928hvb0hdpg1z" name="UkM1U0lNUAMsSFBSa3NQDQluloSjG9Q4RXJHyrgcNBTlnDmcnawlEpHo/TYBUleN/4ZVaWM7Px6iOUrb4clZwwT39bi82q1vJqD8PX9xwcU9aHx7a5wt82WVwpJnjaJgM7HuUp83duj7o8fderL23idWDSLkLY6C" author="" url="" tags="" ctime="20170508124848" dir="1494236928a0tn7dzd8v" file="text.html" crypt="1"/>
+     <record id="1494236928hvb0hdpg1z" name="Строение тела - ДНК, остальное - воспитание" author="" url="" tags="" ctime="20170508124848" dir="1494236928a0tn7dzd8v" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="" id="1494236557fmphqxzhcm" name="UkM1U0lNUAOD8Rg/H/PNKQJhBUP5PKsP2F7OQGxOVLeEpnFFAl8HpyO6M/3Bn9HYwfD6MvyjmF5aYKQAFPM10A==">
+   <node crypt="0" icon="" id="1494236557fmphqxzhcm" name="Психология">
     <recordtable>
-     <record id="14942584853l07j2nwq5" name="UkM1U0lNUAPwyW/eoo/L/cW4R4Qo3yJZYP8rrUc5t+I6k1WmSF7cEYWtiBxzJqGi/e1mI56sKQsQDbyhm406tr7mYTVW1Qhn" author="" url="" tags="" ctime="20170508184805" dir="1494258485s5ktdga0lr" file="text.html" crypt="1"/>
-     <record id="1494258524ws7zrkiamj" name="UkM1U0lNUAOHvx7gLAT3m52PUi19Ub3uIUWQE6AdPfzha66/YMpU0ZtUf8uTHLJCxNUnGVrJ0QY=" author="" url="" tags="" ctime="20170508184844" dir="1494258524mpqb8wu4q6" file="text.html" crypt="1"/>
-     <record id="1494258959mlf198yuo7" name="UkM1U0lNUAM6CUyhtfHE4+n1DIw81lKVxWfVzq+sszoAYV1AiU/qNdNog0z+lfO3V1lcHklEPV8=" author="" url="" tags="" ctime="20170508185559" dir="1494258959c5rv4krh5n" file="text.html" crypt="1"/>
-     <record id="14942591735xkv4l1m8o" name="UkM1U0lNUAPa3WKaSxo6oTW6BswjWsGL4gf/5bgD70OItMixykHB4Fn/sNMfmrSBxAGuaayuo3iksu+72GuVig==" author="" url="" tags="" ctime="20170508185933" dir="14942591737h6f3o49bh" file="text.html" crypt="1"/>
-     <record id="1494260078x23z0amhrl" name="UkM1U0lNUAPADNRmJfn3fPiDPcIem2nN63stRZHQaoPTK2RqgZTmQWOPHOaVggOsebild1L6TlI=" author="" url="" tags="" ctime="20170508191438" dir="1494260078o8sya5m0v9" file="text.html" crypt="1"/>
-     <record id="1496055189aen32g0yfr" name="UkM1U0lNUAO+3BB5HMxkVqFQqnQtZ0NlyjyeAFJ1ci5gsQV911SPRvjWL6IjPiGd9EDNvraSHPcNxi0IXHtE3NhwgnS6YIoa" author="" url="" tags="" ctime="20170529135309" dir="1496055189gzk1yw3yus" file="text.html" crypt="1"/>
+     <record id="14942584853l07j2nwq5" name="Умный / Мудрый" author="" url="" tags="" ctime="20170508184805" dir="1494258485s5ktdga0lr" file="text.html" crypt="0"/>
+     <record id="1494258524ws7zrkiamj" name="Лучший" author="" url="" tags="" ctime="20170508184844" dir="1494258524mpqb8wu4q6" file="text.html" crypt="0"/>
+     <record id="1494258959mlf198yuo7" name="Жизнь" author="" url="" tags="" ctime="20170508185559" dir="1494258959c5rv4krh5n" file="text.html" crypt="0"/>
+     <record id="14942591735xkv4l1m8o" name="Смысл жизни" author="" url="" tags="" ctime="20170508185933" dir="14942591737h6f3o49bh" file="text.html" crypt="0"/>
+     <record id="1494260078x23z0amhrl" name="Любовь" author="" url="" tags="" ctime="20170508191438" dir="1494260078o8sya5m0v9" file="text.html" crypt="0"/>
+     <record id="1496055189aen32g0yfr" name="Самое главное" author="" url="" tags="" ctime="20170529135309" dir="1496055189gzk1yw3yus" file="text.html" crypt="0"/>
     </recordtable>
    </node>
-   <node crypt="1" icon="" id="1494236561j6tyutmhrc" name="UkM1U0lNUAPYxT99cX7GFXtrnDsNsWgT/DTLVu98DtaSo4W8WxpWaTf8pRIm7yWTjcsz2xn2lOs=">
+   <node crypt="0" icon="" id="1494236561j6tyutmhrc" name="Физика">
     <recordtable>
-     <record id="1494236670t2og80as3c" name="UkM1U0lNUAN9FvJVdK/mfAhpJipBcLmg5Yv8aqBQ7bHDJJqrR4VQOyLAur1QnMl3b+nmtevd7XQ9PgIW01T6/MC41Uural95FzOq4fnmcfmgjQZ7uUOk91nJTFXq3269EB/aHcEQESQ=" author="" url="" tags="" ctime="20170508124430" dir="1494236670pepypq3bu6" file="text.html" crypt="1"/>
-     <record id="1494236704zr0icvvrn1" name="UkM1U0lNUANZKEc6nSoVkRCgY7BPlCHIvtgdL3x2yHpcdl8tsqRTlU9+PPN5RlDDWB4WHAl+X1z03u3m54TzGM2z5F1o498Iec7+sghqsej3SckjTwQRRwjuVD4/j1w4" author="" url="" tags="" ctime="20170508124504" dir="1494236704cljb6hlubx" file="text.html" crypt="1"/>
-     <record id="1494249639m0w7q3wmal" name="UkM1U0lNUANnCv55LhEU91Olk/BaMCSp5MKBz9vUVt6M8EIWCiQKSrHgadHIvUb3KidsQ7tUhVpfNv9It+hDHdqJkt+APdAVe+va4oBIoTrnarcQtbybb40ljmsbL2DpCRvl0A3GiiXZnUgTQAe2BF4jgxlNLcbQ" author="" url="" tags="" ctime="20170508162039" dir="1494249639gr8ewm0n8y" file="text.html" crypt="1"/>
+     <record id="1494236670t2og80as3c" name="Температура = частота колебания" author="" url="" tags="" ctime="20170508124430" dir="1494236670pepypq3bu6" file="text.html" crypt="0"/>
+     <record id="1494236704zr0icvvrn1" name="Энергия = частота колебаний" author="" url="" tags="" ctime="20170508124504" dir="1494236704cljb6hlubx" file="text.html" crypt="0"/>
+     <record id="1494249639m0w7q3wmal" name="Волна как отдельная материя не существует" author="" url="" tags="" ctime="20170508162039" dir="1494249639gr8ewm0n8y" file="text.html" crypt="0"/>
     </recordtable>
    </node>
   </node>
   <node crypt="1" icon="" id="1500146593pet7izsr00" name="UkM1U0lNUAMQ++QZ2e1j3qhVehF227VG1NA4slszd4OlatRqOqpiCsIfkjZ4V8Dk">
-   <node crypt="1" icon="" id="1500146612i45wen4b6w" name="UkM1U0lNUAMxxn3jP+5H/HmwMo19UcnP8ozEaRt2gSsim6/6TpWgBLiDUR7ZCfmE4E916wpaxl0=">
-    <recordtable>
-     <record id="1500146842ges8d8jrzy" name="UkM1U0lNUANKdPmO0bji9XwvyfecvUm6I0FxN5G6OdGBmUci7AopzA8Jz/Te3W+w1GWFAn3evZqI0Sz4OikptF+qSFjcWmDGl5vRrnFqMlwACAqnyitukz1P8bCZ7TcK" author="" url="" tags="" ctime="20170715222722" dir="1500146842hwfxec0ajf" file="text.html" crypt="1"/>
-    </recordtable>
-   </node>
    <node crypt="1" icon="" id="1500146639bc1umxjkjd" name="UkM1U0lNUAM5d/3gRZr/2vZvCGz4azngtEGyWgXebmo5sVfHRgik+fazmgllrK42RFxqgbGiUMPJEPSLXrwyLbqB8qf5ACBbv9iocahkGhK3+Bgkp2TrN/7th33+XDgO">
     <recordtable>
      <record id="1500147140h8c7vitpuz" name="UkM1U0lNUAOApZv05wb1toqNWziIuz4AYv49fQPdj1xHVHM3EqB+xYdFoeEd4HbwdNcqqPXxLWyW7XR7Rv5EcdcFnEg6INCi" author="" url="" tags="" ctime="20170715223220" dir="1500147140oiuyk5bxva" file="text.html" crypt="1"/>
@@ -422,8 +427,27 @@
    <node crypt="1" icon="" id="1500146664jrr1omvgc5" name="UkM1U0lNUAPKgmLYqE4L8gSG5EWajLJ8uYdVlckN5xpZtzTMCKYcES8qYwBO6v6nsnLljzOpqDKEl+3O87/OBDwb3dikvf9QZhBsYuvuWUFpLubf6V4uHA==">
     <recordtable>
      <record id="1500147176h5kvsyr035" name="UkM1U0lNUAMdJii9Yb2AoWH7Ob8KD/sVQn49IQE2NL1Xm2KmcDMFZ1YHwZAhpUhvW0/ox4nxbQtTZYJeD/AKnEDHsWmVh1hfpQK5JKHo9/v0yFRuuSXOkg==" author="" url="" tags="" ctime="20170715223256" dir="1500147176tq7da6yoxm" file="text.html" crypt="1"/>
-     <record id="1500147263hu7pyfubyl" name="UkM1U0lNUAPBv6ny8JYyZg4O+UG6SmBvt3iDx/SfMRLojM9r+KCgzcE/nq2epTK+IwRj4Vssx+PYDgDzJWed6iTphAfxJDrbSbgjstXkC1vI9yIYCZEDOlNTwzKYcyXiwlERi/RkrwVX24MmC2atJA==" author="" url="" tags="" ctime="20170715223423" dir="1500147263kum31mm1ue" file="text.html" crypt="1"/>
     </recordtable>
+    <node crypt="1" icon="" id="1503170566mg6m7hcfu4" name="UkM1U0lNUAOW6Wow8pw7N13jsWaRea811rL/ymBBuVlVXha/uD9KdbwzACMilIlAuZYaBoNi7sk=">
+     <recordtable>
+      <record id="1503170668h04j7ryoym" name="UkM1U0lNUAP3hUqi1Pv/euEFveDiRkF4BI7KPw0G4iuZycpkLupMks3+HYlS9RgjP2S3CGhuAQAEMBiS9h/tKL64gZfeE8Kc" author="" url="" tags="" ctime="20170819222428" dir="1503170668asq9fnvkro" file="text.html" crypt="1"/>
+      <record id="1503171142tkqmm4xfxn" name="UkM1U0lNUAMleO12jeATJsVPO8n6VJUDPEpcKev40JJEddLJzGUQr2Q/1sZ2dVSkslRkKVwb/hQULb7688wVib3kzVr9ZaPJPyUZatLQVEFQFWRSrc1sIA==" author="" url="" tags="" ctime="20170819223222" dir="1503171142v0mvzb7v8i" file="text.html" crypt="1"/>
+      <record id="1503171126ywvk64uqu3" name="UkM1U0lNUAPm0N1Gjp9lFlqJeWgYPtLsJGIs2x9zMxzkXDyXHMCwTXpNtLJH7ZecTDDBUV+DhrFqNSrif0zfSZDj91dnGTXqJdg+rwo4dHiTmArxWAusFsVUjZ05OKYo/Ff37MPmAXC94OioC9oSaQ==" author="" url="" tags="" ctime="20170819223206" dir="1503171126t7cnh58mt2" file="text.html" crypt="1"/>
+      <record id="15031705735yddm5vnnh" name="UkM1U0lNUAO26oe59fk1V2vvdVHk3lCLcqb1aGt01Vqm4TthMudLOMNJQQZIvYWG" author="" url="" tags="" ctime="20170819222253" dir="1503170573at0jyj6kur" file="text.html" crypt="1"/>
+      <record id="1503170603bvcsdod190" name="UkM1U0lNUANtwW2g123q7OyL42vJbGbxwzHZwmbQugGFlxg5lA6CGovkMH7T3m6WjKjStR/quKcblLctHQeZsWttngI9BM3l7ljClFt1wx8FhCaca/vqLrTC5FQm6BxC" author="" url="" tags="" ctime="20170819222323" dir="1503170603iol18jtueu" file="text.html" crypt="1"/>
+      <record id="1503170909ikj7f8w4o2" name="UkM1U0lNUANm+9tU0Q3uflZd0ppzgnbmVEzOtKL9BK+TdSgx2myChNUCh+UeRni7uhUQ7xskdOo=" author="" url="" tags="" ctime="20170819222829" dir="1503170909wilwpkds8u" file="text.html" crypt="1"/>
+      <record id="1503170817riza5u2fec" name="UkM1U0lNUAPoqQm3M1x3E2/Xp0Dbek7HYFvQEYHmoGw5qC+Lea4JOxgxumPvc8RCq6rUhZxCIVJf704IemV0tQ2NHs6LFDqkbvsbP+zWEMelCm+al5SFoN7Pw7v27HnkSsuyB6Y8EFw=" author="" url="" tags="" ctime="20170819222657" dir="150317081758ffoq5lwj" file="text.html" crypt="1"/>
+      <record id="1503170976qrc1hnwr19" name="UkM1U0lNUAM6CKxI0E/7LwnLdyPPg7TyVLIKtsGWEBgrRFXkCo1NFXrOuJGIeBOtrhTPsx3vxMEESoTYk/03QC9uuWISF9047ZSch2VKbEFSAwKNFlon/A==" author="" url="" tags="" ctime="20170819222936" dir="1503170976aon3tk5m7j" file="text.html" crypt="1"/>
+      <record id="1503170678tb3oq275ts" name="UkM1U0lNUAMQKOdINmtDBVQxzZgzk3n9Vtrh14sE9xGf6INjURi6O9LGfXczEPFfB1b9ESaSekucUBx0HMQ0nQ==" author="" url="" tags="" ctime="20170819222438" dir="1503170678mlnu7ejvbi" file="text.html" crypt="1"/>
+      <record id="1503171249p0uzccfz70" name="UkM1U0lNUAO/nQ8F8q0lM0OjquCYfg+0dKl/cq+1biOPMe2ERzMm/J55b46DeMX3V318xlgiQoAv2qUEuHXYTrpH/5mstuZw/dmhpgvnqkX0PDmSEKIaSQ==" author="" url="" tags="" ctime="20170819223409" dir="150317124985qeru3dr6" file="text.html" crypt="1"/>
+      <record id="1503170878e7ij9tz21b" name="UkM1U0lNUAPUSM4HrrbUR5jmzkoQzDL53fVB4m9vCz+WT3ccfTXlOAAFfrhtSJnk4Ghi/O90TMa7yr1H6VCtGHDK+n1pnesY3KhGR9N7iFs76aR9BAs/dmSxW2BPxnmjCjiQo9IKHOw=" author="" url="" tags="" ctime="20170819222758" dir="1503170878e952jc00ol" file="text.html" crypt="1"/>
+      <record id="1503170761u0lotwwkyr" name="UkM1U0lNUANpgeG7b/779iaMpj9mUutJySUPwobwZyeJzyFe4W4vy7awNafnym6E" author="" url="" tags="" ctime="20170819222601" dir="1503170761epfwfn06hh" file="text.html" crypt="1"/>
+      <record id="1503170835pdouz8n6fp" name="UkM1U0lNUANnbfY9tou+wgUKkVl+RbvdG4ktbd81rf0Xs2IGz/McvPuyDL0AXBG7" author="" url="" tags="" ctime="20170819222715" dir="1503170835778ooeqbxi" file="text.html" crypt="1"/>
+      <record id="15031707008s9faicngu" name="UkM1U0lNUANgvWeZISKBs0ZqBZ+bx3xwuAje2pThZMfH6wBxImVqJ6uQuiSwgiV0G3QwD1vqz1g+apiMsKYfiJrOo8hKNSMPSWQZelCFVH9ZHsaXf0NgdvXpPE9H2buK0Z7w1Z2auns=" author="" url="" tags="" ctime="20170819222500" dir="1503170700hnxwq1h4wi" file="text.html" crypt="1"/>
+      <record id="15031707248xah9jzm6u" name="UkM1U0lNUAPMCBcTVtyKMdkpG+vVlSj3JgOXb0tXX//J5LLh3G2lXRSYTkFD+BrPEahq1nVmxKtvx2S7xJ0qzEpqsLUWkV/05n8AgbiNcJ25rkeS0hCK4RAoEGPm4Cap" author="" url="" tags="" ctime="20170819222524" dir="1503170724cucwy5l0qc" file="text.html" crypt="1"/>
+      <record id="150317078071ic9sc4dl" name="UkM1U0lNUAN3tzxTyCUK2Am12K3wz+MzW3clbszev9P9DULOH2MMRIzpGa51RsbgM4osqhXTTLGeHYG3zZz8Jg==" author="" url="" tags="" ctime="20170819222620" dir="1503170780pyh83cerk1" file="text.html" crypt="1"/>
+     </recordtable>
+    </node>
    </node>
   </node>
  </content>
