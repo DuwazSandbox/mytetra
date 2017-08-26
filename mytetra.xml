@@ -374,8 +374,9 @@
     </node>
     <node crypt="" id="1503685720g7fzgafm2k" name="Мобильные технологии">
      <recordtable>
-      <record id="150368696304venteie5" name="Вебинары по мобильной связи" author="" url="" tags="" ctime="20170825214923" dir="1503686963gpncyo0icj" file="text.html"/>
+      <record id="150368696304venteie5" name="О мобильной связи" author="" url="" tags="" ctime="20170825214923" dir="1503686963gpncyo0icj" file="text.html"/>
       <record id="1503696627elkaevrbh1" name="(Вебинар) Мобильная связь - небезопасна по умолчанию" author="" url="https://www.youtube.com/watch?v=hprBCLSjoGw" tags="" ctime="20170826003027" dir="1503696627qpw77vynoy" file="text.html"/>
+      <record id="1503770620g62kt78v5l" name="(Вебинар) Мобильная связь: эволюция и стандарты" author="" url="https://www.youtube.com/watch?v=CACvVNPujR0" tags="" ctime="20170826210340" dir="1503770620ri12wqy1sx" file="text.html"/>
      </recordtable>
     </node>
    </node>
