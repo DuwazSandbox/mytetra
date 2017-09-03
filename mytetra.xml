@@ -379,6 +379,12 @@
       <record id="1503770620g62kt78v5l" name="(Вебинар) Мобильная связь: эволюция и стандарты" author="" url="https://www.youtube.com/watch?v=CACvVNPujR0" tags="" ctime="20170826210340" dir="1503770620ri12wqy1sx" file="text.html"/>
      </recordtable>
     </node>
+    <node crypt="" id="1504446714blon4gun45" name="Design Patterns">
+     <recordtable>
+      <record id="15044467406xe2aa889b" name="Strategy / Стратегия" author="" url="" tags="" ctime="20170903165220" dir="1504446740sd32avoyez" file="text.html"/>
+      <record id="15044487692o2x9n57j4" name="Observer / Наблюдатель" author="" url="" tags="" ctime="20170903172609" dir="15044487695gb9h3gqll" file="text.html"/>
+     </recordtable>
+    </node>
    </node>
    <node crypt="0" icon="" id="1494236501i1fww4sqif" name="Биология">
     <node crypt="0" icon="" id="1494236514ta2m7xznwh" name="Работа мозга">
@@ -444,16 +450,14 @@
     </recordtable>
    </node>
    <node crypt="1" icon="" id="1500146664jrr1omvgc5" name="UkM1U0lNUAPKgmLYqE4L8gSG5EWajLJ8uYdVlckN5xpZtzTMCKYcES8qYwBO6v6nsnLljzOpqDKEl+3O87/OBDwb3dikvf9QZhBsYuvuWUFpLubf6V4uHA==">
-    <recordtable>
-     <record id="1500147176h5kvsyr035" name="UkM1U0lNUAMdJii9Yb2AoWH7Ob8KD/sVQn49IQE2NL1Xm2KmcDMFZ1YHwZAhpUhvW0/ox4nxbQtTZYJeD/AKnEDHsWmVh1hfpQK5JKHo9/v0yFRuuSXOkg==" author="" url="" tags="" ctime="20170715223256" dir="1500147176tq7da6yoxm" file="text.html" crypt="1"/>
-    </recordtable>
     <node crypt="1" icon="" id="1503170566mg6m7hcfu4" name="UkM1U0lNUAOW6Wow8pw7N13jsWaRea811rL/ymBBuVlVXha/uD9KdbwzACMilIlAuZYaBoNi7sk=">
      <recordtable>
       <record id="1503170603bvcsdod190" name="UkM1U0lNUANtwW2g123q7OyL42vJbGbxwzHZwmbQugGFlxg5lA6CGovkMH7T3m6WjKjStR/quKcblLctHQeZsWttngI9BM3l7ljClFt1wx8FhCaca/vqLrTC5FQm6BxC" author="" url="" tags="" ctime="20170819222323" dir="1503170603iol18jtueu" file="text.html" crypt="1"/>
+      <record id="1504373831k8jp4uc1lp" name="UkM1U0lNUANzF7Rz4z0jw3Fa1/Lv+b34FRVuVCFgpyq+jOkkBhi8TmUh1eGpEhvvPZAfESTUSrh0FlrhHI/ggvha8oFNLR/vTXmPHJk3jxk=" author="" url="" tags="" ctime="20170902203711" dir="1504373831d2jqr85kwr" file="text.html" crypt="1"/>
+      <record id="1503170909ikj7f8w4o2" name="UkM1U0lNUANm+9tU0Q3uflZd0ppzgnbmVEzOtKL9BK+TdSgx2myChNUCh+UeRni7uhUQ7xskdOo=" author="" url="" tags="" ctime="20170819222829" dir="1503170909wilwpkds8u" file="text.html" crypt="1"/>
       <record id="1503240993xnjgxntjak" name="UkM1U0lNUANbhtA/+t9i9b25nn1DlSRiTN6nU4TBFLxEtY6tkPm4mWY7U6hlP6bW6g16WfJ0fAalF1zULJTFBg==" author="" url="" tags="" ctime="20170820175633" dir="1503240993i99vlm2g6q" file="text.html" crypt="1"/>
       <record id="1503219820ta6amxwb6v" name="UkM1U0lNUAOTDJVKrqVGBeA/3t3ZCBJIt9eqnreArkaHwH0oaQTFDYUtRsO9eNOHo0oPgF+ME34=" author="" url="" tags="" ctime="20170820120340" dir="1503219820htss1xkwwp" file="text.html" crypt="1"/>
       <record id="15031705735yddm5vnnh" name="UkM1U0lNUAO26oe59fk1V2vvdVHk3lCLcqb1aGt01Vqm4TthMudLOMNJQQZIvYWG" author="" url="" tags="" ctime="20170819222253" dir="1503170573at0jyj6kur" file="text.html" crypt="1"/>
-      <record id="1503170909ikj7f8w4o2" name="UkM1U0lNUANm+9tU0Q3uflZd0ppzgnbmVEzOtKL9BK+TdSgx2myChNUCh+UeRni7uhUQ7xskdOo=" author="" url="" tags="" ctime="20170819222829" dir="1503170909wilwpkds8u" file="text.html" crypt="1"/>
       <record id="1503170817riza5u2fec" name="UkM1U0lNUAPoqQm3M1x3E2/Xp0Dbek7HYFvQEYHmoGw5qC+Lea4JOxgxumPvc8RCq6rUhZxCIVJf704IemV0tQ2NHs6LFDqkbvsbP+zWEMelCm+al5SFoN7Pw7v27HnkSsuyB6Y8EFw=" author="" url="" tags="" ctime="20170819222657" dir="150317081758ffoq5lwj" file="text.html" crypt="1"/>
       <record id="1503170976qrc1hnwr19" name="UkM1U0lNUAM6CKxI0E/7LwnLdyPPg7TyVLIKtsGWEBgrRFXkCo1NFXrOuJGIeBOtrhTPsx3vxMEESoTYk/03QC9uuWISF9047ZSch2VKbEFSAwKNFlon/A==" author="" url="" tags="" ctime="20170819222936" dir="1503170976aon3tk5m7j" file="text.html" crypt="1"/>
       <record id="1503170678tb3oq275ts" name="UkM1U0lNUAMQKOdINmtDBVQxzZgzk3n9Vtrh14sE9xGf6INjURi6O9LGfXczEPFfB1b9ESaSekucUBx0HMQ0nQ==" author="" url="" tags="" ctime="20170819222438" dir="1503170678mlnu7ejvbi" file="text.html" crypt="1"/>
