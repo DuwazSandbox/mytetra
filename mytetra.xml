@@ -383,6 +383,13 @@
      <recordtable>
       <record id="15044467406xe2aa889b" name="Strategy / Стратегия" author="" url="" tags="" ctime="20170903165220" dir="1504446740sd32avoyez" file="text.html"/>
       <record id="15044487692o2x9n57j4" name="Observer / Наблюдатель" author="" url="" tags="" ctime="20170903172609" dir="15044487695gb9h3gqll" file="text.html"/>
+      <record id="15047019419yxp8naj5f" name="Decorator / Декоратор" author="" url="" tags="" ctime="20170906154541" dir="15047019410h31sd12mw" file="text.html"/>
+      <record id="1504803615y1s2vp2ky8" name="Factory / Фабрика" author="" url="" tags="" ctime="20170907200015" dir="1504803615hv5jhxrwt0" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1504596587fbesq7xxqd" name="Задачки">
+     <recordtable>
+      <record id="1504596649c8p15xahm1" name="Задача об умном муравье" author="" url="https://www.youtube.com/watch?v=7ccsQqAB2-U" tags="автомат" ctime="20170905103049" dir="1504596649qf7i9xlxca" file="text.html"/>
      </recordtable>
     </node>
    </node>
@@ -415,6 +422,21 @@
      <recordtable>
       <record id="1496956139lyt4xq12vb" name="UkM1U0lNUANKdqwJY7OefNY8dTCIuvNyuyeTlrlKU/VDD0Hb9nLLgwpwsjpoARRPB6OJLor9auAEvDdUWE1b07ZfT6Fjq3aG" author="" url="" tags="" ctime="20170609000859" dir="1496956139zp3cil15a4" file="text.html" crypt="1"/>
       <record id="14969563083m86h7a221" name="UkM1U0lNUAOsVscXbgMiHbiAg79ve6Mijqe6LYo10uMe0ME4Ph93BJsVTC6ARPuNd3KxBttg5ow=" author="" url="" tags="" ctime="20170609001148" dir="149695630841jrqe9nbi" file="text.html" crypt="1"/>
+     </recordtable>
+    </node>
+   </node>
+   <node crypt="" id="15045958759639j1c182" name="Книги">
+    <node crypt="" id="1504595890qn1t2drt34" name="Компьютер">
+     <recordtable>
+      <record id="1504595936p38vbuqwbu" name="Хакинг - искусство эксплойта" author="Д. Эриксон" url="" tags="" ctime="20170905101856" dir="15045959365scq8c9jjt" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1504595897d74zmh2dya" name="Биология"/>
+   </node>
+   <node crypt="" id="1504596717vcbh24v76i" name="Математика">
+    <node crypt="" id="1504596737401u3vz8lm" name="Доказательства">
+     <recordtable>
+      <record id="15045968715wt9wikgxk" name="Гармонический ряд расходится" author="" url="" tags="гармонический ряд сходимость" ctime="20170905103431" dir="15045968716hxfdwfpdc" file="text.html"/>
      </recordtable>
     </node>
    </node>
@@ -477,6 +499,11 @@
      <record id="1503706828plymk2qw7x" name="UkM1U0lNUANrODFZFff8Hq/DVP1zrUu1Um5u5txHnl5nZS+vGwV3U0RtLOXINrRdsLKB0t3TVJg=" author="" url="" tags="" ctime="20170826032028" dir="1503706828xuukqzhqr6" file="text.html" crypt="1"/>
     </recordtable>
    </node>
+  </node>
+  <node crypt="" id="15045963276pcd9plywu" name="Тесты">
+   <recordtable>
+    <record id="1504596433szw65rjkwg" name="Тест на знание Си" author="" url="" tags="" ctime="20170905102713" dir="1504596433zn4n6i13a1" file="text.html"/>
+   </recordtable>
   </node>
  </content>
 </root>
