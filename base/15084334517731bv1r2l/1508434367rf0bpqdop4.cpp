@@ -56,37 +56,37 @@ class stream
 public:
 	stream(std::string filename, const char* mode)
 	{
-		file.init(this, &stream::get_file);
-		isOpen.init(this, &stream::get_isOpen);
+		File.init(this, &stream::get_file);
+		IsOpen.init(this, &stream::get_isOpen);
 
-		l_file = fopen(filename.c_str(), mode);
-		if (l_file != NULL) l_isOpen = true;
+		file = fopen(filename.c_str(), mode);
+		if (file != NULL) isOpen = true;
 	}
 
 	void close()
 	{
-		if (l_isOpen)
+		if (isOpen)
 		{
-			fclose(l_file);
-			l_isOpen = false;
+			fclose(file);
+			isOpen = false;
 		}
 	}
 
 	virtual ~stream()
 	{
-		if (l_isOpen)
-			fclose(l_file);
+		if (isOpen)
+			fclose(file);
 	}
 
-	bool get_isOpen() { return l_isOpen; }
-	FILE* get_file() { return l_file; }
+	bool get_isOpen() { return isOpen; }
+	FILE* get_file() { return file; }
 
-	property <FILE*, stream> file;
-	property <bool, stream> isOpen;
+	property <FILE*, stream> File;
+	property <bool, stream> IsOpen;
 
 private:
-	FILE* l_file;
-	bool l_isOpen;
+	FILE* file;
+	bool isOpen;
 };
 
 class ostream:public stream
@@ -97,7 +97,7 @@ public:
 	{
 		try
 		{
-			fputs(toOut.c_str(), file);
+			fputs(toOut.c_str(), File);
 		}
 		catch (std::exception ex)
 		{
@@ -114,13 +114,13 @@ public:
 
 	istream& operator>> (std::string& Str)
 	{
-		if (isOpen)
+		if (IsOpen)
 		{
 			Str.erase();
 			try
 			{
 				char symbol;
-				while ((symbol = fgetc(file)) > 0 && symbol != '\n')
+				while ((symbol = fgetc(File)) > 0 && symbol != '\n')
 					Str.append(1, symbol);
 			}
 			catch (std::exception ex)
