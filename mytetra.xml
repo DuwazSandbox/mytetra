@@ -360,11 +360,23 @@
        <record id="1508262404tet9n5tyvt" name="Работа с памятью" author="" url="" tags="" ctime="20171017204644" dir="1508262404jiatcnhsy2" file="text.html"/>
        <record id="1508274179q3fjgl50sc" name="Core Guidelines" author="" url="http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines" tags="" ctime="20171018000259" dir="15082741796cjp1i6pq0" file="text.html"/>
        <record id="1508274506c9bvc5f12f" name="CppCon" author="" url="https://www.youtube.com/channel/UCMlGfpWw-RUdWX_JbLCukXg" tags="" ctime="20171018000826" dir="1508274506icp3bfrsr6" file="text.html"/>
-       <record id="15084334514b92s0v7qe" name="- Ввод и вывод в C и C++" author="" url="" tags="" ctime="20171019201731" dir="15084334517731bv1r2l" file="text.html">
+       <record id="15084334514b92s0v7qe" name="Ввод и вывод в C и C++" author="" url="" tags="" ctime="20171019201731" dir="15084334517731bv1r2l" file="text.html">
         <files>
          <file id="1508434367rf0bpqdop4" fileName="main.cpp" type="file"/>
         </files>
        </record>
+      </recordtable>
+     </node>
+     <node crypt="" id="1509371285qnslzcqpt7" name="C">
+      <recordtable>
+       <record id="1509371618gr0f6m9rei" name="Компилятор" author="" url="" tags="" ctime="20171030165338" dir="1509371618xjo4k0xh4l" file="text.html"/>
+       <record id="1509371334msc0j75zpf" name="Аллокация регистров" author="" url="http://32bit-me.livejournal.com/107643.html" tags="" ctime="20171030164854" dir="1509371334qwn0fkbnsc" file="text.html"/>
+       <record id="1509372744hmtlqb89g0" name="Peephole optimization" author="" url="" tags="" ctime="20171030171224" dir="1509372744ooeuoj8nox" file="text.html"/>
+      </recordtable>
+     </node>
+     <node crypt="" id="1510599895qbgu3cgqqz" name="WinAPI">
+      <recordtable>
+       <record id="1510600840h94xyyxyo0" name="Работа с клавиатурой" author="" url="" tags="" ctime="20171113222040" dir="15106008404624f81txa" file="text.html"/>
       </recordtable>
      </node>
     </node>
