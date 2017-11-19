@@ -301,10 +301,13 @@
      <recordtable>
       <record id="1493563666qsdi0y714i" name="TLSF" author="" url="" tags="" ctime="20170508124121" dir="1493563666b4h6ynxkdq" file="text.html" crypt="0"/>
       <record id="1493563753l3zrt1zil4" name="ASLR" author="" url="" tags="" ctime="20170508124121" dir="1493563753rezc3qy9fe" file="text.html" crypt="0"/>
+      <record id="1511095077fh4yfpzcqa" name="Гиперпотоковость" author="" url="" tags="" ctime="20171119153757" dir="1511095077719xslnq8b" file="text.html"/>
      </recordtable>
      <node crypt="0" icon="" id="1494236481b451yjensx" name="Windows">
       <recordtable>
        <record id="14909402932z31t7kjve" name="Запуск" author="" url="" tags="" ctime="20170508124121" dir="14909402932k5zc82k02" file="text.html" crypt="0"/>
+       <record id="1511085579ptlaup4lji" name="Общение программ с ОС" author="" url="" tags="" ctime="20171119125939" dir="15110855790ju5gf4r80" file="text.html"/>
+       <record id="1511094549c6fgj17xgd" name="Обеспечивают переносимость ОС" author="" url="" tags="" ctime="20171119152909" dir="1511094549mvrhbfq1kt" file="text.html"/>
       </recordtable>
       <node crypt="0" icon="" id="1494236481wcn40ntomg" name="WinDBG">
        <recordtable>
@@ -367,11 +370,12 @@
        </record>
       </recordtable>
      </node>
-     <node crypt="" id="1509371285qnslzcqpt7" name="C">
+     <node crypt="" id="1509371285qnslzcqpt7" name="Компилятор">
       <recordtable>
-       <record id="1509371618gr0f6m9rei" name="Компилятор" author="" url="" tags="" ctime="20171030165338" dir="1509371618xjo4k0xh4l" file="text.html"/>
-       <record id="1509371334msc0j75zpf" name="Аллокация регистров" author="" url="http://32bit-me.livejournal.com/107643.html" tags="" ctime="20171030164854" dir="1509371334qwn0fkbnsc" file="text.html"/>
+       <record id="1509371618gr0f6m9rei" name="Оптимизатор компилятора" author="" url="" tags="" ctime="20171030165338" dir="1509371618xjo4k0xh4l" file="text.html"/>
+       <record id="1509371334msc0j75zpf" name="Register allocation / Аллокация регистров" author="" url="http://32bit-me.livejournal.com/107643.html" tags="" ctime="20171030164854" dir="1509371334qwn0fkbnsc" file="text.html"/>
        <record id="1509372744hmtlqb89g0" name="Peephole optimization" author="" url="" tags="" ctime="20171030171224" dir="1509372744ooeuoj8nox" file="text.html"/>
+       <record id="15110991930skc6d2qaz" name="Loop unrolling / unwinding ; Размотка / Раскрутка цикла" author="" url="" tags="" ctime="20171119164633" dir="1511099193wgc9dnhogd" file="text.html"/>
       </recordtable>
      </node>
      <node crypt="" id="1510599895qbgu3cgqqz" name="WinAPI">
@@ -409,7 +413,8 @@
       <record id="15044467406xe2aa889b" name="Strategy / Стратегия" author="" url="" tags="" ctime="20170903165220" dir="1504446740sd32avoyez" file="text.html"/>
       <record id="15044487692o2x9n57j4" name="Observer / Наблюдатель" author="" url="" tags="" ctime="20170903172609" dir="15044487695gb9h3gqll" file="text.html"/>
       <record id="15047019419yxp8naj5f" name="Decorator / Декоратор" author="" url="" tags="" ctime="20170906154541" dir="15047019410h31sd12mw" file="text.html"/>
-      <record id="1504803615y1s2vp2ky8" name="Factory / Фабрика" author="" url="" tags="" ctime="20170907200015" dir="1504803615hv5jhxrwt0" file="text.html"/>
+      <record id="1504803615y1s2vp2ky8" name="Abstract factory / Абстрактная фабрика" author="" url="" tags="" ctime="20170907200015" dir="1504803615hv5jhxrwt0" file="text.html"/>
+      <record id="15109868500qmr005m20" name="Factory method / Фабричный метод" author="" url="" tags="" ctime="20171118093410" dir="15109868509bkt44bwc7" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1504596587fbesq7xxqd" name="Задачки">
