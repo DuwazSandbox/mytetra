@@ -383,6 +383,11 @@
        <record id="1510600840h94xyyxyo0" name="Работа с клавиатурой" author="" url="" tags="" ctime="20171113222040" dir="15106008404624f81txa" file="text.html"/>
       </recordtable>
      </node>
+     <node crypt="" id="1511208577q8c6baka9o" name="C">
+      <recordtable>
+       <record id="15112086188yrrokqu7r" name="restrict" author="" url="" tags="" ctime="20171120231018" dir="1511208618p31gzwcxyd" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1503138940x9l1m8yvzm" name="Сортировка">
      <recordtable>
@@ -415,6 +420,7 @@
       <record id="15047019419yxp8naj5f" name="Decorator / Декоратор" author="" url="" tags="" ctime="20170906154541" dir="15047019410h31sd12mw" file="text.html"/>
       <record id="1504803615y1s2vp2ky8" name="Abstract factory / Абстрактная фабрика" author="" url="" tags="" ctime="20170907200015" dir="1504803615hv5jhxrwt0" file="text.html"/>
       <record id="15109868500qmr005m20" name="Factory method / Фабричный метод" author="" url="" tags="" ctime="20171118093410" dir="15109868509bkt44bwc7" file="text.html"/>
+      <record id="15112951597ng0jis960" name="Singleton / Одиночка" author="" url="" tags="" ctime="20171121231239" dir="1511295159mbylyppjhu" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1504596587fbesq7xxqd" name="Задачки">
