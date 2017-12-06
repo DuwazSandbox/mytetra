@@ -326,6 +326,12 @@
         <record id="149094039171pxxclmdk" name="Windows kernel: краткий курс молодого бойца (Артем Шишкин) " author="" url="https://www.youtube.com/watch?v=Xv9ckZ4PCmc" tags="" ctime="20170508124121" dir="1490940391emhicgzhc0" file="text.html" crypt="0"/>
        </recordtable>
       </node>
+      <node crypt="" id="1512594888xamlv936gw" name="Запуск подсистем">
+       <recordtable>
+        <record id="1512594917906xi1914v" name="About" author="" url="" tags="" ctime="20171207001517" dir="1512594917x2btahjpkb" file="text.html"/>
+        <record id="1512596479xojaywn8xo" name="Подсистема Windows" author="" url="" tags="" ctime="20171207004119" dir="1512596479aumnva5vfa" file="text.html"/>
+       </recordtable>
+      </node>
      </node>
      <node crypt="0" icon="" id="149423648120kbpvt1rr" name="Память">
       <recordtable>
@@ -368,7 +374,14 @@
          <file id="1508434367rf0bpqdop4" fileName="main.cpp" type="file"/>
         </files>
        </record>
+       <record id="15113800686rlf52m0lr" name="Контейнеры STL" author="" url="" tags="" ctime="20171122224748" dir="1511380068kekstl0mt2" file="text.html"/>
+       <record id="1512299532e1qfgl9lg0" name="Стоимость операций в тактах ЦП" author="" url="https://habrahabr.ru/company/otus/blog/343566/" tags="такт" ctime="20171203141212" dir="1512299532y0zrycq478" file="text.html"/>
       </recordtable>
+      <node crypt="" id="1512298058f7pvgogjas" name="C++17">
+       <recordtable>
+        <record id="1512299138oi1qdgu5ji" name="Удобные изменения" author="" url="https://habrahabr.ru/post/343622/.com++17--kotorye-dolzhe" tags="" ctime="20171203140538" dir="1512299138gyuj7yn0ec" file="text.html"/>
+       </recordtable>
+      </node>
      </node>
      <node crypt="" id="1509371285qnslzcqpt7" name="Компилятор">
       <recordtable>
@@ -475,6 +488,11 @@
       <record id="15045968715wt9wikgxk" name="Гармонический ряд расходится" author="" url="" tags="гармонический ряд сходимость" ctime="20170905103431" dir="15045968716hxfdwfpdc" file="text.html"/>
      </recordtable>
     </node>
+   </node>
+   <node crypt="" id="1512310010bi1huc9otc" name="Интересный факт">
+    <recordtable>
+     <record id="1512310036h038r2o5n1" name="Витая пара" author="" url="" tags="" ctime="20171203170716" dir="1512310036zcosgj5k9b" file="text.html"/>
+    </recordtable>
    </node>
   </node>
   <node crypt="0" icon="" id="1494236530myfkf0jhcp" name="Предположения">
