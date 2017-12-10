@@ -376,6 +376,7 @@
        </record>
        <record id="15113800686rlf52m0lr" name="Контейнеры STL" author="" url="" tags="" ctime="20171122224748" dir="1511380068kekstl0mt2" file="text.html"/>
        <record id="1512299532e1qfgl9lg0" name="Стоимость операций в тактах ЦП" author="" url="https://habrahabr.ru/company/otus/blog/343566/" tags="такт" ctime="20171203141212" dir="1512299532y0zrycq478" file="text.html"/>
+       <record id="15129245047aylmkz2ye" name="cast" author="" url="" tags="" ctime="20171210194824" dir="1512924504rzbhi0e491" file="text.html"/>
       </recordtable>
       <node crypt="" id="1512298058f7pvgogjas" name="C++17">
        <recordtable>
