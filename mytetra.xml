@@ -5,6 +5,9 @@
  <content>
   <node crypt="0" icon="" id="1494235986c629r211sn" name="Знания">
    <node crypt="0" icon="" id="1494236129klxij031z2" name="Компьютер">
+    <recordtable>
+     <record id="1514971433jryo1ls72t" name="Чистка служб" author="" url="" tags="" ctime="20180103122353" dir="1514971433a942ga43u7" file="text.html"/>
+    </recordtable>
     <node crypt="0" icon="" id="1494236140j1d5hh4c4j" name="Computer Vision">
      <node crypt="0" icon="" id="1494236140m8z6q3j2g1" name="Graph computing engines">
       <node crypt="0" icon="" id="1494236140gwsks3f5nm" name="Giraph"/>
@@ -308,6 +311,7 @@
        <record id="14909402932z31t7kjve" name="Запуск" author="" url="" tags="" ctime="20170508124121" dir="14909402932k5zc82k02" file="text.html" crypt="0"/>
        <record id="1511085579ptlaup4lji" name="Общение программ с ОС" author="" url="" tags="" ctime="20171119125939" dir="15110855790ju5gf4r80" file="text.html"/>
        <record id="1511094549c6fgj17xgd" name="Обеспечивают переносимость ОС" author="" url="" tags="" ctime="20171119152909" dir="1511094549mvrhbfq1kt" file="text.html"/>
+       <record id="15152162403latqpoajb" name="Подсистема Windows" author="" url="" tags="" ctime="20180106082400" dir="1515216240ptmm60ma3m" file="text.html"/>
       </recordtable>
       <node crypt="0" icon="" id="1494236481wcn40ntomg" name="WinDBG">
        <recordtable>
@@ -383,6 +387,11 @@
         <record id="1512299138oi1qdgu5ji" name="Удобные изменения" author="" url="https://habrahabr.ru/post/343622/.com++17--kotorye-dolzhe" tags="" ctime="20171203140538" dir="1512299138gyuj7yn0ec" file="text.html"/>
        </recordtable>
       </node>
+      <node crypt="" id="15137937370q0cc7g81f" name="Smart pointers">
+       <recordtable>
+        <record id="151379375529o7o9ilh9" name="shared_ptr" author="" url="" tags="" ctime="20171220211555" dir="1513793755iwu5gfdsaj" file="text.html"/>
+       </recordtable>
+      </node>
      </node>
      <node crypt="" id="1509371285qnslzcqpt7" name="Компилятор">
       <recordtable>
@@ -435,11 +444,20 @@
       <record id="1504803615y1s2vp2ky8" name="Abstract factory / Абстрактная фабрика" author="" url="" tags="" ctime="20170907200015" dir="1504803615hv5jhxrwt0" file="text.html"/>
       <record id="15109868500qmr005m20" name="Factory method / Фабричный метод" author="" url="" tags="" ctime="20171118093410" dir="15109868509bkt44bwc7" file="text.html"/>
       <record id="15112951597ng0jis960" name="Singleton / Одиночка" author="" url="" tags="" ctime="20171121231239" dir="1511295159mbylyppjhu" file="text.html"/>
+      <record id="1514903532ah8wwgfjoc" name="Command / Команда" author="" url="" tags="" ctime="20180102173212" dir="1514903532sl7xxm6naf" file="text.html"/>
+      <record id="15139747605bcqng2jsp" name="Adapter / Адаптер" author="" url="" tags="" ctime="20171222233240" dir="1513974760zujkcyyev3" file="text.html"/>
+      <record id="15149070409y96spv00q" name="Facade / Фасад" author="" url="" tags="" ctime="20180102183040" dir="1514907040adky2yqmzv" file="text.html"/>
      </recordtable>
     </node>
     <node crypt="" id="1504596587fbesq7xxqd" name="Задачки">
      <recordtable>
       <record id="1504596649c8p15xahm1" name="Задача об умном муравье" author="" url="https://www.youtube.com/watch?v=7ccsQqAB2-U" tags="автомат" ctime="20170905103049" dir="1504596649qf7i9xlxca" file="text.html"/>
+     </recordtable>
+    </node>
+    <node crypt="" id="1515859758aart8fon1q" name="Bitcoin">
+     <recordtable>
+      <record id="1515860208t156czkdbv" name="В Bitcoin'е используются деревья Меркла" author="" url="" tags="" ctime="20180113191648" dir="151586020861u9ms5j5f" file="text.html"/>
+      <record id="15158603411abtndvg94" name="Архитектура Bitcoin" author="" url="" tags="" ctime="20180113191901" dir="1515860341cdezjw42cj" file="text.html"/>
      </recordtable>
     </node>
    </node>
@@ -461,9 +479,9 @@
       <record id="149743558372bwwm5uyj" name="About" author="" url="" tags="" ctime="20170614131943" dir="1497435583qk58vw1f1u" file="text.html" crypt="0"/>
      </recordtable>
     </node>
-    <node crypt="" id="1503141159eau56j3udb" name="Боль">
+    <node crypt="0" icon="" id="1503141159eau56j3udb" name="Боль">
      <recordtable>
-      <record id="1503143310lme15s5e1n" name="About" author="" url="https://cyberleninka.ru/article/v/tipy-boli-i-osnovnye-gruppy-antinotsitseptivnyh-sredstv" tags="" ctime="20170819144830" dir="1503143310zs7gv6l8t9" file="text.html"/>
+      <record id="1503143310lme15s5e1n" name="About" author="" url="https://cyberleninka.ru/article/v/tipy-boli-i-osnovnye-gruppy-antinotsitseptivnyh-sredstv" tags="" ctime="20170819144830" dir="1503143310zs7gv6l8t9" file="text.html" crypt="0"/>
      </recordtable>
     </node>
    </node>
@@ -476,10 +494,19 @@
     </node>
    </node>
    <node crypt="" id="15045958759639j1c182" name="Книги">
+    <recordtable>
+     <record id="1515831077jvjjzr8v27" name="Язык убеждения" author="Дейл Карнеги" url="" tags="" ctime="20180113111117" dir="15158310773pyoims9pw" file="text.html"/>
+    </recordtable>
     <node crypt="" id="1504595890qn1t2drt34" name="Компьютер">
      <recordtable>
       <record id="1504595936p38vbuqwbu" name="Хакинг - искусство эксплойта" author="Д. Эриксон" url="" tags="" ctime="20170905101856" dir="15045959365scq8c9jjt" file="text.html"/>
      </recordtable>
+     <node crypt="" id="1515843789jsvh76jq71" name="Администрирование VMware vSphere 5">
+      <recordtable>
+       <record id="1515843857uyt3go0j2n" name="Таблица разделов ESXi" author="" url="" tags="" ctime="20180113144417" dir="1515843857dy3lxs5sdk" file="text.html"/>
+       <record id="1515843902swr4qz928w" name="Конспект" author="" url="" tags="" ctime="20180113144502" dir="1515843902mszaenpnhl" file="text.html"/>
+      </recordtable>
+     </node>
     </node>
     <node crypt="" id="1504595897d74zmh2dya" name="Биология"/>
    </node>
